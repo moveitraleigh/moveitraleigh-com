@@ -3,9 +3,9 @@
 <!doctype html>
 <html lang="en-us">
   <head>
-    <meta charset="utf=8">
+    <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie-edge">
-    {{ if eq .URL "/" }}<title>{{ .Title }}</title>{{ else }}<title>{{ .Site.Title }} - {{ .Title }}</title>{{ end }}
+    {{ if eq .URL "/" }}<title>{{ .Site.Title }}</title>{{ else }}<title>{{ .Site.Title }} - {{ .Title }}</title>{{ end }}
     {{ with .Description }}<meta name="description" content="{{ . }}">{{ end }}
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link href="https://fonts.googleapis.com/css?family=Kalam:400,700" rel="stylesheet">
