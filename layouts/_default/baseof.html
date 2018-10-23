@@ -1,0 +1,31 @@
+{{ $mainOptions := (dict "targetPath" "css/main.css" "outputStyle" "compressed" "enableSourceMap" false ) }}
+{{ $main := resources.Get "sass/main.sass" | resources.ToCSS $mainOptions }}
+<!doctype html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf=8">
+    <meta http-equiv="x-ua-compatible" content="ie-edge">
+    {{ if eq .URL "/" }}<title>{{ .Title }}</title>{{ else }}<title>{{ .Site.Title }} - {{ .Title }}</title>{{ end }}
+    {{ with .Description }}<meta name="description" content="{{ . }}">{{ end }}
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link href="https://fonts.googleapis.com/css?family=Kalam:400,700" rel="stylesheet">
+    <link href="{{ $main.Permalink }}" rel="stylesheet">
+  </head>
+  <body>
+    <header>
+        <img class="full-image" alt="Move It Raleigh" src="/img/moveitbanner2.jpg">
+    </header>
+    <main>
+      {{ block "main" . }}
+        <!-- The part of the page that begins to differ between templates -->
+      {{ end }}
+    </main>
+    <footer>
+      {{ block "footer" . }}
+        <small class="copy">&copy; {{ now.Format "2006"}} Move It Raleigh</small>
+        <span>
+        </span>
+      {{ end }}
+    </footer>
+  </body>
+</html>

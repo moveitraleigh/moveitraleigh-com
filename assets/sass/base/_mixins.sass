@@ -1,0 +1,37 @@
+@mixin type-scale($scale, $base, $value, $measure:"")
+  @if $value == rem
+    font-size: $scale#{px}
+    font-size: context-calc($scale, $base, $value)
+  @else if $value == em
+    font-size: context-calc($scale, $base, $value)
+  @else
+    font-size: $scale#{px}
+
+  @if $measure != ""
+    @if $value == rem
+      margin-bottom: measure-margin($scale, $measure, $value: px)
+      margin-bottom: measure-margin($scale, $measure, $value)
+    @else if $value == em
+      margin-bottom: measure-margin($scale, $measure, $value: em)
+    @else
+      margin-bottom: measure-margin($scale, $measure, $value)
+
+@mixin heading-init()
+  @each $h, $size in $heading-sizes
+    #{$h}
+      @include type-scale($size, $font-base, '#{$typescale-unit}', $measure-base)
+
+@mixin hover-link()
+  text-decoration: none
+  &:hover, &:focus
+    text-decoration: underline
+
+
+@mixin unstyled-link()
+  color: inherit
+  cursor: inherit
+  text-decoration: inherit
+  &:active, &:focus
+    outline: none
+  &:hover, &:focus
+    text-decoration: none
