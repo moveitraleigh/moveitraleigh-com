@@ -26,7 +26,6 @@
   &:hover, &:focus
     text-decoration: underline
 
-
 @mixin unstyled-link()
   color: inherit
   cursor: inherit
@@ -35,3 +34,14 @@
     outline: none
   &:hover, &:focus
     text-decoration: none
+
+@mixin breakpoint($point)
+  @if $point == papa-bear
+    @media (min-width: 1600px)
+      @content
+  @else if $point == mama-bear
+    @media (min-width: 1250px)
+      @content
+  @else if $point == baby-bear
+    @media (min-width: 650px)
+      @content
