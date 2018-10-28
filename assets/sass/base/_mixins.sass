@@ -37,11 +37,11 @@
 
 @mixin breakpoint($point)
   @if $point == papa-bear
-    @media (min-width: 1600px)
+    @media (min-width: $media-desktop)
       @content
   @else if $point == mama-bear
-    @media (min-width: 1250px)
+    @media (min-width: $media-tablet)
       @content
   @else if $point == baby-bear
-    @media (min-width: 650px)
+    @media (min-width: $media-mobile)
       @content

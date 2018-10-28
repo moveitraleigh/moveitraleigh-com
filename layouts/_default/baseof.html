@@ -12,13 +12,14 @@
     <link href="{{ $main.Permalink }}" rel="stylesheet">
   </head>
   <body>
-    <header>
+    <header id="header">
         {{ partial "header/site-header.html" . }}
     </header>
     <main>
         <img class="full-image" alt="Move It Raleigh" src="/img/moveitbanner2.jpg">
       {{ block "main" . }}
         <!-- The part of the page that begins to differ between templates -->
+        {{ .Content }}
       {{ end }}
     </main>
     <footer>
@@ -28,5 +29,6 @@
         </span>
       {{ end }}
     </footer>
+    <script src="/js/scroll.js" async defer></script>
   </body>
 </html>
