@@ -40,11 +40,18 @@ title = "Move It Raleigh"
     weight = -79
 
   [[menu.main]]
+    identifier = "press"
+    name = "Press Releases"
+    parent = "news-media"
+    url = "/press/"
+    weight = -79
+
+  [[menu.main]]
     identifier = "media"
     name = "Media"
     parent = "news-media"
     url = "/media/"
-    weight = -78
+    weight = -77
 
   [[menu.main]]
     identifier = "donate"
