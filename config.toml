@@ -3,7 +3,6 @@ languageCode = "en-us"
 title = "Move It Raleigh"
 
 [menu]
-
   [[menu.main]]
     identifier = "about"
     name = "Who We Are"
