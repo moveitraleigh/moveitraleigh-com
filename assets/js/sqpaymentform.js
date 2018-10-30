@@ -1,8 +1,3 @@
-var applicationId = '{{ getenv "APP_ID" }}';
-
-// Set the location ID
-var locationId = 'REPLACE';
-
 function buildForm(form) {
   if (SqPaymentForm.isSupportedBrowser()) {
     form.build();

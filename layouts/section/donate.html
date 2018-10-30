@@ -1,12 +1,16 @@
-{{ $jsTemplate := resources.Get "js/sqpaymentform.js" }}
-{{ $sqpaymentform := $jsTemplate | resources.ExecuteAsTemplate "sqpaymentform.js" . }}
 {{ define "main" }}
+
+{{ $jsAppId := (printf "/* %s */\n\nvar applicationId = '%s';\n\nvar locationId = '%s';\n\n" (getenv "BRANCH") (getenv "HUGO_APP_ID") (getenv "HUGO_LOC_ID")) | resources.FromString "js/vars.js" }}
+{{ $jsTemplate := resources.Get "js/sqpaymentform.js" }}
+
+{{ $sqPaymentFormJs := slice $jsAppId $jsTemplate | resources.Concat "js/sqpayment.js" }}
+
 <!-- link to the SqPaymentForm library -->
 <script type="text/javascript" src="https://js.squareup.com/v2/paymentform">
 </script>
 
 <!-- link to the local SqPaymentForm initialization -->
-<script type="text/javascript" src="{{ .RelPermalink $sqpaymentform }}">
+<script type="text/javascript" src="{{ $sqPaymentFormJs.RelPermalink }}">
 </script>
 
 <!-- link to the custom styles for SqPaymentForm -->
