@@ -1,10 +1,10 @@
 // Set the application ID
 var branch = process.env.BRANCH.toUpperCase();
 
-var applicationId = process.env[branch + '_APP_ID'];
+var applicationId = 'REPLACE';
 
 // Set the location ID
-var locationId = process.env[branch + '_LOC_ID'];
+var locationId = 'REPLACE';
 
 function buildForm(form) {
   if (SqPaymentForm.isSupportedBrowser()) {
