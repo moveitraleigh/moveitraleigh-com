@@ -1,8 +1,10 @@
 // Set the application ID
-var applicationId = 'sandbox-sq0atb-pJTU388CMPQMom5c4FozdA';
+var branch = process.env.BRANCH.toUpperCase();
+
+var applicationId = process.env[branch + '_APP_ID'];
 
 // Set the location ID
-var locationId = 'CBASEN7nTi_Fev1nNBLJ_jtM0I0gAQ';
+var locationId = process.env[branch + '_LOC_ID'];
 
 function buildForm(form) {
   if (SqPaymentForm.isSupportedBrowser()) {
