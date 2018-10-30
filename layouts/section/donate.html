@@ -3,7 +3,7 @@
 {{ $appId := (getenv (printf "%s_APP_ID" (getenv "BRANCH" | upper))) }}
 {{ $locId := (getenv (printf "%s_LOC_ID" (getenv "BRANCH" | upper))) }}
 
-{{ $jsVars := (printf "/* %s */\n\nvar applicationId = '%s';\n\nvar locationId = '%s';\n\n" (getenv "BRANCH") $appId $locId) | resources.FromString "js/vars.js" }}
+{{ $jsVars := (printf "var applicationId = '%s';\n\nvar locationId = '%s';\n\n" $appId $locId) | resources.FromString "js/vars.js" }}
 {{ $jsTemplate := resources.Get "js/sqpaymentform.js" }}
 
 {{ $sqPaymentFormJs := slice $jsVars $jsTemplate | resources.Concat "js/sqpayment.js" }}
