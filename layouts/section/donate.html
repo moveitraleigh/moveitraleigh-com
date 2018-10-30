@@ -1,9 +1,11 @@
 {{ define "main" }}
 
-{{ $jsAppId := (printf "/* %s */\n\nvar applicationId = '%s';\n\nvar locationId = '%s';\n\n" (getenv "BRANCH") (getenv "APP_ID") (getenv "LOC_ID")) | resources.FromString "js/vars.js" }}
+{{ $jsVars := (printf "/* %s */\n\nvar applicationId = '%s';\n\nvar locationId = '%s';\n\n" (getenv "BRANCH") (getenv "APP_ID") (getenv "LOC_ID")) | resources.FromString "js/vars.js" }}
+{{ $jsAppId := (printf "/* %s %s */\n\n" (getenv "APP_ID") (getenv "HUGO_APP_ID")) | resources.FromString "js/app2.js" }}
+{{ $jsLocId := (printf "/* %s %s */\n\n" (getenv "LOC_ID") (getenv "HUGO_LOC_ID")) | resources.FromString "js/loc2.js" }}
 {{ $jsTemplate := resources.Get "js/sqpaymentform.js" }}
 
-{{ $sqPaymentFormJs := slice $jsAppId $jsTemplate | resources.Concat "js/sqpayment.js" }}
+{{ $sqPaymentFormJs := slice $jsVars $jsAppId $jsLocId $jsTemplate | resources.Concat "js/sqpayment.js" }}
 
 <!-- link to the SqPaymentForm library -->
 <script type="text/javascript" src="https://js.squareup.com/v2/paymentform">
