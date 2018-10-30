@@ -1,3 +1,60 @@
 baseURL = "https://moveitraleigh.com/"
 languageCode = "en-us"
 title = "Move It Raleigh"
+
+[menu]
+  [[menu.main]]
+    identifier = "about"
+    name = "Who We Are"
+    title = "who we are title"
+    url = "/about/"
+    weight = -110
+    
+  [[menu.main]]
+    identifier = "support"
+    name = "Who We Support"
+    title = "who we support title"
+    url = "/support/"
+    weight = -100
+    
+  [[menu.main]]
+    identifier = "giving"
+    name = "How To Give"
+    title = "how to give title"
+    url = "/giving/"
+    weight = -90
+
+  [[menu.main]]
+    identifier = "news-media"
+    name = "News & Media"
+    title = "news media title"
+    url = "/news-media/"
+    weight = -80
+    
+  [[menu.main]]
+    identifier = "news"
+    name = "News"
+    parent = "news-media"
+    url = "/news/"
+    weight = -79
+
+  [[menu.main]]
+    identifier = "press"
+    name = "Press Releases"
+    parent = "news-media"
+    url = "/press/"
+    weight = -79
+
+  [[menu.main]]
+    identifier = "media"
+    name = "Media"
+    parent = "news-media"
+    url = "/media/"
+    weight = -77
+
+  [[menu.main]]
+    identifier = "donate"
+    name = "Donate"
+    title = "donate title"
+    url = "/donate/"
+    weight = -70

@@ -1,11 +1,26 @@
 header
-  display: inline
+  display: flex
+  justify-content: space-between
   padding: 1.1em 0
   width: 100%
+  z-index: $zindex-header
+  background: $grey-gandalf
+  +breakpoint('mama-bear')
+    background: inherit
+    margin-bottom: 2.2em
   h1
     display:  inline
     padding-left: 1.1em
     text-transform: uppercase
-  img.full-image
-    width: 100vw
-    object-fit: cover
+  .nav-logo
+    position: absolute
+    left: $spacing
+    top: $spacing
+    +breakpoint("mama-bear")
+      position: static
+      padding-left: 1.1em 
+  &.sticky-header
+    position: fixed
+    background: $grey-gandalf
+    transition: $nav-mobile-transition
+    margin-bottom: 3.2em

@@ -1,4 +1,4 @@
-{{ $mainOptions := (dict "targetPath" "css/main.css" "outputStyle" "compressed" "enableSourceMap" false ) }}
+{{ $mainOptions := (dict "targetPath" "css/main.css" "outputStyle" "nested" "enableSourceMap" false ) }}
 {{ $main := resources.Get "sass/main.sass" | resources.ToCSS $mainOptions }}
 <!doctype html>
 <html lang="en-us">
@@ -12,12 +12,14 @@
     <link href="{{ $main.Permalink }}" rel="stylesheet">
   </head>
   <body>
-    <header>
-        <img class="full-image" alt="Move It Raleigh" src="/img/moveitbanner2.jpg">
+    <header id="header">
+        {{ partial "header/site-header.html" . }}
     </header>
     <main>
       {{ block "main" . }}
         <!-- The part of the page that begins to differ between templates -->
+        <img class="full-image" alt="Move It Raleigh" src="/img/moveitbanner2.jpg">
+        {{ .Content }}
       {{ end }}
     </main>
     <footer>
@@ -27,5 +29,6 @@
         </span>
       {{ end }}
     </footer>
+    <script src="/js/scroll.js" async defer></script>
   </body>
 </html>

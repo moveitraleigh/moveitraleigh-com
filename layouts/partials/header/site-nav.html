@@ -1,0 +1,34 @@
+<nav>
+  <label for="tm" id="toggle-menu">Navigation <span class="drop-icon">▾</span></label>
+  <input type="checkbox" id="tm">
+  <ul class="main-menu clearfix">
+    {{ $currentPage := . }}
+      {{ range .Site.Menus.main }}
+        {{ if .HasChildren }}
+          <li class="{{ if $currentPage.HasMenuCurrent "main" . }}active{{ end }}">
+            <a href="#">
+              {{ .Pre }}
+              <span class="nav-item">{{ .Name }}</span>
+              <span class="drop-icon">▾</span>
+              <label title="Toggle Drop-down" class="drop-icon" for="sm-{{ .Identifier }}">▾</label>
+            </a>
+            <input type="checkbox" id="sm-{{ .Identifier }}">
+            <ul class="sub-menu">
+              {{ range .Children }}
+                <li class="{{ if $currentPage.IsMenuCurrent "main" . }}active{{ end }}">
+                  <a class="nav-item" href="{{ .URL }}">{{ .Name }}</a>
+                </li>
+              {{ end }}
+            </ul>
+          </li>
+        {{ else }}
+          <li>
+            <a href="{{ .URL }}">
+              {{ .Pre }}
+              <span class="nav-item">{{ .Name }}</span>
+            </a>
+          </li>
+      {{ end }}
+    {{ end }}
+  </ul>
+</nav>
