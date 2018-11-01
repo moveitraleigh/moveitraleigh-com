@@ -1,4 +1,4 @@
 [build]
   functions = "lambda"
-  command = "hugo && netlify-lambda run build:lambda"
+  command = "netlify-lambda run build:lambda"
 
