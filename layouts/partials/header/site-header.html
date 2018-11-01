@@ -1,5 +1,7 @@
+{{ $bigImage := resources.Get "img/mir-full.png" }}
+{{ $logo := $bigImage.Fit "96x96" }}
 <div class="nav-logo">
-    <a href="/">LOGO</a>
+    <a href="/"><img class="img-logo" src="{{ $logo.RelPermalink }}" alt="Move It Raleigh" /></a>
 </div>
 {{ partial "header/site-nav.html" . }}
 

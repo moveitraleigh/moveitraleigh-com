@@ -1,36 +1,8 @@
-* {
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-body, html {
-  color: #373F4A;
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-weight: normal;
-}
-
 iframe {
   margin: 0;
   padding: 0;
   border: 0;
 }
-
-button {
-  border: 0;
-}
-
-hr {
-  height: 1px;
-  border: 0;
-  background-color: #CCC;
-}
-
-fieldset {
-  margin: 0;
-  padding: 0;
-  border: 0;
-}
-
 
 #form-container {
   position: relative;
