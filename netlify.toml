@@ -3,6 +3,6 @@
   command = "hugo && npm run build:lambda"
   
 [[redirects]]
-  from = "/.netlify/functions/checkout"
-  to = "/checkout"
+  from = "/checkout"
+  to = "/.netlify/functions/checkout"
   status = 200
