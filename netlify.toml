@@ -1,4 +1,8 @@
 [build]
   functions = "lambda"
   command = "hugo && npm run build:lambda"
-
+  
+[[redirects]]
+  from = "/.netlify/functions/checkout"
+  to = "/checkout"
+  status = 200
