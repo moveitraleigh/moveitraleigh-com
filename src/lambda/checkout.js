@@ -1,12 +1,14 @@
 'use strict';
 
 import SquareConnect from 'square-connect';
+import uuid from 'uuid';
+
 const defaultClient = SquareConnect.ApiClient.instance;
 
 const oauth2 = defaultClient.authentications['oauth2'];
-oauth2.accessToken = 'sandbox-sq0atb-pJTU388CMPQMom5c4FozdA';
+oauth2.accessToken = process.env[`${process.env.BRANCH.toUpperCase()}_APP_ID`];
 
-const locationId = 'CBASEN7nTi_Fev1nNBLJ_jtM0I0gAQ';
+const locationId = process.env[`${process.env.BRANCH.toUpperCase()}_LOC_ID`];
 
 const buyerInfo = {
   buyer_email_address: 'thebuyer@example.com',
@@ -21,7 +23,7 @@ const buyerInfo = {
 };
 
 const cardNonce = 'fake-card-nonce-ok';
-var idempotencyKey = 'oncnweiuniwuniniuwndudinq';
+var idempotencyKey = uuid();
 
 const paymentInfo = {
   idempotency_key: idempotencyKey,
