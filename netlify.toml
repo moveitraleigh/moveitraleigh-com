@@ -2,9 +2,9 @@
   functions = "lambda"
   command = "hugo && npm run build:lambda"
   
-[context.phase3.environment]
-  VAR_ENV = "STAGING"
-  
+[context.phase3]
+  environment = { VAR_ENV = "STAGING" }
+
 [[redirects]]
   from = "/checkout"
   to = "/.netlify/functions/checkout"
