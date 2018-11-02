@@ -44,14 +44,7 @@ const transactionInfo = Object.assign({}, buyerInfo, paymentInfo, referenceInfo)
 const api = new SquareConnect.TransactionsApi();
 
 exports.handler = async function(event, context, callback) {
-    callback(null, {statusCode: 200, body: JSON.stringify({
-      branch: BRANCH_ENV,
-      appHc: process.env.STAGING_APP_ID,
-      locHc: process.env.STAGING_LOC_ID,
-      appId: process.env[`${BRANCH_ENV}_APP_ID`],
-      locId: process.env[`${BRANCH_ENV}_LOC_ID`]
-    })});
-    // return api.charge(locationId, transactionInfo)
-    //     .then((data) => callback(null, {statusCode: 200, body: JSON.stringify(data)}))
-    //     .catch((error) => callback({status: 500, body: JSON.stringify(Object.assign({}, error, transactionInfo, {locationId}))}));
+    return api.charge(locationId, transactionInfo)
+        .then((data) => callback(null, {statusCode: 200, body: JSON.stringify(data)}))
+        .catch((error) => callback({status: 500, body: JSON.stringify(Object.assign({}, error, transactionInfo, {locationId}))}));
 };
