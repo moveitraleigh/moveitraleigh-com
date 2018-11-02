@@ -2,11 +2,11 @@
   functions = "lambda"
   command = "hugo && npm run build:lambda"
   
-[context.branch-deploy.environment]
-  VAR_ENV = "STAGING"
+# [context.branch-deploy]
+#   environment = { NSPC = "STAGING" }
 
 [context.phase3]
-  environment = { VAR_ENV = "STAGING" }
+  environment = { NSPC = "STAGING" }
 
 [[redirects]]
   from = "/checkout"
