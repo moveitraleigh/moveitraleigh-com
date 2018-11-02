@@ -6,6 +6,12 @@ import uuid from 'uuid';
 const defaultClient = SquareConnect.ApiClient.instance;
 
 const oauth2 = defaultClient.authentications['oauth2'];
+console.log(process.env.BRANCH);
+console.log(`${process.env.BRANCH.toUpperCase()}_APP_ID`);
+console.log(`${process.env.BRANCH.toUpperCase()}_LOC_ID`);
+console.log(process.env[`${process.env.BRANCH.toUpperCase()}_APP_ID`]);
+console.log(process.env[`${process.env.BRANCH.toUpperCase()}_LOC_ID`]);
+
 oauth2.accessToken = process.env[`${process.env.BRANCH.toUpperCase()}_APP_ID`];
 
 const locationId = process.env[`${process.env.BRANCH.toUpperCase()}_LOC_ID`];
@@ -46,5 +52,5 @@ const api = new SquareConnect.TransactionsApi();
 exports.handler = async function(event, context, callback) {
     return api.charge(locationId, transactionInfo)
         .then((data) => callback(null, {statusCode: 200, body: JSON.stringify(data)}))
-        .catch((error) => callback({status: 500, body: JSON.stringify(error)}));
+        .catch((error) => callback({status: 500, body: JSON.stringify(process.env)}));
 };
