@@ -3,7 +3,7 @@
   command = "hugo && npm run build:lambda"
   
 [context.phase3.environment]
-  NODE_ENV='staging'
+  VAR_ENV='STAGING'
   
 [[redirects]]
   from = "/checkout"
