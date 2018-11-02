@@ -1,6 +1,6 @@
 [build]
   functions = "lambda"
-  command = "hugo && env NSPC=$(echo $BRANCH | tr a-z A-Z) npm run build:lambda"
+  command = "hugo && npm run build:lambda"
 
 [context.phase3.environment]
   BRANCH_ENV = "staging"
