@@ -1,13 +1,7 @@
 [build]
   functions = "lambda"
-  command = "hugo && npm run build:lambda"
+  command = "hugo && env NSPC=$(echo $BRANCH | tr a-z A-Z) npm run build:lambda"
   
-# [context.branch-deploy]
-#   environment = { NSPC = "STAGING" }
-
-[context.phase3]
-  environment = { NSPC = "STAGING" }
-
 [[redirects]]
   from = "/checkout"
   to = "/.netlify/functions/checkout"
