@@ -2,6 +2,12 @@
   functions = "lambda"
   command = "hugo && npm run build:lambda"
 
+[context.production.environment]
+  BRANCH_ENV = "prod"
+
+[context.staging.environment]
+  BRANCH_ENV = "staging"
+
 [context.phase3.environment]
   BRANCH_ENV = "staging"
   
