@@ -3,9 +3,8 @@
   command = "hugo && npm run build:lambda"
   
 [context.phase3.environment]
-  BRANCH='staging'
-  NODE_ENV='development'
-
+  NODE_ENV='staging'
+  
 [[redirects]]
   from = "/checkout"
   to = "/.netlify/functions/checkout"
