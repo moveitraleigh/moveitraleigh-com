@@ -1,0 +1,179 @@
+{{ define "main" }}
+
+{{ $appId := (getenv (printf "%s_SQUARE_APP_ID" (getenv "BRANCH_ENV" | upper))) }}
+{{ $locId := (getenv (printf "%s_SQUARE_LOC_ID" (getenv "BRANCH_ENV" | upper))) }}
+
+{{ $jsVars := (printf "var applicationId = '%s';\n\nvar locationId = '%s';\n\n" $appId $locId) | resources.FromString "js/vars.js" }}
+{{ $jsTemplate := resources.Get "js/sqpaymentform.js" }}
+
+{{ $sqPaymentFormJs := slice $jsVars $jsTemplate | resources.Concat "js/sqpayment.js" }}
+
+<!-- link to the SqPaymentForm library -->
+<script type="text/javascript" src="https://js.squareup.com/v2/paymentform">
+</script>
+
+<!-- link to the local SqPaymentForm initialization -->
+<script type="text/javascript" src="{{ $sqPaymentFormJs.RelPermalink }}">
+</script>
+
+<!-- link to the custom styles for SqPaymentForm -->
+<link rel="stylesheet" type="text/css" href="/css/sqpaymentform.css">
+
+{{ .Content }}
+
+<section class="sponsor-form">
+  <div id="form-container">
+    <div id="sq-ccbox">
+      <form id="nonce-form" novalidate action="/checkout" method="post">
+        <fieldset>
+          <label for="donor-name">Name</label>
+          <input id="donor-name" type="text" />
+          
+          <label for="email">Email</label>
+          <input id="email" type="email" />
+          
+          <fieldset>
+            <label for="addr1">Address Line 1</label>
+            <input id="addr1" type="text" />
+
+            <label for="addr2">Address Line 2</label>
+            <input id="addr2" type="text" />
+
+            <label for="city">City</label>
+            <input id="addr1" type="text" />
+
+            <label for="state">State</label>
+            <input id="state" type="text" />
+
+            <label for="zip">ZIP Code</label>
+            <input id="zip" type="text" />
+          </fieldset>
+        </fieldset>
+        <fieldset>
+          <label for="amount">Amount</label>
+          <input id="amount" type="text" />
+          
+          <label for="viptix">VIP Tickets Requested</label>
+          <input id="viptix" type="text" />
+        </fieldset>
+        
+        <fieldset>
+        <span class="label">Card Number</span>
+        <div id="sq-card-number"></div>
+
+        <div class="third">
+          <span class="label">Expiration</span>
+          <div id="sq-expiration-date"></div>
+        </div>
+
+        <div class="third">
+          <span class="label">CVV</span>
+          <div id="sq-cvv"></div>
+        </div>
+
+        <div class="third">
+          <span class="label">Postal</span>
+          <div id="sq-postal-code"></div>
+        </div>
+        </fieldset>
+
+        <button id="sq-creditcard" class="button-credit-card" onclick="requestCardNonce(event)">Pay $1.00</button>
+
+        <div id="error"></div>
+
+        <!--
+          After a nonce is generated it will be assigned to this hidden input field.
+        -->
+        <input type="hidden" id="card-nonce" name="nonce">
+      </form>
+    </div> <!-- end #sq-ccbox -->
+
+  </div> <!-- end #form-container -->
+  <div class="sponsor-levels">
+    <dl>
+      <dt>Performance Supporter - $50+ (Individuals only)</dt>
+      <dd>
+        <ul>
+          <li>2 tickets to Benefit Concert</li>
+        </ul>
+      </dd>
+     
+      <dt>Performance Friend - $100+ (Companies with <5 employees or individuals)</dt>
+      <dd>
+        <ul>
+          <li>Recognition in Benefit Concert Program</li>
+          <li>4 tickets to Benefit Concert</li>
+          <li>Opportunity to include materials in concert swag bag (750 bags - 1 swag bag per ticket)</li>
+        </ul>
+      </dd>
+
+      <dt>Performance Partner - $500+</dt>
+      <dd>
+        <ul>
+          <li>Company name or individual recognition in Benefit Concert Program</li>
+          <li>Quarter-page ad in Benefit Concert Program</li>
+          <li>4 VIP tickets to Benefit Concert, if requested</li>
+          <li>Opportunity to include materials in concert swag bag (750 bags - 1 swag bag per ticket)</li>
+        </ul>
+      </dd>
+      
+      <dt>Benefactor Sponsor - $1000</dt>
+      <dd>
+        <ul>
+          <li>Company name or individual recognition in Benefit Concert Program</li>
+          <li>Half-page ad in Benefit Concert Program</li>
+          <li>6 VIP tickets to Benefit Concert, if requested</li>
+          <li>Opportunity to include materials in concert swag bag (750 bags - 1 swag bag per ticket)</li>
+        </ul>
+      </dd>
+
+      <dt>Outreach Sponsor - $3000</dt>
+      <dd>
+        <ul>
+          <li>Exclusive naming rights to Benefit Concert Online Auction (i.e. 1st Annual MOVE IT RALEIGH Auction, sponsored by John & Jane Doe)</li>
+          <li>Company logo or individual on all auction signage, marketing materials, website</li>
+          <li>Opening curtain recognition and opportunity to speak at performance</li>
+          <li>Full-page ad (inside back cover) in Benefit Concert Program</li>
+          <li>8 VIP tickets to Benefit Concert, if requested</li>
+          <li>Opportunity to include materials in concert swag bag (750 bags - 1 swag bag per ticket)</li>
+        </ul>
+      </dd>
+      
+      <dt>Production Sponsor - $5000</dt>
+      <dd>
+        <ul>
+          <li>Exclusive naming rights to Benefit Concert Online Auction (i.e. 1st Annual MOVE IT RALEIGH Benefit Concert, sponsored by XYZ Company)</li>
+          <li>Company logo or individual on all auction signage, marketing materials, website</li>
+          <li>Opening curtain recognition and opportunity to speak at performance</li>
+          <li>2 Full-page ads (inside front cover and back cover) in Benefit Concert Program</li>
+          <li>10 VIP tickets to Benefit Concert, if requested</li>
+          <li>Opportunity to include materials in concert swag bag (750 bags - 1 swag bag per ticket)</li>
+        </ul>
+      </dd>
+    </dl>
+  </div>
+
+</section>
+<!--
+- Name
+- Email
+- Billing Address
+ - Street
+ - Street 2
+ - City
+ - State
+ - ZIP
+- Donation
+- Note - Dropdown info
+
+-->
+
+<script>
+document.addEventListener("DOMContentLoaded", function(event) {
+  if (SqPaymentForm.isSupportedBrowser()) {
+    paymentForm.build();
+    paymentForm.recalculateSize();
+  }
+});
+</script>
+{{ end }}

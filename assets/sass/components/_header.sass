@@ -1,21 +1,20 @@
 header
   display: flex
   justify-content: space-between
-  padding: 1.1em 0
+  min-height: $height-header
   width: 100%
   z-index: $zindex-header
   background: $grey-gandalf
   +breakpoint('mama-bear')
     background: inherit
-    margin-bottom: 2.2em
   h1
     display:  inline
     padding-left: 1.1em
     text-transform: uppercase
   .nav-logo
     position: absolute
-    left: $spacing
-    top: $spacing
+    left: $hpad-header
+    top: $vpad-header
     +breakpoint("mama-bear")
       position: static
       padding-left: 1.1em 
@@ -23,4 +22,7 @@ header
     position: fixed
     background: $grey-gandalf
     transition: $nav-mobile-transition
-    margin-bottom: 3.2em
+    margin-bottom: 100px
+    + main
+      top: 100px
+      padding-bottom: 100px

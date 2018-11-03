@@ -1,6 +1,7 @@
 <nav>
-  <label for="tm" id="toggle-menu">Navigation <span class="drop-icon">▾</span></label>
+  <!-- <label for="tm" id="toggle-menu">Navigation <span class="drop-icon">▾</span></label> -->
   <input type="checkbox" id="tm">
+  <label for="tm" id="toggle-menu"><span></span><span></span><span></span></label>
   <ul class="main-menu clearfix">
     {{ $currentPage := . }}
       {{ range .Site.Menus.main }}

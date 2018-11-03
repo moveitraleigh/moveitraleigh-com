@@ -7,9 +7,9 @@ import querystring from 'querystring';
 const defaultClient = SquareConnect.ApiClient.instance;
 
 const oauth2 = defaultClient.authentications['oauth2'];
-oauth2.accessToken = process.env[`${BRANCH_ENV}_APP_ID`];
+oauth2.accessToken = process.env[`${BRANCH_ENV}_SQUARE_ACCESS_TOKEN`];
  
-const locationId = process.env[`${BRANCH_ENV}_LOC_ID`];
+const locationId = process.env[`${BRANCH_ENV}_SQUARE_LOC_ID`];
 
 exports.handler = async function(event, context) {
   

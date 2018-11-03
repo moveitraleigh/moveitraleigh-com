@@ -1,7 +1,16 @@
 main
   height: auto
-  img.full-image
-    object-fit: cover
-    width: 100vw
-  #form-container
-    padding-top: 200px
+  h2
+    padding: 0 $spacing-double
+  figure.full-image
+    margin: 0
+    padding: 0
+    img
+      object-fit: cover
+      width: 100vw
+
+.sponsor-form
+  display: grid
+  grid-gap: $spacing
+  grid-template-columns: 50% 50%
+  padding: 0 $spacing-double

@@ -8,8 +8,6 @@ iframe {
   position: relative;
   width: 380px;
   margin: 0 auto;
-  top: 50%;
-  transform: translateY(-50%);
 }
 
 .label {

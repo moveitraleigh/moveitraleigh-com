@@ -1,19 +1,44 @@
 nav
-  z-index: $zindex-nav
+  font-family: $font-family-2
   background-color: $color-nav-base
   overflow-y: scroll
+  z-index: $zindex-nav
   #toggle-menu
+    padding-top: $vpad-header * 2.5
     position: absolute
-    top: $spacing
-    right: $spacing
+    right: $hpad-header
+    span
+      background: $color-menu-open
+      display: block
+      width: 32px
+      height: 4px
+      margin-bottom: 5px
+      position: relative
+      border-radius: 3px  
+      transform-origin: 4px 0px
+      transition: $menu-toggle-transition
+      &:first-child
+        transform-origin: 0% 0%
+      &:nth-last-child(2)
+        transform-origin: 0% 100%
   #tm
     display: none
-    &:checked + ul
-      display: block
-      height: 100vh
+    &:checked
+      ~ label span
+        opacity: 1
+        transform: rotate(45deg) translate(3px, -2px)
+        background: $color-menu-close
+        &:nth-last-child(2)
+          opacity: 0
+          transform: rotate(0deg) scale(0.2, 0.2)
+        &:nth-last-child(1)
+          transform: rotate(-45deg) translate(-2px, 2px)
+      ~ ul
+        display: block
+        height: 100vh
   ul
     padding: 0
-    top: $spacing-double
+    top: $height-header - $spacing-double
     z-index: $zindex-nav
     background-color: $color-nav-base
     overflow-y: scroll
@@ -29,6 +54,9 @@ nav
       display: none
       &:checked + .sub-menu
         display: block
+  a
+    +unstyled-link
+    cursor: pointer
   span.drop-icon
     display: none
   .sub-menu
@@ -39,20 +67,21 @@ nav
     position: absolute
     right: $spacing
   .nav-item
-    padding-left: $spacing
+    padding-left: $hpad-header
 
 +breakpoint("mama-bear")  
   nav
     padding-right: 1.1em
-    background-color: inherit
+    background-color: transparent
     overflow-y: visible
+    align-self: center
     #toggle-menu
       display: none
     #tm:checked + ul,
     [id^=sm-]:checked + .sub-menu
         display: none
     ul
-      background-color: inherit
+      background-color: transparent
       position: static
       display: inline
       margin: 0

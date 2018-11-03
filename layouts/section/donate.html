@@ -1,26 +1,12 @@
 {{ define "main" }}
 
-{{ $appId := (getenv (printf "%s_APP_ID" (getenv "BRANCH_ENV" | upper))) }}
-{{ $locId := (getenv (printf "%s_LOC_ID" (getenv "BRANCH_ENV" | upper))) }}
+{{ $appId := (getenv (printf "%s_SQUARE_APP_ID" (getenv "BRANCH_ENV" | upper))) }}
+{{ $locId := (getenv (printf "%s_SQUARE_LOC_ID" (getenv "BRANCH_ENV" | upper))) }}
 
 {{ $jsVars := (printf "var applicationId = '%s';\n\nvar locationId = '%s';\n\n" $appId $locId) | resources.FromString "js/vars.js" }}
 {{ $jsTemplate := resources.Get "js/sqpaymentform.js" }}
 
 {{ $sqPaymentFormJs := slice $jsVars $jsTemplate | resources.Concat "js/sqpayment.js" }}
-
-<!--
-- Name
-- Email
-- Billing Address
- - Street
- - Street 2
- - City
- - State
- - ZIP
-- Donation
-- Note - Dropdown info
-
--->
 
 <!-- link to the SqPaymentForm library -->
 <script type="text/javascript" src="https://js.squareup.com/v2/paymentform">
@@ -33,36 +19,29 @@
 <!-- link to the custom styles for SqPaymentForm -->
 <link rel="stylesheet" type="text/css" href="/css/sqpaymentform.css">
 
+{{ .Content }}
 
 <div id="form-container">
   <div id="sq-ccbox">
-    <!--
-      Be sure to replace the action attribute of the form with the path of
-      the Transaction API charge endpoint URL you want to POST the nonce to
-      (for example, "/process-card")
-    -->
     <form id="nonce-form" novalidate action="/checkout" method="post">
       <fieldset>
-        
-      </fieldset>
-      <fieldset>
-        <span class="label">Card Number</span>
-        <div id="sq-card-number"></div>
+      <span class="label">Card Number</span>
+      <div id="sq-card-number"></div>
 
-        <div class="third">
-          <span class="label">Expiration</span>
-          <div id="sq-expiration-date"></div>
-        </div>
+      <div class="third">
+        <span class="label">Expiration</span>
+        <div id="sq-expiration-date"></div>
+      </div>
 
-        <div class="third">
-          <span class="label">CVV</span>
-          <div id="sq-cvv"></div>
-        </div>
+      <div class="third">
+        <span class="label">CVV</span>
+        <div id="sq-cvv"></div>
+      </div>
 
-        <div class="third">
-          <span class="label">Postal</span>
-          <div id="sq-postal-code"></div>
-        </div>
+      <div class="third">
+        <span class="label">Postal</span>
+        <div id="sq-postal-code"></div>
+      </div>
       </fieldset>
 
       <button id="sq-creditcard" class="button-credit-card" onclick="requestCardNonce(event)">Pay $1.00</button>
@@ -86,5 +65,4 @@ document.addEventListener("DOMContentLoaded", function(event) {
   }
 });
 </script>
-  {{ .Content }}
 {{ end }}
