@@ -30,9 +30,17 @@ iframe {
 }
 */
 /* Define how SqPaymentForm iframes should look */
-/*
 .sq-input {
+  width: 20em;
+  height: 38px;
+  padding: 6px 10px;
+  background-color: #fff;
+  border: 1px solid #D1D1D1;
+  border-radius: 4px;
+  box-shadow: none;
   box-sizing: border-box;
+  
+  /* box-sizing: border-box;
   border: 1px solid #E0E2E3;
   border-radius: 4px;
   outline-offset: -2px;
@@ -40,9 +48,8 @@ iframe {
   -webkit-transition: border-color .2s ease-in-out, background .2s ease-in-out;
      -moz-transition: border-color .2s ease-in-out, background .2s ease-in-out;
       -ms-transition: border-color .2s ease-in-out, background .2s ease-in-out;
-          transition: border-color .2s ease-in-out, background .2s ease-in-out;
+          transition: border-color .2s ease-in-out, background .2s ease-in-out; */
 }
-*/
 /* Define how SqPaymentForm iframes should look when they have focus */
 /*
 .sq-input--focus {
