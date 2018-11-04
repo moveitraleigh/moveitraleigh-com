@@ -678,11 +678,11 @@ main {
 .sponsor-form input, .sponsor-form select {
   display: block; }
 
-.sponsor-form label {
+.sponsor-form label, .sponsor-form .label {
   margin-left: 11px;
   margin-bottom: 0; }
 
-.sponsor-form input, .sponsor-form select {
+.sponsor-form input, .sponsor-form select, .sponsor-form iframe {
   margin-left: 10px;
   margin-bottom: 10px; }
 
