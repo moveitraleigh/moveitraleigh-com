@@ -15,10 +15,11 @@ header
     position: absolute
     left: $hpad-header
     top: $vpad-header
-    height: 100px
     transition: $nav-mobile-transition
+    height: 80px
     +breakpoint("mama-bear")
       position: static
+      height: 100px
       padding-left: 1.1em 
     img
       height: 100%
@@ -26,11 +27,13 @@ header
     position: fixed
     background: $grey-gandalf
     transition: $nav-mobile-transition
-    min-height: 80px
-    margin-bottom: 80px
-    .nav-logo
-      padding-left: $hpad-header * 4
-      height: 80px
+    margin-bottom: 100px
+    +breakpoint("mama-bear")
+      min-height: 80px
+      margin-bottom: 80px
+      .nav-logo
+        padding-left: $hpad-header * 4
+        height: 80px
     + main
       top: 100px
       padding-bottom: 100px
