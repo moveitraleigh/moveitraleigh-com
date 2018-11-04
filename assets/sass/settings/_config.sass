@@ -1,0 +1,177 @@
+// toolkit/reset
+
+// math
+// screens
+
+// colors
+// borders
+// transition
+
+// modular-scale-init
+// layout
+// icons
+// text
+// base
+
+/*-------------------------------------*/
+// VARIABLES: GLOBAL
+/*-------------------------------------*/
+
+/*-------------------------------------*/
+// GRID
+// Grid: Gutters
+// $grid-gutter: 10px
+
+/*-------------------------------------*/
+// MEDIA QUERIES
+
+$media-desktop: 960px
+$media-tablet:  768px
+$media-mobile:  480px
+
+/*-------------------------------------*/
+// DIMENSIONS: WIDTHS, HEIGHTS
+
+// Header: Height
+$height-header: 100px
+$vpad-header: 16px
+$hpad-header: 10px
+
+// Nav Menu:
+$height-nav: 800px
+
+// Footer: Height
+$height-footer: 100px
+
+/*-------------------------------------*/
+// FONTS
+
+// Fonts: Base styles
+$font-family-1:  Helvetica, Arial, sans-serif
+$font-family-2:  "Kalam", cursive
+
+$font-weight:    normal
+$line-height:    1.65
+$font-percent:   112.5
+$typescale-unit: rem
+
+$font-base:      16 * ($font-percent/100)
+$measure-base:   $font-base * $line-height
+$font-size:      $font-base * 1px
+
+$heading-sizes:  (h1: 32, h2: 28, h3: 22, h4: 20, h5: 16, h6: 12)
+
+$nav-size:       16px
+
+// Fonts: Weights
+$font-thin:        100
+$font-extra-light: 200
+$font-light:       300
+$font-normal:      400
+$font-medium:      500
+$font-semi-bold:   600
+$font-bold:        700
+$font-extra-bold:  800
+$font-ultra-bold:  900
+
+// Fonts: Sizes
+$font-sm-x:  80%
+$font-sm:    90%
+$font-lg:   110%
+$font-lg-x: 120%
+
+// Timings
+$timing-fast: 400ms
+$nav-mobile-transition: all .125s ease-in-out
+$nav-hover-transition: all 0.25s ease-in-out
+$menu-toggle-transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0), background 0.5s cubic-bezier(0.77,0.2,0.05,1.0), opacity 0.55s ease
+
+/*-------------------------------------*/
+// FONT-ICONS: FAMILY
+
+//$font-icon: 'icomoon'
+
+/*-------------------------------------*/
+// SPACING
+
+$spacing:        10px
+$spacing-double: $spacing * 2
+$spacing-third:  $spacing * 3
+$spacing-quad:   $spacing * 4
+$spacing-half:   $spacing / 2
+
+/*-------------------------------------*/
+// Z:INDEX
+
+$zindex-header:      1000
+$zindex-nav:         1100
+$zindex-dropdown:    1200
+$zindex-toggle:      1300
+$zindex-notify:      1400
+$zindex-modal:       1500
+
+$border-radius: 4px !default
+$border-radius-lg: 6px !default
+$border-radius-sm: 3px !default
+
+/*--*/
+$input-btn-padding-y:         .375rem !default
+$input-btn-padding-x:         .75rem !default
+$input-btn-font-size:         $font-size !default
+$input-btn-line-height:       $line-height !default
+
+$input-btn-focus-width:       .2rem !default
+$input-btn-focus-color:       rgba(#fff, .25) !default
+$input-btn-focus-box-shadow:  0 0 0 $input-btn-focus-width $input-btn-focus-color !default
+
+$input-btn-padding-y-sm:      .25rem !default
+$input-btn-padding-x-sm:      .5rem !default
+$input-btn-font-size-sm:      $font-size * .8 !default
+$input-btn-line-height-sm:    $line-height * .8 !default
+
+$input-btn-padding-y-lg:      .5rem !default
+$input-btn-padding-x-lg:      1rem !default
+$input-btn-font-size-lg:      $font-size * 1.2 !default
+$input-btn-line-height-lg:    $line-height * 1.2 !default
+
+$input-btn-border-width:      0 !default
+
+
+// Buttons
+//
+// For each of Bootstrap's buttons, define text, background, and border color.
+
+$btn-padding-y:               $input-btn-padding-y !default
+$btn-padding-x:               $input-btn-padding-x !default
+$btn-font-size:               $input-btn-font-size !default
+$btn-line-height:             $input-btn-line-height !default
+
+$btn-padding-y-sm:            $input-btn-padding-y-sm !default
+$btn-padding-x-sm:            $input-btn-padding-x-sm !default
+$btn-font-size-sm:            $input-btn-font-size-sm !default
+$btn-line-height-sm:          $input-btn-line-height-sm !default
+
+$btn-padding-y-lg:            $input-btn-padding-y-lg !default
+$btn-padding-x-lg:            $input-btn-padding-x-lg !default
+$btn-font-size-lg:            $input-btn-font-size-lg !default
+$btn-line-height-lg:          $input-btn-line-height-lg !default
+
+$btn-border-width:            $input-btn-border-width !default
+
+$btn-font-weight:             $font-normal !default
+$btn-box-shadow:              inset 0 1px 0 rgba(#fff, .15), 0 1px 1px rgba(#000, .075) !default
+$btn-focus-width:             $input-btn-focus-width !default
+$btn-focus-box-shadow:        $input-btn-focus-box-shadow !default
+$btn-disabled-opacity:        .65 !default
+$btn-active-box-shadow:       inset 0 3px 5px rgba(#000, .125) !default
+
+$btn-link-disabled-color:     $grey-gandalf !default
+
+$btn-block-spacing-y:         .5rem !default
+
+// Allows for customizing button radius independently from global border radius
+$btn-border-radius:           $border-radius !default
+$btn-border-radius-lg:        $border-radius-lg !default
+$btn-border-radius-sm:        $border-radius-sm !default
+
+$btn-transition:              color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out !default

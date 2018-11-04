@@ -8,6 +8,8 @@
     {{ if eq .URL "/" }}<title>{{ .Site.Title }}</title>{{ else }}<title>{{ .Site.Title }} - {{ .Title }}</title>{{ end }}
     {{ with .Description }}<meta name="description" content="{{ . }}">{{ end }}
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    {{ template "_internal/opengraph.html" . }}
+    {{ template "_internal/twitter_cards.html" . }}
     <link href="https://fonts.googleapis.com/css?family=Kalam:400,700" rel="stylesheet">
     <link href="{{ $main.RelPermalink }}" rel="stylesheet">
   </head>
@@ -26,9 +28,11 @@
       {{ block "footer" . }}
         <small class="copy">&copy; {{ now.Format "2006"}} Move It Raleigh - <a href="mailto:info@moveitraleigh.com">Contact Us</a></small>
         <span>
+          <img height="32" width="32" src="/img/instagram.svg" />
         </span>
       {{ end }}
     </footer>
     <script src="/js/scroll.js" async defer></script>
+    {{ template "_internal/google_analytics_async.html" . }} 
   </body>
 </html>

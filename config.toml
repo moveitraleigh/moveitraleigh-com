@@ -2,6 +2,19 @@ baseURL = "https://moveitraleigh.com/"
 languageCode = "en-us"
 title = "Move It Raleigh"
 
+[blackfriday]
+  hrefTargetBlank = true
+
+[params]
+  description = "Text about my cool site"
+  images = ["site-feature-image.jpg"]
+  title = "My cool site"
+
+[taxonomies]
+  series = "series"
+  tag = "tags"
+  category = "categories"
+    
 [menu]
   [[menu.main]]
     identifier = "about"
@@ -64,4 +77,5 @@ title = "Move It Raleigh"
     name = "Donate"
     title = "donate title"
     url = "/donate/"
+    class = "button"
     weight = -70
