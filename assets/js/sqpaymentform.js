@@ -36,10 +36,10 @@ var paymentForm = new SqPaymentForm({
   inputStyles: [{
     fontSize: '16px',
     fontFamily: 'Helvetica Neue',
-    padding: '16px',
+    padding: '6px 10px',
     color: '#373F4A',
     backgroundColor: 'transparent',
-    lineHeight: '24px',
+    lineHeight: '1.15',
     placeholderColor: '#CCC',
     _webkitFontSmoothing: 'antialiased',
     _mozOsxFontSmoothing: 'grayscale'
