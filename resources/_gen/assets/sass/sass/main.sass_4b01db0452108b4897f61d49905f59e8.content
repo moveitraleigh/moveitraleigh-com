@@ -525,7 +525,7 @@ nav {
     list-style: none;
     height: 0;
     width: 100vw;
-    transition: all 0.125s ease-in-out; }
+    transition: all 0.35s ease-in-out; }
     nav ul li {
       position: relative;
       display: block;
@@ -624,16 +624,24 @@ header {
   header .nav-logo {
     position: absolute;
     left: 10px;
-    top: 16px; }
+    top: 16px;
+    height: 100px;
+    transition: all 0.35s ease-in-out; }
     @media (min-width: 768px) {
       header .nav-logo {
         position: static;
         padding-left: 1.1em; } }
+    header .nav-logo img {
+      height: 100%; }
   header.sticky-header {
     position: fixed;
     background: #aaa;
-    transition: all 0.125s ease-in-out;
-    margin-bottom: 100px; }
+    transition: all 0.35s ease-in-out;
+    min-height: 80px;
+    margin-bottom: 80px; }
+    header.sticky-header .nav-logo {
+      padding-left: 40px;
+      height: 80px; }
     header.sticky-header + main {
       top: 100px;
       padding-bottom: 100px; }

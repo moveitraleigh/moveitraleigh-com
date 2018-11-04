@@ -1,5 +1,5 @@
 {{ $bigImage := resources.Get "img/mir-full.png" }}
-{{ $logo := $bigImage.Fit "96x96" }}
+{{ $logo := $bigImage.Resize "x100" }}
 <div class="nav-logo">
     <a href="/">
       <img class="img-logo" src="{{ $logo.RelPermalink }}" alt="Move It Raleigh" />
