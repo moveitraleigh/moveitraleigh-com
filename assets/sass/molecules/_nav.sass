@@ -55,10 +55,16 @@ nav
         background-color: $color-nav-sub
     [id^=sm-]
       display: none
-      &:checked + .sub-menu
+      + .sub-menu
         display: block
+        height: 0
+        transition: $nav-mobile-transition        
+      &:checked + .sub-menu
+          height: $line-height * 1em // WARNING - Change when adding more items
   a
     +unstyled-link
+    display: inline-block
+    width: 100%
     cursor: pointer
   span.drop-icon
     display: none
@@ -69,6 +75,9 @@ nav
   .drop-icon
     position: absolute
     right: $spacing
+    width: 50%
+    cursor: pointer
+    text-align: right
   .nav-item
     padding-left: $hpad-header
 
@@ -99,18 +108,23 @@ nav
           +unstyled-link
         &:hover
           background-color: #ddd
-          ul
+          ul.sub-menu
             background-color: #ddd
             display: inline-block
+            height: $line-height * 1em !important // WARNING - Change when adding more items
             li
               float: none
               display: block
+              &:hover
+                background-color: #eee
       ul.sub-menu
-        display: none
+        display: inline-block
         left: 0
         position: absolute
+        height: 0
         top: 100%
         width: 100%
+        transition: $nav-hover-transition
       .drop-icon
         position: relative
       .nav-item

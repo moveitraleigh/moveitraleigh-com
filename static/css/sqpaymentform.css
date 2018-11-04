@@ -1,8 +1,8 @@
-iframe {
+/* iframe {
   margin: 0;
   padding: 0;
   border: 0;
-}
+} */
 /*
 #form-container {
   position: relative;
@@ -30,7 +30,7 @@ iframe {
 }
 */
 /* Define how SqPaymentForm iframes should look */
-.sq-input {
+/* .sq-input {
   width: 20em;
   height: 38px;
   padding: 6px 10px;
@@ -40,7 +40,7 @@ iframe {
   box-shadow: none;
   box-sizing: border-box;
   font-size: 16px;
-  
+   */
   /* box-sizing: border-box;
   border: 1px solid #E0E2E3;
   border-radius: 4px;

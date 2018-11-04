@@ -460,23 +460,10 @@ input[type="checkbox"],
 input[type="radio"] {
   display: inline; }
 
-label,
-.label,
-legend {
-  display: block;
-  margin-bottom: .5em;
-  font-size: .8em; }
-
 fieldset {
   padding: 0;
   margin: 0;
   border-width: 0; }
-
-label > .label-body,
-.label > .label-body {
-  display: inline-block;
-  margin-left: .5rem;
-  font-weight: normal; }
 
 nav {
   font-family: "Kalam", cursive;
@@ -534,12 +521,18 @@ nav {
         background-color: #fef7e5; }
     nav ul [id^=sm-] {
       display: none; }
+      nav ul [id^=sm-] + .sub-menu {
+        display: block;
+        height: 0;
+        transition: all 0.35s ease-in-out; }
       nav ul [id^=sm-]:checked + .sub-menu {
-        display: block; }
+        height: 1.65em; }
   nav a {
     color: inherit;
     cursor: inherit;
     text-decoration: inherit;
+    display: inline-block;
+    width: 100%;
     cursor: pointer; }
     nav a:active, nav a:focus {
       outline: none; }
@@ -553,7 +546,10 @@ nav {
     height: auto; }
   nav .drop-icon {
     position: absolute;
-    right: 10px; }
+    right: 10px;
+    width: 50%;
+    cursor: pointer;
+    text-align: right; }
   nav .nav-item {
     padding-left: 10px; }
 
@@ -590,22 +586,61 @@ nav {
             text-decoration: none; }
         nav ul li:hover {
           background-color: #ddd; }
-          nav ul li:hover ul {
+          nav ul li:hover ul.sub-menu {
             background-color: #ddd;
-            display: inline-block; }
-            nav ul li:hover ul li {
+            display: inline-block;
+            height: 1.65em !important; }
+            nav ul li:hover ul.sub-menu li {
               float: none;
               display: block; }
+              nav ul li:hover ul.sub-menu li:hover {
+                background-color: #eee; }
       nav ul ul.sub-menu {
-        display: none;
+        display: inline-block;
         left: 0;
         position: absolute;
+        height: 0;
         top: 100%;
-        width: 100%; }
+        width: 100%;
+        transition: all 0.25s ease-in-out; }
       nav ul .drop-icon {
         position: relative; }
       nav ul .nav-item {
         padding-right: 10px; } }
+
+.form-group {
+  display: block; }
+
+.form-inline {
+  display: inline; }
+
+.form-flex {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start; }
+
+.form-group label,
+.form-group .label,
+.form-group legend,
+.form-inline label,
+.form-inline .label,
+.form-inline legend,
+.form-flex label,
+.form-flex .label,
+.form-flex legend {
+  display: block;
+  margin-bottom: .5rem;
+  font-size: .8rem; }
+
+.form-group label > .label-body,
+.form-group .label > .label-body,
+.form-inline label > .label-body,
+.form-inline .label > .label-body,
+.form-flex label > .label-body,
+.form-flex .label > .label-body {
+  display: inline-block;
+  margin-left: .5rem;
+  font-weight: normal; }
 
 header {
   display: flex;
@@ -647,8 +682,9 @@ header {
           padding-left: 40px;
           height: 80px; } }
     header.sticky-header + main {
-      top: 100px;
-      padding-bottom: 100px; }
+      top: 100px; }
+    header.sticky-header ~ footer {
+      padding-top: 100px; }
 
 main {
   height: auto; }
@@ -661,31 +697,16 @@ main {
       object-fit: cover;
       width: 100vw; }
 
-.sponsor-form {
-  display: grid;
-  grid-gap: 10px;
-  grid-template-columns: 50% 50%;
-  padding: 0 20px; }
+.sponsor-form #city {
+  width: calc(11rem - 10px * 1.5);
+  margin-right: 5px; }
 
-.sponsor-form #form-container {
-  padding-left: 20%; }
+.sponsor-form #state {
+  width: calc(4rem - 10px * 1.5);
+  margin-right: 5px; }
 
-.sponsor-form .form-group {
-  display: block; }
-
-.sponsor-form .form-inline {
-  display: inline; }
-
-.sponsor-form .csz {
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-start; }
-  .sponsor-form .csz #city {
-    width: 11em; }
-  .sponsor-form .csz #state {
-    width: 3em; }
-  .sponsor-form .csz #zip {
-    width: 5em; }
+.sponsor-form #sq-postal-code {
+  width: 5rem; }
 
 .sponsor-form input, .sponsor-form select {
   display: block; }
@@ -698,11 +719,66 @@ main {
   margin-left: 10px;
   margin-bottom: 10px; }
 
-.sponsor-form .csz label select {
-  width: 3em; }
+.sponsor-form .form-flex label select {
+  width: 3rem; }
 
 .sponsor-form .sponsor-levels h3 {
   margin-bottom: 0; }
+
+iframe {
+  margin: 0;
+  padding: 0;
+  border: 0; }
+
+/* Define how SqPaymentForm iframes should look */
+.sq-input {
+  width: 20rem;
+  height: 38px;
+  padding: 6px 10px;
+  background-color: #fff;
+  border: 1px solid #D1D1D1;
+  border-radius: 4px;
+  box-shadow: none;
+  box-sizing: border-box;
+  font-size: 18px; }
+  .sq-input--focus {
+    border: 1px solid #4A90E2; }
+  .sq-input--error {
+    border: 1px solid #E02F2F; }
+
+.half .sq-input {
+  width: calc(10rem - 10px);
+  margin-right: 10px; }
+
+.button-credit-card {
+  width: 100%;
+  height: 56px;
+  margin-top: 10px;
+  background: #4A90E2;
+  border-radius: 4px;
+  cursor: pointer;
+  display: block;
+  color: #FFFFFF;
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 700;
+  letter-spacing: 0;
+  text-align: center;
+  -webkit-transition: background .2s ease-in-out;
+  -moz-transition: background .2s ease-in-out;
+  -ms-transition: background .2s ease-in-out;
+  transition: background .2s ease-in-out; }
+  .button-credit-card:hover {
+    background-color: #4281CB; }
+
+#error {
+  width: 100%;
+  margin-top: 16px;
+  font-size: 14px;
+  color: red;
+  font-weight: 500;
+  text-align: center;
+  opacity: 0.8; }
 
 footer {
   display: flex;
@@ -718,6 +794,12 @@ footer {
       footer small svg.instagram:hover,
       footer .socialmedia svg.instagram:hover {
         fill: #e4405f; }
+    footer small svg.facebook,
+    footer .socialmedia svg.facebook {
+      fill: #444; }
+      footer small svg.facebook:hover,
+      footer .socialmedia svg.facebook:hover {
+        fill: #3b5998; }
 
 body {
   display: flex;
@@ -741,3 +823,10 @@ footer {
   flex-grow: 0;
   position: relative;
   width: 100vw; }
+
+@media (min-width: 768px) {
+  .sponsor-form {
+    display: grid;
+    grid-gap: 10px;
+    grid-template-columns: 50% 50%;
+    padding: 0 20px; } }

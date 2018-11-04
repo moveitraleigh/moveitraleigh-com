@@ -7,7 +7,7 @@
       {{ range .Site.Menus.main }}
         {{ if .HasChildren }}
           <li{{ if $currentPage.HasMenuCurrent "main" . }} class="active"{{ end }}>
-            <a href="#">
+            <a href="{{ if .URL }}{{ .URL }}{{ else }}#{{ end }}">
               {{ .Pre }}
               <span class="nav-item">{{ .Name }}</span>
               <span class="drop-icon">▾</span>

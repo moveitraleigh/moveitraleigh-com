@@ -1,4 +1,4 @@
-{{ $bigImage := resources.Get "img/mir-full.png" }}
+{{ $bigImage := resources.Get ($.Param "header_image") }}
 {{ $logo := $bigImage.Resize "x100" }}
 <div class="nav-logo">
     <a href="/">

@@ -52,13 +52,13 @@
             <input id="addr2" type="text" />
           </div>
           
-          <div class="csz">
-          <div>
+          <div class="form-flex">
+          <div class="form-group">
             <label for="city">City</label>
             <input id="city" type="text" required />
           </div>
           
-          <div>            
+          <div class="form-group">            
             <label for="state">State</label>
             <select id="state">
             	<option value="AL">AL</option>
@@ -115,43 +115,47 @@
             </select>
           </div>
           
-          <div class="form-inline">
-            <label for="zip">ZIP Code</label>
-            <input id="zip" type="text" required />
+          <div class="form-group">
+            <span class="label">ZIP Code</span>
+            <div id="sq-postal-code"></div>
           </div>
         </div>
           
         </fieldset>
 
         </fieldset>
+
         <fieldset>
-          <label for="amount">Amount</label>
-          <input id="amount" type="number" step="any" pattern="[-+]?[0-9]*[.,]?[0-9]+"/>
+          <div class="form-group">
+            <span class="label">Card Number</span>
+            <div id="sq-card-number"></div>
+          </div>
+
+          <div class="form-flex">
+            <div class="form-group half">
+              <span class="label">Expiration</span>
+              <div id="sq-expiration-date"></div>
+            </div>
+
+            <div class="form-group half">
+              <span class="label">CVV</span>
+              <div id="sq-cvv"></div>
+            </div>
+          </div>
+        </fieldset>
+
+        <fieldset>
+          <div class="form-group">
+            <label for="amount">Amount</label>
+            <input id="amount" type="number" step="any" pattern="[-+]?[0-9]*[.,]?[0-9]+"/>
+          </div>
           
-          <label for="viptix">VIP Tickets Requested</label>
-          <input id="viptix" type="number" />
+          <div class="form-group">
+            <label for="viptix">VIP Tickets Requested</label>
+            <input id="viptix" type="number" />
+          </div>
         </fieldset>
         
-        <fieldset>
-        <span class="label">Card Number</span>
-        <div id="sq-card-number"></div>
-
-        <div class="third">
-          <span class="label">Expiration</span>
-          <div id="sq-expiration-date"></div>
-        </div>
-
-        <div class="third">
-          <span class="label">CVV</span>
-          <div id="sq-cvv"></div>
-        </div>
-
-        <div class="third">
-          <span class="label">Postal</span>
-          <div id="sq-postal-code"></div>
-        </div>
-        </fieldset>
-
         <button id="sq-creditcard" class="button-credit-card button-primary" onclick="requestCardNonce(event)">Sponsor Us</button>
 
         <div id="error"></div>

@@ -2,6 +2,8 @@
 date = "2018-09-22T13:30:14-04:00"
 draft = false
 title = "First Annual Benefit"
+type = "event"
+header_image = "img/mir-concert-full.png"
 eventName = "First Annual Move It Raleigh Benefit Concert"
 location = "Rolesville High School"
 address = "1099 E Young St, Rolesville, NC 27571"

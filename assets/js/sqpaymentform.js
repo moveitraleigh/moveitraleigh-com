@@ -34,12 +34,12 @@ var paymentForm = new SqPaymentForm({
 
   // Customize the CSS for SqPaymentForm iframe elements
   inputStyles: [{
-    fontSize: '16px',
+    fontSize: '18px',
     fontFamily: 'Helvetica Neue',
-    padding: '6px 10px',
+    padding: '0',
     color: '#373F4A',
     backgroundColor: 'transparent',
-    lineHeight: '1.15',
+    lineHeight: '20px',
     placeholderColor: '#CCC',
     _webkitFontSmoothing: 'antialiased',
     _mozOsxFontSmoothing: 'grayscale'
