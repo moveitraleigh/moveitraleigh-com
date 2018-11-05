@@ -74,3 +74,18 @@ $enable-shadows: true !default
 @mixin box-shadow($shadow...)
   @if $enable-shadows
     box-shadow: $shadow
+    
+@mixin border-radius($radius: $border-radius)
+  @if $enable-rounded
+    border-radius: $radius
+
+@mixin gradient-bg($color)
+  background-color: $color
+    
+@mixin alert-variant($background, $border, $color)
+  color: $color
+  +gradient-bg($background)
+  border-color: $border
+    border-top-color: darken($border, 5%)
+  .alert-link
+    color: darken($color, 10%)
