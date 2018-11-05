@@ -795,7 +795,7 @@ main {
   width: calc(4rem - 10px * 1.5);
   margin-right: 5px; }
 
-#form-container #sq-postal-code {
+#form-container #zip {
   width: 5rem; }
 
 #form-container input, #form-container select {
@@ -864,7 +864,7 @@ iframe {
   margin-right: 10px; }
 
 .third .sq-input {
-  width: calc(20rem/3 - 5px);
+  width: calc(20rem/3 - 15px);
   margin-right: 10px; }
 
 .button-credit-card {

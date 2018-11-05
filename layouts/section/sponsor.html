@@ -21,43 +21,44 @@
 <section class="sponsor-form">
   <div id="form-container">
     <div id="sq-ccbox">
-      <form id="nonce-form" novalidate action="/checkout" method="post">
+      <form id="nonce-form" novalidate action="http://localhost:9000/checkout" method="post">
         <fieldset>
           <div class="form-group">
             <label for="donor-name">Name</label>
-            <input id="donor-name" type="text" required />
+            <input id="donor-name" name="donor-name" type="text" value="Brett Lewis" required />
           </div>
           
           <div class="form-group">
-            <label for="donor-name">Business</label>
-            <input id="business" type="text" />
+            <label for="business">Business</label>
+            <input id="business" name="business" type="text" value="My Business" />
           </div>
           
           <div class="form-group">
           <label for="email">Email</label>
-          <input id="email" type="email" required />
+          <input id="email" name="email" type="email" value="brett.lewis@gmail.com" required />
         </div>
         
         <fieldset>
           <div class="form-group">
             <label for="addr1">Address Line 1</label>
-            <input id="addr1" type="text" required />
+            <input id="addr1" name="addr1" type="text" value="3513 E Jameson Rd" required />
           </div>
           
           <div class="form-group">
             <label for="addr2">Address Line 2</label>
-            <input id="addr2" type="text" />
+            <input id="addr2" name="addr2" type="text" value="Suite 300" />
           </div>
           
           <div class="form-flex">
           <div class="form-group">
             <label for="city">City</label>
-            <input id="city" type="text" required />
+            <input id="city" name="city" type="text" value="Raleigh" required />
           </div>
           
           <div class="form-group">            
             <label for="state">State</label>
-            <select id="state">
+            <select id="state" name="state">
+              <option value="--">--</option>
             	<option value="AL">AL</option>
             	<option value="AK">AK</option>
             	<option value="AZ">AZ</option>
@@ -91,7 +92,7 @@
             	<option value="NJ">NJ</option>
             	<option value="NM">NM</option>
             	<option value="NY">NY</option>
-            	<option value="NC">NC</option>
+            	<option selected value="NC">NC</option>
             	<option value="ND">ND</option>
             	<option value="OH">OH</option>
             	<option value="OK">OK</option>
@@ -113,8 +114,8 @@
           </div>
           
           <div class="form-group">
-            <span class="label">ZIP Code</span>
-            <div id="sq-postal-code"></div>
+            <label for="zip">ZIP Code</label>
+            <input id="zip" name="zip" type="text" value="27604" required />
           </div>
         </div>
           
@@ -129,14 +130,19 @@
           </div>
 
           <div class="form-flex">
-            <div class="form-group half">
+            <div class="form-group third">
               <span class="label">Expiration</span>
               <div id="sq-expiration-date"></div>
             </div>
 
-            <div class="form-group half">
+            <div class="form-group third">
               <span class="label">CVV</span>
               <div id="sq-cvv"></div>
+            </div>
+            
+            <div class="form-group third">
+              <span class="label">Postal Code</span>
+              <div id="sq-postal-code"></div>
             </div>
           </div>
         </fieldset>
@@ -144,12 +150,12 @@
         <fieldset>
           <div class="form-group">
             <label for="amount">Amount</label>
-            <input id="amount" type="number" step="any" pattern="[-+]?[0-9]*[.,]?[0-9]+"/>
+            <input id="amount" name="amount" value="75" type="number" step="any" pattern="[-+]?[0-9]*[.,]?[0-9]+"/>
           </div>
           
           <div class="form-group">
             <label for="viptix">VIP Tickets Requested</label>
-            <input id="viptix" type="number" />
+            <input id="viptix" name="viptix" value="2" type="number" />
           </div>
         </fieldset>
         
