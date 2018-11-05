@@ -10,7 +10,12 @@ $alert-border-level: -9 !default
 $alert-color-level: 6 !default
 
 .alert
-  position: relative
+  position: fixed
+  font-size: .9em
+  text-align: center
+  z-index: $zindex-modal
+  left: 15%
+  right: 15%
   padding: $alert-padding-y $alert-padding-x
   margin-bottom: $alert-margin-bottom
   border: $alert-border-width solid transparent
@@ -28,3 +33,15 @@ $alert-color-level: 6 !default
 @each $color, $value in $theme-colors
   .alert-#{$color}
     +alert-variant(theme-color-level($color, $alert-bg-level), theme-color-level($color, $alert-border-level), theme-color-level($color, $alert-color-level))
+
+.fade-in-out
+  opacity: 0
+  animation: fade 8s ease-in-out
+
+@keyframes fade
+  0%,
+  100%
+    opacity: 0
+  20%,
+  30%
+    opacity: 1

@@ -8,8 +8,8 @@ module.exports.handler = (event, context, callback) => {
 
     const formData = JSON.parse(event.body);
     const email = formData.email;
-    const fname = formData.fname;
-    const lname = formData.lname;
+    const first = formData.first;
+    const last = formData.last;
     let errorMessage = null;
 
     if (!formData) {
@@ -34,8 +34,8 @@ module.exports.handler = (event, context, callback) => {
         email_address: email,
         status: "subscribed",
         merge_fields: {
-          FNAME: fname,
-          LNAME: lname
+          FNAME: first,
+          LNAME: last
         }
     };
 
@@ -69,7 +69,7 @@ module.exports.handler = (event, context, callback) => {
                     "Access-Control-Allow-Credentials": "true"
                 },
                 body: JSON.stringify({
-                    status: "saved email"
+                    status: `The email ${email} was added to our mailing list!`
                 })
             })
         } else {
@@ -78,5 +78,4 @@ module.exports.handler = (event, context, callback) => {
         }
 
     });
-    
 };

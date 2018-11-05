@@ -306,6 +306,9 @@ body {
   background-color: #d4d2d6;
   background-image: url(/img/brushed-alum-dark.png); }
 
+.hidden {
+  display: none; }
+
 h1, h2, h3, h4, h5, h6 {
   color: #222;
   font-family: "Kalam", cursive;
@@ -414,10 +417,8 @@ input[type="search"],
 input[type="text"],
 input[type="tel"],
 input[type="url"],
-input[type="password"],
-textarea,
-select {
-  width: 20em;
+input[type="password"], textarea, select {
+  width: 20rem;
   height: 38px;
   padding: 6px 10px;
   background-color: #fff;
@@ -425,6 +426,15 @@ select {
   border-radius: 4px;
   box-shadow: none;
   box-sizing: border-box; }
+  input:focus[type="email"],
+  input:focus[type="number"],
+  input:focus[type="search"],
+  input:focus[type="text"],
+  input:focus[type="tel"],
+  input:focus[type="url"],
+  input:focus[type="password"], textarea:focus, select:focus {
+    border: 1px solid #33C3F0;
+    outline: 0; }
 
 input[type="email"],
 input[type="number"],
@@ -432,28 +442,15 @@ input[type="search"],
 input[type="text"],
 input[type="tel"],
 input[type="url"],
-input[type="password"],
-textarea {
+input[type="password"], select {
   -webkit-appearance: none;
-    -webkit-appearance--moz-appearance: none;
-      -webkit-appearance--moz-appearance-appearance: none; }
+  -moz-appearance: none;
+  appearance: none; }
 
 textarea {
   min-height: 65px;
   padding-top: 6px;
   padding-bottom: 6px; }
-
-input[type="email"]:focus,
-input[type="number"]:focus,
-input[type="search"]:focus,
-input[type="text"]:focus,
-input[type="tel"]:focus,
-input[type="url"]:focus,
-input[type="password"]:focus,
-textarea:focus,
-select:focus {
-  border: 1px solid #33C3F0;
-  outline: 0; }
 
 input[type="checkbox"],
 input[type="radio"] {
@@ -608,7 +605,12 @@ nav {
         padding-right: 10px; } }
 
 .alert {
-  position: relative;
+  position: fixed;
+  font-size: .9em;
+  text-align: center;
+  z-index: 1500;
+  left: 15%;
+  right: 15%;
   padding: 1.25rem 0.75rem;
   margin-bottom: 1rem;
   border: 2px solid transparent;
@@ -683,6 +685,18 @@ nav {
     border-color-border-top-color: #b9bbbe; }
   .alert-dark .alert-link {
     color: #040505; }
+
+.fade-in-out {
+  opacity: 0;
+  animation: fade 8s ease-in-out; }
+
+@keyframes fade {
+  0%,
+  100% {
+    opacity: 0; }
+  20%,
+  30% {
+    opacity: 1; } }
 
 .form-group {
   display: block; }
@@ -773,33 +787,56 @@ main {
       object-fit: cover;
       width: 100vw; }
 
-.sponsor-form #city {
+#form-container #city {
   width: calc(11rem - 10px * 1.5);
   margin-right: 5px; }
 
-.sponsor-form #state {
+#form-container #state {
   width: calc(4rem - 10px * 1.5);
   margin-right: 5px; }
 
-.sponsor-form #sq-postal-code {
+#form-container #sq-postal-code {
   width: 5rem; }
 
-.sponsor-form input, .sponsor-form select {
+#form-container input, #form-container select {
   display: block; }
 
-.sponsor-form label, .sponsor-form .label {
+#form-container label, #form-container .label {
   margin-left: 11px;
   margin-bottom: 0; }
 
-.sponsor-form input, .sponsor-form select, .sponsor-form iframe {
+#form-container input, #form-container select, #form-container iframe {
   margin-left: 10px;
   margin-bottom: 10px; }
 
-.sponsor-form .form-flex label select {
+#form-container .form-flex label select {
   width: 3rem; }
 
-.sponsor-form .sponsor-levels h3 {
-  margin-bottom: 0; }
+.sponsor-levels {
+  margin: 0 10px; }
+  .sponsor-levels h3 {
+    margin-bottom: 0; }
+  .sponsor-levels sub {
+    display: block; }
+  .sponsor-levels dd {
+    margin-left: 20px; }
+    .sponsor-levels dd ul {
+      padding-left: 5px; }
+
+#mc-container {
+  margin: 0 10px; }
+  #mc-container input, #mc-container select {
+    display: block; }
+  #mc-container label, #mc-container .label {
+    margin-left: 11px;
+    margin-bottom: 0; }
+  #mc-container input, #mc-container select, #mc-container iframe {
+    margin-left: 10px;
+    margin-bottom: 10px; }
+  #mc-container button {
+    width: 20rem;
+    margin-top: 10px;
+    margin-left: 10px; }
 
 iframe {
   margin: 0;
@@ -826,10 +863,14 @@ iframe {
   width: calc(10rem - 10px);
   margin-right: 10px; }
 
+.third .sq-input {
+  width: calc(20rem/3 - 5px);
+  margin-right: 10px; }
+
 .button-credit-card {
-  width: 100%;
+  width: 20rem;
   height: 56px;
-  margin-top: 10px;
+  margin: 10px 10px 0;
   background: #4A90E2;
   border-radius: 4px;
   cursor: pointer;

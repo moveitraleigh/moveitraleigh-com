@@ -2,7 +2,7 @@
 
   {{ .Content }}
 
-  <form>
+  <form id="mc-container">
     <div class="form-group">
       <label for="first">First Name</label>
       <input type="text" id="first" />
@@ -15,6 +15,35 @@
       <label for="email">Email Address</label>
       <input type="email" id="email" />
     </div>
-    <button class="button-primary">Join Our Mailing List</button>
+    <button id="joinlist" class="button-primary">Join Our Mailing List</button>
   </form>
+  
+  <script>
+    let first = document.getElementById('first');
+    let last = document.getElementById('last');
+    let email = document.getElementById('email');
+    let button = document.getElementById('joinlist'); 
+    let alert = document.getElementById('notification');   
+    button.addEventListener("click", event => {
+      event.preventDefault();
+      fetch('/signup', {
+        method: 'post',
+        body: JSON.stringify({first: first.value, last: last.value, email: email.value})
+      })
+      .then(response => response.json())
+      .then(data => {
+        first.value = last.value = email.value = '';
+        alert.innerHTML = data.status;
+        alert.classList.add('alert-success');
+        alert.classList.add('fade-in-out');
+        alert.classList.remove('hidden');
+      })
+      .catch(error => {
+        alert.innerHTML = 'The email address could not be added.';
+        alert.classList.add('alert-danger');
+        alert.classList.add('fade-in-out');
+        alert.classList.remove('hidden');
+      });
+    });
+  </script>
 {{ end }}

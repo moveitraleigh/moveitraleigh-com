@@ -18,10 +18,9 @@
         {{ partial "header/site-header.html" . }}
     </header>
     <main>
+      <div id="notification" class="alert hidden" role="alert"></div>
+
       {{ block "main" . }}
-      <div class="alert alert-primary" role="alert">
-        The Concert is Coming! Click here!
-      </div>
         <!-- The part of the page that begins to differ between templates -->
         <img class="full-image" alt="Move It Raleigh" src="/img/moveitbanner2.jpg">
         {{ .Content }}
