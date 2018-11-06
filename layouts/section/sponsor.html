@@ -155,7 +155,19 @@
           
           <div class="form-group" id="form-group-viptix">
             <label for="viptix">VIP Tickets Requested</label>
-            <input id="viptix" name="viptix" type="number" />
+            <select id="viptix" name="viptix">
+              <option value="0">No VIP Tickets</option>
+              <option value="1">1 VIP Ticket</option>
+              <option value="2">2 VIP Tickets</option>
+              <option value="3">3 VIP Tickets</option>
+              <option value="4">4 VIP Tickets</option>
+              <option value="5">5 VIP Tickets</option>
+              <option value="6">6 VIP Tickets</option>
+              <option value="7">7 VIP Tickets</option>
+              <option value="8">8 VIP Tickets</option>
+              <option value="9">9 VIP Tickets</option>
+              <option value="10">10 VIP Tickets</option>
+            </select>
           </div>
         </fieldset>
         
@@ -265,6 +277,17 @@ function setFaded(isFaded) {
   }
 }
 
+function setTickets(numtix) {
+  if (numtix > 0) {
+    vipgroup.classList.add('allowed');
+  } else {
+    vipgroup.classList.remove('allowed');
+  }
+  Array.from(viptix.options).forEach((item) => {
+    item.hidden = (item.value > numtix);
+  })
+}
+
 amount.addEventListener('change', function(event) {
   const value = event.target.valueAsNumber;
   if (value < 50) {
@@ -274,7 +297,7 @@ amount.addEventListener('change', function(event) {
     benefactorSponsor.forEach(setFaded(false));
     outreachSponsor.forEach(setFaded(false));
     productionSponsor.forEach(setFaded(false));
-    vipgroup.classList.remove('allowed');
+    setTickets(0);
   } else if (value < 100) {
     perfSupporter.forEach(setFaded(false));
     perfFriend.forEach(setFaded(true));
@@ -282,7 +305,7 @@ amount.addEventListener('change', function(event) {
     benefactorSponsor.forEach(setFaded(true));
     outreachSponsor.forEach(setFaded(true));
     productionSponsor.forEach(setFaded(true));
-    vipgroup.classList.remove('allowed');
+    setTickets(0);
   } else if (value < 500) {
     perfSupporter.forEach(setFaded(true));
     perfFriend.forEach(setFaded(false));
@@ -290,7 +313,7 @@ amount.addEventListener('change', function(event) {
     benefactorSponsor.forEach(setFaded(true));
     outreachSponsor.forEach(setFaded(true));
     productionSponsor.forEach(setFaded(true));    
-    vipgroup.classList.remove('allowed');
+    setTickets(0);
   } else if (value < 1000) {
     perfSupporter.forEach(setFaded(true));
     perfFriend.forEach(setFaded(true));
@@ -298,7 +321,7 @@ amount.addEventListener('change', function(event) {
     benefactorSponsor.forEach(setFaded(true));
     outreachSponsor.forEach(setFaded(true));
     productionSponsor.forEach(setFaded(true));    
-    vipgroup.classList.add('allowed');
+    setTickets(4);
   } else if (value < 3000) {
     perfSupporter.forEach(setFaded(true));
     perfFriend.forEach(setFaded(true));
@@ -306,7 +329,7 @@ amount.addEventListener('change', function(event) {
     benefactorSponsor.forEach(setFaded(false));
     outreachSponsor.forEach(setFaded(true));
     productionSponsor.forEach(setFaded(true));    
-    vipgroup.classList.add('allowed');
+    setTickets(6);
   } else if (value < 5000) {
     perfSupporter.forEach(setFaded(true));
     perfFriend.forEach(setFaded(true));
@@ -314,7 +337,7 @@ amount.addEventListener('change', function(event) {
     benefactorSponsor.forEach(setFaded(true));
     outreachSponsor.forEach(setFaded(false));
     productionSponsor.forEach(setFaded(true));    
-    vipgroup.classList.add('allowed');
+    setTickets(8);
   } else {
     perfSupporter.forEach(setFaded(true));
     perfFriend.forEach(setFaded(true));
@@ -322,7 +345,7 @@ amount.addEventListener('change', function(event) {
     benefactorSponsor.forEach(setFaded(true));
     outreachSponsor.forEach(setFaded(true));
     productionSponsor.forEach(setFaded(false));    
-    vipgroup.classList.add('allowed');
+    setTickets(10);
   }
 });
 </script>
