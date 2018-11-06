@@ -266,10 +266,7 @@ function setFaded(isFaded) {
 }
 
 amount.addEventListener('change', function(event) {
-  console.dir(event);
-  console.dir(viptix);
   const value = event.target.valueAsNumber;
-  console.log(value);
   if (value < 50) {
     perfSupporter.forEach(setFaded(false));
     perfFriend.forEach(setFaded(false));
