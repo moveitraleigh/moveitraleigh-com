@@ -309,6 +309,9 @@ body {
 .hidden {
   display: none; }
 
+.isFaded {
+  opacity: .4; }
+
 h1, h2, h3, h4, h5, h6 {
   color: #222;
   font-family: "Kalam", cursive;
@@ -731,6 +734,14 @@ nav {
   display: inline-block;
   margin-left: .5rem;
   font-weight: normal; }
+
+#form-group-viptix {
+  display: none;
+  height: 0;
+  transition: height .3s ease-in-out; }
+  #form-group-viptix.allowed {
+    display: block;
+    height: 4em; }
 
 header {
   display: flex;

@@ -153,7 +153,7 @@
             <input id="amount" name="amount" type="number" step="any" pattern="[-+]?[0-9]*[.,]?[0-9]+"/>
           </div>
           
-          <div class="form-group">
+          <div class="form-group" id="form-group-viptix">
             <label for="viptix">VIP Tickets Requested</label>
             <input id="viptix" name="viptix" type="number" />
           </div>
@@ -242,6 +242,90 @@ document.addEventListener("DOMContentLoaded", function(event) {
   if (SqPaymentForm.isSupportedBrowser()) {
     paymentForm.build();
     paymentForm.recalculateSize();
+  }
+});
+const amount = document.getElementById('amount');
+const viptix = document.getElementById('viptix');
+const vipgroup = document.getElementById('form-group-viptix');
+
+const perfSupporter = Array.from(document.getElementsByClassName('perf-supporter'));
+const perfFriend = Array.from(document.getElementsByClassName('perf-friend'));
+const perfPartner = Array.from(document.getElementsByClassName('perf-partner'));
+const benefactorSponsor = Array.from(document.getElementsByClassName('benefactor-sponsor'));
+const outreachSponsor = Array.from(document.getElementsByClassName('outreach-sponsor'));
+const productionSponsor = Array.from(document.getElementsByClassName('production-sponsor'));
+
+function setFaded(isFaded) {
+  return function (item) {
+    if (isFaded) {
+      item.classList.add('isFaded');
+    } else {
+      item.classList.remove('isFaded')
+    }
+  }
+}
+
+amount.addEventListener('change', function(event) {
+  console.dir(event);
+  console.dir(viptix);
+  const value = event.target.valueAsNumber;
+  console.log(value);
+  if (value < 50) {
+    perfSupporter.forEach(setFaded(false));
+    perfFriend.forEach(setFaded(false));
+    perfPartner.forEach(setFaded(false));
+    benefactorSponsor.forEach(setFaded(false));
+    outreachSponsor.forEach(setFaded(false));
+    productionSponsor.forEach(setFaded(false));
+    vipgroup.classList.remove('allowed');
+  } else if (value < 100) {
+    perfSupporter.forEach(setFaded(false));
+    perfFriend.forEach(setFaded(true));
+    perfPartner.forEach(setFaded(true));
+    benefactorSponsor.forEach(setFaded(true));
+    outreachSponsor.forEach(setFaded(true));
+    productionSponsor.forEach(setFaded(true));
+    vipgroup.classList.remove('allowed');
+  } else if (value < 500) {
+    perfSupporter.forEach(setFaded(true));
+    perfFriend.forEach(setFaded(false));
+    perfPartner.forEach(setFaded(true));
+    benefactorSponsor.forEach(setFaded(true));
+    outreachSponsor.forEach(setFaded(true));
+    productionSponsor.forEach(setFaded(true));    
+    vipgroup.classList.remove('allowed');
+  } else if (value < 1000) {
+    perfSupporter.forEach(setFaded(true));
+    perfFriend.forEach(setFaded(true));
+    perfPartner.forEach(setFaded(false));
+    benefactorSponsor.forEach(setFaded(true));
+    outreachSponsor.forEach(setFaded(true));
+    productionSponsor.forEach(setFaded(true));    
+    vipgroup.classList.add('allowed');
+  } else if (value < 3000) {
+    perfSupporter.forEach(setFaded(true));
+    perfFriend.forEach(setFaded(true));
+    perfPartner.forEach(setFaded(true));
+    benefactorSponsor.forEach(setFaded(false));
+    outreachSponsor.forEach(setFaded(true));
+    productionSponsor.forEach(setFaded(true));    
+    vipgroup.classList.add('allowed');
+  } else if (value < 5000) {
+    perfSupporter.forEach(setFaded(true));
+    perfFriend.forEach(setFaded(true));
+    perfPartner.forEach(setFaded(true));
+    benefactorSponsor.forEach(setFaded(true));
+    outreachSponsor.forEach(setFaded(false));
+    productionSponsor.forEach(setFaded(true));    
+    vipgroup.classList.add('allowed');
+  } else {
+    perfSupporter.forEach(setFaded(true));
+    perfFriend.forEach(setFaded(true));
+    perfPartner.forEach(setFaded(true));
+    benefactorSponsor.forEach(setFaded(true));
+    outreachSponsor.forEach(setFaded(true));
+    productionSponsor.forEach(setFaded(false));    
+    vipgroup.classList.add('allowed');
   }
 });
 </script>
