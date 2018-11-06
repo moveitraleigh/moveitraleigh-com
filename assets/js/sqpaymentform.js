@@ -104,22 +104,50 @@ var paymentForm = new SqPaymentForm({
      * Triggered when: SqPaymentForm completes a card nonce request
      */
     cardNonceResponseReceived: function (errors, nonce, cardData) {
-      if (errors) {
-        // Log errors from nonce generation to the Javascript console
-        console.log("Encountered errors:");
-        errors.forEach(function (error) {
-          console.log('  ' + error.message);
-          alert(error.message);
-        });
+      const alert = document.getElementById('notification');   
+      const formFields = {
+        donorName: document.getElementById('donorName'),
+        business: document.getElementById('business'),
+        email: document.getElementById('email'),
+        addr1: document.getElementById('addr1'),
+        addr2: document.getElementById('addr2'),
+        city: document.getElementById('city'),
+        state: document.getElementById('state'),
+        zip: document.getElementById('zip'),
+        amount: document.getElementById('amount'),
+        viptix: document.getElementById('viptix'),
+        nonce: document.getElementById('card-nonce')
+      };
 
-        return;
-      }
       // Assign the nonce value to the hidden form field
-      document.getElementById('card-nonce').value = nonce;
-
-      // POST the nonce form to the payment processing page
-      document.getElementById('nonce-form').submit();
-
+      formFields.nonce.value = nonce;
+      
+      fetch('http://localhost:9000/checkout', {
+        method: 'post',
+        body: JSON.stringify({
+          donorName: formFields.donorName.value,
+          business: formFields.business.value,
+          email: formFields.email.value,
+          addr1: formFields.addr1.value,
+          addr2: formFields.addr2.value,
+          city: formFields.city.value,
+          state: formFields.state.value,
+          zip: formFields.zip.value,
+          amount: formFields.amount.value,
+          viptix: formFields.viptix.value,
+          nonce: formFields.nonce.value
+        })
+      })
+      .then(data => {
+        donorName.value = business.value = email.value = addr1.value = addr2.value = city.value = state.value = zip.value = amount.value = viptix.value = '';
+        window.location.replace('/sponsor/thankyou');
+      })
+      .catch(error => {
+        alert.innerHTML = 'Something went wrong. Please try again.';
+        alert.classList.add('alert-danger');
+        alert.classList.add('fade-in-out');
+        alert.classList.remove('hidden');
+      });
     },
 
     /*
@@ -164,7 +192,6 @@ var paymentForm = new SqPaymentForm({
      */
     paymentFormLoaded: function () {
       /* HANDLE AS DESIRED */
-      console.log("The form loaded!");
     }
   }
 });

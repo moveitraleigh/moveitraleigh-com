@@ -1,33 +1,35 @@
-const nodemailer = require('nodemailer');
+import nodemailer from 'nodemailer';
 
-exports.handler = function(event, context, callback) {
-    const fromEmail = process.env[`${BRANCH_ENV}_GMAIL_LOGIN`];
+const userEmail = 'sysadmin@moveitraleigh.com';
+const serviceClient = process.env[`${BRANCH_ENV}_GMAIL_CLIENT_ID`];
+const privateKey = process.env[`${BRANCH_ENV}_GMAIL_PRIVATE_KEY`].replace(/\\n/g, "\n");
+
+exports.handler = async function(event, context) {
     let transporter = nodemailer.createTransport({
         host: 'smtp.gmail.com',
         port: 465,
         secure: true,
+        logger: true,
         auth: {
             type: 'OAuth2',
-            user: fromEmail,
-            serviceClient: process.env[`${BRANCH_ENV}_GMAIL_CLIENT_ID`],
-            privateKey: process.env[`${BRANCH_ENV}_GMAIL_PRIVATE_KEY`]
+            user: userEmail,
+            serviceClient,
+            privateKey
         }
     });
-    console.log(event.body);
 
-    transporter.sendMail({
-        from: fromEmail,
-        to: process.env.MAIL_TO,
-        subject: process.env.SUBJECT + new Date().toLocaleString(),
-        text: event.body
-    }, function(error, info) {
-    	if (error) {
-    		callback(error);
-    	} else {
-    		callback(null, {
-			    statusCode: 200,
-			    body: "Ok"
-	    	});
-    	}
+    transporter.verify(function(error, success) {
+      if (error) {
+        console.log(error);
+      } else {
+        console.log('Server is ready to take our messages');
+      }
     });
+    
+    return transporter.sendMail({
+        from: userEmail,
+        to: 'brett.lewis@gmail.com',
+        subject: 'My subject',
+        text: 'the text of the body'
+    }).then(data => ({statusCode: 200, body: JSON.stringify(data)}));
 }

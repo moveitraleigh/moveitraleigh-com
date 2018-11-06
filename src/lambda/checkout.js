@@ -2,82 +2,26 @@
 
 import SquareConnect from 'square-connect';
 import uuid from 'uuid';
-import querystring from 'querystring';
-import { google } from 'googleapis';
-import nodemailer from 'nodemailer';
+import Emailer from '../svc/email.js';
 
 const defaultClient = SquareConnect.ApiClient.instance;
+const emailer = new Emailer();
 
 const oauth2 = defaultClient.authentications['oauth2'];
 oauth2.accessToken = process.env[`${BRANCH_ENV}_SQUARE_ACCESS_TOKEN`];
  
 const locationId = process.env[`${BRANCH_ENV}_SQUARE_LOC_ID`];
 
-// const clientEmail = process.env[`${BRANCH_ENV}_GMAIL_WSLOGIN`];
-const fromEmail = process.env[`${BRANCH_ENV}_GMAIL_LOGIN`];
-const clientId = process.env[`${BRANCH_ENV}_GMAIL_CLIENT_ID`];
-const privateKey = process.env[`${BRANCH_ENV}_GMAIL_PRIVATE_KEY`].replace(/\\n/g, "\n");
-
-// const jwtClient = new google.auth.JWT(
-//   clientEmail,
-//   null,
-//   privateKey,
-//   ['https://www.googleapis.com/auth/gmail.compose'],
-//   fromEmail
-// );
-
-function sendMail (toEmail, subject, body) {
-    // jwtClient.authorize(function(error, token) {
-    //   if (error) {
-    //     console.log(error);
-    //     return Promise.reject(error);
-    //   }
-    // 
-      const transporter = nodemailer.createTransport({
-        host: 'smtp.gmail.com',
-        port: 465,
-        secure: true,
-        auth: {
-          type: 'OAuth2',
-          user: fromEmail,
-          serviceClient: clientId,
-          privateKey: privateKey
-        }
-      });
-      
-      transporter.verify(function(error, success) {
-        if (error) {
-          console.log(error);
-        } else {
-          console.log('Server is ready to take our messages');
-        }
-      });
-      
-      return transporter.sendMail({
-          from: fromEmail,
-          to: toEmail,
-          subject: subject,
-          text: body
-      });
-    // })
-}
-
-exports.handler = async function(event, context) {
-  
+exports.handler = function(event, context, callback) {
     // Only allow POST
     if (event.httpMethod !== 'POST') {
-        return { statusCode: 405, body: 'Method Not Allowed' };
+        callback({ statusCode: 405, body: 'Method Not Allowed' }, null);
     }
 
     // When the method is POST, the name will no longer be in the event’s
     // queryStringParameters – it’ll be in the event body encoded as a query string
-    const params = querystring.parse(event.body);
+    const params = JSON.parse(event.body);
     
-    const sponsorBody = 'Hey man, thank you!';
-    return sendMail(params.email, 'Thank you from Move It Raleigh!', sponsorBody)
-      .then(() => ({ statusCode: 200, body: 'Hey there!' }))
-      .catch(error => ({ statusCode: 500, body: JSON.stringify(error) }));
-
     const buyerInfo = {
         buyer_email_address: params.email,
         billing_address: {
@@ -107,18 +51,46 @@ exports.handler = async function(event, context) {
     };
 
     const transactionInfo = Object.assign({}, buyerInfo, paymentInfo, referenceInfo);
-
     const api = new SquareConnect.TransactionsApi();
 
-    return api.charge(locationId, transactionInfo)
+    const sponsorEmailOptions = {
+      to: params.email,
+      subject: 'Thank You from Move It Raleigh!',
+      html: '<p>Move It Raleigh would like to thank you for your generous donation.</p>'
+    }
+
+    const mirEmailOptions = {
+      to: 'brett.lewis@gmail.com',
+      subject: 'New Sponsor for Move It Raleigh',
+      text: `
+        Name: ${params.donorName}
+        Business: ${params.business}
+        Email: ${params.email}
+        Address 1: ${params.addr1}
+        Address 2: ${params.addr2}
+        City: ${params.city}
+        State: ${params.state}
+        ZIP: ${params.zip}
+        Amount: ${params.amount}
+        VIP Tickets Requested: ${params.viptix}
+      `
+    }
+
+    api.charge(locationId, transactionInfo)
         .then((data) => {
-          const sponsorBody = 'Hey man, thank you!';
-          sendMail(params.email, 'Thank you from Move It Raleigh!', sponsorBody);
-          return {statusCode: 200, body: JSON.stringify(data)};
+          console.log(data);
+          emailer.send(sponsorEmailOptions);
+          emailer.send(mirEmailOptions);
+          callback(null, {
+            statusCode: 200, 
+            headers: {
+                "Content-Type": "application/json",
+                "Access-Control-Allow-Origin": "*",
+                "Access-Control-Allow-Credentials": "true"
+            },
+            body: JSON.stringify(data)});
         })
         .catch((error) => {
-          const sponsorBody = 'Hey man, did not work!';
-          sendMail(params.email, 'Thank you from Move It Raleigh!', sponsorBody);
-          return {statusCode: 500, body: JSON.stringify(error)}
+          callback({statusCode: 500, body: JSON.stringify(error)}, null);
         });
 };
