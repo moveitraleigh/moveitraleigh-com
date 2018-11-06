@@ -1,12 +1,13 @@
 <nav>
-  <label for="tm" id="toggle-menu">Navigation <span class="drop-icon">▾</span></label>
+  <!-- <label for="tm" id="toggle-menu">Navigation <span class="drop-icon">▾</span></label> -->
   <input type="checkbox" id="tm">
+  <label for="tm" id="toggle-menu"><span></span><span></span><span></span></label>
   <ul class="main-menu clearfix">
     {{ $currentPage := . }}
       {{ range .Site.Menus.main }}
         {{ if .HasChildren }}
-          <li class="{{ if $currentPage.HasMenuCurrent "main" . }}active{{ end }}">
-            <a href="#">
+          <li{{ if $currentPage.HasMenuCurrent "main" . }} class="active"{{ end }}>
+            <a href="{{ if .URL }}{{ .URL }}{{ else }}#{{ end }}">
               {{ .Pre }}
               <span class="nav-item">{{ .Name }}</span>
               <span class="drop-icon">▾</span>
@@ -23,7 +24,7 @@
           </li>
         {{ else }}
           <li>
-            <a href="{{ .URL }}">
+            <a href="{{ .URL }}"{{ if eq .Identifier "donate" }} class="butn"{{ end }}>
               {{ .Pre }}
               <span class="nav-item">{{ .Name }}</span>
             </a>

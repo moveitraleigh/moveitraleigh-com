@@ -8,6 +8,8 @@
     {{ if eq .URL "/" }}<title>{{ .Site.Title }}</title>{{ else }}<title>{{ .Site.Title }} - {{ .Title }}</title>{{ end }}
     {{ with .Description }}<meta name="description" content="{{ . }}">{{ end }}
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    {{ template "_internal/opengraph.html" . }}
+    {{ template "_internal/twitter_cards.html" . }}
     <link href="https://fonts.googleapis.com/css?family=Kalam:400,700" rel="stylesheet">
     <link href="{{ $main.RelPermalink }}" rel="stylesheet">
   </head>
@@ -16,6 +18,8 @@
         {{ partial "header/site-header.html" . }}
     </header>
     <main>
+      <div id="notification" class="alert hidden" role="alert"></div>
+
       {{ block "main" . }}
         <!-- The part of the page that begins to differ between templates -->
         <img class="full-image" alt="Move It Raleigh" src="/img/moveitbanner2.jpg">
@@ -24,11 +28,10 @@
     </main>
     <footer>
       {{ block "footer" . }}
-        <small class="copy">&copy; {{ now.Format "2006"}} Move It Raleigh - <a href="mailto:info@moveitraleigh.com">Contact Us</a></small>
-        <span>
-        </span>
+        {{ partial "footer/site-footer.html" . }}
       {{ end }}
     </footer>
     <script src="/js/scroll.js" async defer></script>
+    {{ template "_internal/google_analytics_async.html" . }} 
   </body>
 </html>

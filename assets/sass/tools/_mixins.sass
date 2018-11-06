@@ -45,3 +45,47 @@
   @else if $point == baby-bear
     @media (min-width: $media-mobile)
       @content
+
+// Button sizes
+$enable-rounded: true !default
+@mixin button-size($padding-y, $padding-x, $font-size, $line-height, $border-radius)
+  padding: $padding-y $padding-x
+  font-size: $font-size
+  line-height: $line-height
+  @if $enable-rounded
+    border-radius: $border-radius
+  @else
+    border-radius: 0
+
+$enable-transitions: true !default
+$enable-prefers-reduced-motion-media-query: true !default
+@mixin transition($transition...)
+  @if $enable-transitions
+    @if length($transition) == 0
+      transition: $transition-base
+    @else
+      transition: $transition
+
+  @if $enable-prefers-reduced-motion-media-query
+    @media screen and (prefers-reduced-motion: reduce)
+      transition: none
+
+$enable-shadows: true !default
+@mixin box-shadow($shadow...)
+  @if $enable-shadows
+    box-shadow: $shadow
+    
+@mixin border-radius($radius: $border-radius)
+  @if $enable-rounded
+    border-radius: $radius
+
+@mixin gradient-bg($color)
+  background-color: $color
+    
+@mixin alert-variant($background, $border, $color)
+  color: $color
+  +gradient-bg($background)
+  border-color: $border
+    border-top-color: darken($border, 5%)
+  .alert-link
+    color: darken($color, 10%)

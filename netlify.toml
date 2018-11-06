@@ -1,0 +1,22 @@
+[build]
+  functions = "lambda"
+  command = "hugo && npm run build:lambda"
+
+[context.production.environment]
+  BRANCH_ENV = "prod"
+
+[context.staging.environment]
+  BRANCH_ENV = "staging"
+
+[context.phase3.environment]
+  BRANCH_ENV = "staging"
+  
+[[redirects]]
+  from = "/checkout"
+  to = "/.netlify/functions/checkout"
+  status = 200
+
+[[redirects]]
+  from = "/signup"
+  to = "/.netlify/functions/signup"
+  status = 200

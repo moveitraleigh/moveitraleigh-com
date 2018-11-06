@@ -20,77 +20,28 @@
 /*-------------------------------------*/
 // GRID
 // Grid: Gutters
-$grid-gutter: 10px
+// $grid-gutter: 10px
 
 /*-------------------------------------*/
 // MEDIA QUERIES
 
 $media-desktop: 960px
-$media-tablet:  720px
+$media-tablet:  768px
 $media-mobile:  480px
 
 /*-------------------------------------*/
 // DIMENSIONS: WIDTHS, HEIGHTS
 
 // Header: Height
-$height-header: 45px
-$header-vpad: 16px
-$header-hpad: 24px
+$height-header: 100px
+$vpad-header: 16px
+$hpad-header: 10px
 
 // Nav Menu:
 $height-nav: 800px
 
 // Footer: Height
 $height-footer: 100px
-
-/*-------------------------------------*/
-// COLORS
-
-// Colors: Brand
-$color-brand-1: #7dcfb8
-
-// Colors: White
-$titanium-white: #fff
-$linen: #f2ebd3
-$bone: #e7dfcc
-$ivory: #fef7e5
-$cotton: #fbfcf7
-
-// Colors: Common: Greys
-$grey-coal: #222
-$grey-gravel: #444
-$grey-gandalf: #aaa
-$grey-newgandalf: #bbb
-
-// Colors: Common: Cool
-$blue-light-steel: 	#b0c4de
-$blue-vivid: #09f
-$blue-arctic: #a0dbe3
-
-// Colors: Common: Warm
-$orange-rust: #8c4005
-$orange-cider: #b66827
-$orange-cantaloupe: #fca172
-
-// Colors: Brands for Social Media
-$blue-facebook: #3b5998
-$blue-twitter: #55acee
-$blue-vimeo: #1ab7ea
-$red-youtube: #cd201f
-
-// Colors: Links
-$color-link: $blue-vivid
-$color-link-hover: darken($color-link, 12%)
-
-// Colors: Base Font
-$color-font-base: $grey-gravel
-$color-head-base: $grey-coal
-
-$color-nav-base: $bone
-$color-nav-sub: $ivory
-
-// Colors: Background
-$color-background: #d4d2d6
 
 /*-------------------------------------*/
 // FONTS
@@ -131,7 +82,11 @@ $font-lg-x: 120%
 
 // Timings
 $timing-fast: 400ms
-$nav-mobile-transition: all .125s ease-in-out
+$nav-mobile-transition: all 0.35s ease-in-out
+$nav-hover-transition: all 0.25s ease-in-out
+$alert-transition: all 1s ease-in-out
+$menu-toggle-transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0), background 0.5s cubic-bezier(0.77,0.2,0.05,1.0), opacity 0.55s ease
+
 /*-------------------------------------*/
 // FONT-ICONS: FAMILY
 
@@ -149,9 +104,14 @@ $spacing-half:   $spacing / 2
 /*-------------------------------------*/
 // Z:INDEX
 
+$zindex-footer:     -1000
 $zindex-header:      1000
 $zindex-nav:         1100
 $zindex-dropdown:    1200
 $zindex-toggle:      1300
 $zindex-notify:      1400
 $zindex-modal:       1500
+
+$border-radius: 4px !default
+$border-radius-lg: 6px !default
+$border-radius-sm: 3px !default

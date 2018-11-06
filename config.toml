@@ -2,6 +2,21 @@ baseURL = "https://moveitraleigh.com/"
 languageCode = "en-us"
 title = "Move It Raleigh"
 
+[blackfriday]
+  hrefTargetBlank = true
+
+[params]
+  description = "Text about my cool site"
+  images = ["site-feature-image.jpg"]
+  title = "My cool site"
+  header_image = "img/mir-full.png"
+
+[taxonomies]
+  series = "series"
+  event = "events"
+  tag = "tags"
+  category = "categories"
+    
 [menu]
   [[menu.main]]
     identifier = "about"
@@ -18,43 +33,59 @@ title = "Move It Raleigh"
     weight = -100
     
   [[menu.main]]
-    identifier = "giving"
-    name = "How To Give"
+    identifier = "concert"
+    name = "Benefit Concert"
     title = "how to give title"
-    url = "/giving/"
+    url = "/events/1st-annual-benefit"
     weight = -90
 
   [[menu.main]]
-    identifier = "news-media"
-    name = "News & Media"
-    title = "news media title"
-    url = "/news-media/"
-    weight = -80
-    
-  [[menu.main]]
-    identifier = "news"
-    name = "News"
-    parent = "news-media"
-    url = "/news/"
-    weight = -79
+    identifier = "sponsor"
+    parent = "concert"
+    name = "How To Give"
+    title = "how to give title"
+    url = "/sponsor"
+    weight = -89
 
-  [[menu.main]]
-    identifier = "press"
-    name = "Press Releases"
-    parent = "news-media"
-    url = "/press/"
-    weight = -79
 
+  # [[menu.main]]
+  #   identifier = "news-media"
+  #   name = "News & Media"
+  #   title = "news media title"
+  #   url = "/news-media/"
+  #   weight = -80
+  # 
+  # [[menu.main]]
+  #   identifier = "news"
+  #   name = "News"
+  #   parent = "news-media"
+  #   url = "/news/"
+  #   weight = -79
+  # 
+  # [[menu.main]]
+  #   identifier = "press"
+  #   name = "Press Releases"
+  #   parent = "news-media"
+  #   url = "/press/"
+  #   weight = -79
+  # 
+  # [[menu.main]]
+  #   identifier = "media"
+  #   name = "Media"
+  #   parent = "news-media"
+  #   url = "/media/"
+  #   weight = -77
+  # 
   [[menu.main]]
-    identifier = "media"
-    name = "Media"
-    parent = "news-media"
-    url = "/media/"
-    weight = -77
+    identifier = "connect"
+    name = "Connect"
+    title = "Connect With Us"
+    url = "/connect"
+    weight = -70
 
   [[menu.main]]
     identifier = "donate"
     name = "Donate"
     title = "donate title"
-    url = "/donate/"
-    weight = -70
+    url = "/donate"
+    weight = -60

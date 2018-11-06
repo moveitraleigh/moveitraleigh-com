@@ -1,0 +1,21 @@
+html
+  @if variable-exists(custom-font)
+    font: #{$font-weight} #{$font-percent + "%"}/#{$line-height} #{$custom-font}, #{$font-family-1}
+  @else
+    font: #{$font-weight} #{$font-percent + "%"}/#{$line-height} #{$font-family-1}    
+  height: 100%
+
+body
+  @extend %breakword
+  color: $color-font-base
+  height: 100%
+  font-weight: $font-light
+  min-height: 100vh
+  @if variable-exists(background-img)
+    background: #{$color-background} url(#{$background-img})
+  @else
+    background-color: $color-background
+    background-image: url(/img/brushed-alum-dark.png)
+
+.hidden
+  display: none

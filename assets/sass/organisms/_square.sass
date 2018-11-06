@@ -1,0 +1,69 @@
+iframe
+  margin: 0
+  padding: 0
+  border: 0
+
+/* Define how SqPaymentForm iframes should look */
+.sq-input
+  width: 20rem
+  height: 38px
+  padding: 6px 10px
+  background-color: #fff
+  border: 1px solid #D1D1D1
+  border-radius: 4px
+  box-shadow: none
+  box-sizing: border-box
+  font-size: 18px  
+  // box-sizing: border-box
+  // border: 1px solid #E0E2E3
+  // border-radius: 4px
+  // outline-offset: -2px
+  // display: inline-block
+  // -webkit-transition: border-color .2s ease-in-out, background .2s ease-in-out
+  //    -moz-transition: border-color .2s ease-in-out, background .2s ease-in-out
+  //     -ms-transition: border-color .2s ease-in-out, background .2s ease-in-out
+  //         transition: border-color .2s ease-in-out, background .2s ease-in-out
+  &--focus
+    border: 1px solid #4A90E2
+  &--error
+    border: 1px solid #E02F2F
+
+.half
+  .sq-input
+    width: calc(10rem - 10px)
+    margin-right: 10px
+
+.third
+  .sq-input
+    width: calc(20rem/3 - 15px)
+    margin-right: 10px
+
+.button-credit-card
+  width: 20rem
+  height: 56px
+  margin: $spacing $spacing 0
+  background: #4A90E2
+  border-radius: 4px
+  cursor: pointer
+  display: block
+  color: #FFFFFF
+  font-size: 16px
+  line-height: 24px
+  font-weight: 700
+  letter-spacing: 0
+  text-align: center
+  -webkit-transition: background .2s ease-in-out
+  -moz-transition: background .2s ease-in-out
+  -ms-transition: background .2s ease-in-out
+  transition: background .2s ease-in-out
+  &:hover
+    background-color: #4281CB
+
+#error
+  width: 100%
+  margin-top: 16px
+  font-size: 14px
+  color: red
+  font-weight: 500
+  text-align: center
+  opacity: 0.8
