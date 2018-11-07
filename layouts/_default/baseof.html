@@ -1,4 +1,4 @@
-{{ $mainOptions := (dict "targetPath" "css/main.css" "outputStyle" "nested" "enableSourceMap" false ) }}
+{{ $mainOptions := (dict "targetPath" "css/main.css" "outputStyle" "compressed" "enableSourceMap" false ) }}
 {{ $main := resources.Get "sass/main.sass" | resources.ToCSS $mainOptions }}
 <!doctype html>
 <html lang="en-us">
