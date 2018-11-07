@@ -356,10 +356,11 @@ h6 {
   margin-bottom: 2.75rem; }
 
 a {
-  text-decoration: none; }
+  text-decoration: none;
+  color: #0074c2; }
   a:hover, a:focus {
     text-decoration: underline; }
-  a, a:visited, a:focus, a:hover, a:active {
+  a:visited, a:focus, a:hover, a:active {
     color: #0074c2; }
 
 hr {
