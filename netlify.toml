@@ -1,5 +1,6 @@
 [build]
-  command = "hugo"
+  functions = "lambda"
+  command = "hugo && npm run build:lambda"
 
 [context.production.environment]
   BRANCH_ENV = "prod"
