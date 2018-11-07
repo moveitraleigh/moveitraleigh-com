@@ -1,5 +1,5 @@
 [build]
-#  functions = "lambda"
+  functions = "./lambda"
   command = "hugo && npm run build:lambda"
 #  command = "hugo"
 
