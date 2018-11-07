@@ -789,7 +789,7 @@ header {
     header.sticky-header + main {
       top: 100px; }
     header.sticky-header ~ footer {
-      padding-top: 100px; }
+      margin-top: 100px; }
 
 main {
   height: auto; }
