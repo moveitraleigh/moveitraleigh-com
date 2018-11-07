@@ -79,7 +79,7 @@ abbr[title] {
  */
 b,
 strong {
-  font-weight: bolder; }
+  font-weight: 700; }
 
 /**
  * 1. Correct the inheritance and scaling of font size in all browsers.
@@ -281,21 +281,21 @@ template {
   display: none; }
 
 @font-face {
-  font-family: 'Kalam';
+  font-family: 'Economica';
   font-style: normal;
   font-weight: 400;
-  src: local("Kalam"), local("Kalam-Regular"), url(https://fonts.gstatic.com/s/kalam/v8/YA9dr0Wd4kDdMthROCfhsCkA.woff2) format("woff2");
+  src: local("Economica"), local("Economica-Regular"), url(https://fonts.gstatic.com/s/economica/v5/Qw3fZQZaHCLgIWa29ZBbNsIBIF51fA.woff2) format("woff2");
   unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }
 
 @font-face {
-  font-family: 'Kalam';
+  font-family: 'Economica';
   font-style: normal;
   font-weight: 700;
-  src: local("Kalam Bold"), local("Kalam-Bold"), url(https://fonts.gstatic.com/s/kalam/v8/YA9Qr0Wd4kDdMtDqHTLMkiQqtbGs.woff2) format("woff2");
+  src: local("Economica Bold"), local("Economica-Bold"), url(https://fonts.gstatic.com/s/economica/v5/Qw3aZQZaHCLgIWa29ZBTjecUDXx4Vn8sig.woff2) format("woff2");
   unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }
 
 html {
-  font: normal 112.5%/1.65 Helvetica, Arial, sans-serif;
+  font: normal 125%/1.65 Economica, Helvetica, Arial, sans-serif;
   height: 100%; }
 
 body {
@@ -314,46 +314,46 @@ body {
 
 h1, h2, h3, h4, h5, h6 {
   color: #222;
-  font-family: "Kalam", cursive;
+  font-family: "Economica", Helvetica, Arial, sans-serif;
   text-rendering: optimizeLegibility;
   line-height: 1;
   margin-top: 0; }
 
 h1 {
   font-size: 32px;
-  font-size: 1.77777778 rem;
-  margin-bottom: 16.70625px;
-  margin-bottom: 0.928125rem; }
+  font-size: 1.6 rem;
+  margin-bottom: 20.625px;
+  margin-bottom: 1.03125rem; }
 
 h2 {
   font-size: 28px;
-  font-size: 1.55555556 rem;
-  margin-bottom: 19.09285714px;
-  margin-bottom: 1.06071429rem; }
+  font-size: 1.4 rem;
+  margin-bottom: 23.57142857px;
+  margin-bottom: 1.17857143rem; }
 
 h3 {
   font-size: 22px;
-  font-size: 1.22222222 rem;
-  margin-bottom: 24.3px;
-  margin-bottom: 1.35rem; }
+  font-size: 1.1 rem;
+  margin-bottom: 30px;
+  margin-bottom: 1.5rem; }
 
 h4 {
   font-size: 20px;
-  font-size: 1.11111111 rem;
-  margin-bottom: 26.73px;
-  margin-bottom: 1.485rem; }
+  font-size: 1 rem;
+  margin-bottom: 33px;
+  margin-bottom: 1.65rem; }
 
 h5 {
   font-size: 16px;
-  font-size: 0.88888889 rem;
-  margin-bottom: 33.4125px;
-  margin-bottom: 1.85625rem; }
+  font-size: 0.8 rem;
+  margin-bottom: 41.25px;
+  margin-bottom: 2.0625rem; }
 
 h6 {
   font-size: 12px;
-  font-size: 0.66666667 rem;
-  margin-bottom: 44.55px;
-  margin-bottom: 2.475rem; }
+  font-size: 0.6 rem;
+  margin-bottom: 55px;
+  margin-bottom: 2.75rem; }
 
 a {
   text-decoration: none; }
@@ -465,7 +465,7 @@ fieldset {
   border-width: 0; }
 
 nav {
-  font-family: "Kalam", cursive;
+  font-family: "Economica", Helvetica, Arial, sans-serif;
   background-color: #e7dfcc;
   overflow-y: scroll;
   z-index: 1100; }
@@ -909,7 +909,6 @@ iframe {
   opacity: 0.8; }
 
 footer {
-  z-index: -1000;
   display: flex;
   flex-direction: row;
   justify-content: space-between;

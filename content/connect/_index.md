@@ -9,7 +9,6 @@ title = "Stay Connected"
 
 Check us out on social media.
 
- - Facebook Link
- - Instagram Link
+ - Facebook: [https://www.facebook.com/moveitraleigh/](https://www.facebook.com/moveitraleigh/)
+ - Instagram Link [https://www.instagram.com/move_it_raleigh/](https://www.instagram.com/move_it_raleigh/)
  
-  
