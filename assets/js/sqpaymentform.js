@@ -122,7 +122,7 @@ var paymentForm = new SqPaymentForm({
       // Assign the nonce value to the hidden form field
       formFields.nonce.value = nonce;
       
-      fetch('http://localhost:9000/checkout', {
+      fetch('/checkout', {
         method: 'post',
         body: JSON.stringify({
           donorName: formFields.donorName.value,
