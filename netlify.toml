@@ -1,5 +1,5 @@
 [build]
- functions = "./lambda"
+ functions = "./functions"
  command = "hugo && npm run build:lambda"
 
 [context.production.environment]
