@@ -359,6 +359,8 @@ a {
   text-decoration: none; }
   a:hover, a:focus {
     text-decoration: underline; }
+  a, a:visited, a:focus, a:hover, a:active {
+    color: #0074c2; }
 
 hr {
   margin: 20px 0; }
@@ -537,6 +539,8 @@ nav {
       outline: none; }
     nav a:hover, nav a:focus {
       text-decoration: none; }
+    nav a, nav a:hover, nav a:visited, nav a.active, nav a.focus {
+      color: #444; }
   nav span.drop-icon {
     display: none; }
   nav .sub-menu {
