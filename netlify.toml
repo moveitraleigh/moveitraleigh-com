@@ -8,7 +8,7 @@
 [context.staging.environment]
   BRANCH_ENV = "staging"
 
-[context.phase3.environment]
+[context.phase4.environment]
   BRANCH_ENV = "staging"
   
 [[redirects]]
