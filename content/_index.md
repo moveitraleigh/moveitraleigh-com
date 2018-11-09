@@ -17,5 +17,5 @@ Developed by Christy Curtis, owner of CC & Co Dance Complex, Move It Raleigh is 
 
 The First Annual Move It Raleigh Benefit Concert will be held December 2nd at Rolesville High School. Experience a two-hour community performance showcasing amazingly talented local performing artists. This can't-miss event will be filled with dance, music and song. Come and enjoy **ART IN MOTION**.
 
-Proceeds to benefit [Helping Hand Mission of Raleigh](http://helpinghandmission.org/) and dance studios impacted by Hurricane Florence, such as the [Dance Theatre of Jacksonville](http://dancetheatreofjacksonville.com/).
+Proceeds to benefit [Helping Hand Mission of Raleigh](http://helpinghandmission.org/) and dance studios impacted by Hurricane Florence.
 
