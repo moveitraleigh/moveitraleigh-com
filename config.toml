@@ -21,16 +21,24 @@ title = "Move It Raleigh"
   [[menu.main]]
     identifier = "about"
     name = "Who We Are"
-    title = "who we are title"
+    title = "Who We Are`"
     url = "/about/"
     weight = -110
     
   [[menu.main]]
     identifier = "concert"
     name = "Benefit Concert"
-    title = "how to give title"
+    title = "Benefit Concert"
     url = "/events/1st-annual-benefit/"
     weight = -100
+
+  [[menu.main]]
+    identifier = "auction"
+    name = "Silent Auction"
+    title = "Silent Auction"
+    parent = "concert"
+    url = "https://www.biddingowl.com/MoveItRaleigh"
+    weight = -99
 
   [[menu.main]]
     identifier = "sponsor"

@@ -19,12 +19,22 @@
     </header>
     <main>
       <div id="notification" class="alert hidden" role="alert"></div>
+      {{ with .Params.heading }}<h2>{{ . }}</h2>{{ end }}
+      <article>
+        <section>
+          {{ block "main" . }}
+            <!-- The part of the page that begins to differ between templates -->
+            <img class="full-image" alt="Move It Raleigh" src="/img/moveitbanner2.jpg">
+            {{ .Content }}
+          {{ end }}
+        </section>
+          {{ with .Params.side_img }}
+          <aside>
+            <img class="side-image" alt="{{ $.Params.side_alt }}" src="{{ . }}" />
+          </aside>
+        {{end}}
+      </article>
 
-      {{ block "main" . }}
-        <!-- The part of the page that begins to differ between templates -->
-        <img class="full-image" alt="Move It Raleigh" src="/img/moveitbanner2.jpg">
-        {{ .Content }}
-      {{ end }}
     </main>
     <footer>
       {{ block "footer" . }}
