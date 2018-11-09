@@ -1,8 +1,8 @@
 import nodemailer from 'nodemailer';
 
-const user = 'sysadmin@moveitraleigh.com';
-const serviceClient = process.env[`${BRANCH_ENV}_GMAIL_CLIENT_ID`];
-const privateKey = process.env[`${BRANCH_ENV}_GMAIL_PRIVATE_KEY`].replace(/\\n/g, "\n");
+const user =process.env[`${BRANCH_ENV}_GMAIL_LOGIN`];
+const serviceClient = process.env.GMAIL_CLIENT_ID;
+const privateKey = process.env.GMAIL_PRIVATE_KEY.replace(/\\n/g, "\n");
 
 export default class {
   constructor () {
