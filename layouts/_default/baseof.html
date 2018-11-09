@@ -19,6 +19,7 @@
     </header>
     <main>
       <div id="notification" class="alert hidden" role="alert"></div>
+      {{ with .Params.banner_img}}<img class="full-image" alt="{{ $.Params.banner_alt }}" src="{{ . }}" />{{ end }}
       {{ with .Params.heading }}<h2>{{ . }}</h2>{{ end }}
       <article>
         <section>
