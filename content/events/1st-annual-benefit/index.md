@@ -15,7 +15,7 @@ eventEnd = "2018-12-02 20:00:00"
 +++
 **Join The Journey. Be A Part Of The Evolution. Make A Difference.**
 
-The First Annual Move It Raleigh Benefit Concert will be held December 2nd at Rolesville High School. Experience a two-hour community performance showcasing amazingly talented local performing artists. This can't-miss event will be filled with dance, music and song. Come and enjoy ART IN MOTION.
+The First Annual Move It Raleigh Benefit Concert will be held December 2nd at Rolesville High School. Experience a two-hour community performance showcasing amazingly talented local performing artists. This can't-miss event will be filled with dance, music and song. Come and enjoy **ART IN MOTION**.
 
 Move It Raleigh is launching into its first year with a benefit concert on December 2nd that will showcase local performing artists in the Triangle area.
 
