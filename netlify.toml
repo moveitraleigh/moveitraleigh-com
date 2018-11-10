@@ -4,9 +4,11 @@
 
 [context.production.environment]
   BRANCH_ENV = "prod"
+  HUGO_GOOGLEANALYTICS = "UA-128594050-1"
 
 [context.staging.environment]
   BRANCH_ENV = "staging"
+  HUGO_GOOGLEANALYTICS = "UA-128594050-2"
 
 [[redirects]]
   from = "/checkout"
