@@ -5,6 +5,8 @@ function buildForm(form) {
   }
 }
 
+var isCalled = false;
+
 /*
  * function: requestCardNonce
  *
@@ -20,7 +22,9 @@ function requestCardNonce(event) {
   event.preventDefault();
 
   // Request a nonce from the SqPaymentForm object
-  paymentForm.requestCardNonce();
+  if (!isCalled) {
+    paymentForm.requestCardNonce();    
+  }
 }
 
 // Create and initialize a payment form object
@@ -104,6 +108,7 @@ var paymentForm = new SqPaymentForm({
      * Triggered when: SqPaymentForm completes a card nonce request
      */
     cardNonceResponseReceived: function (errors, nonce, cardData) {
+      isCalled = true;
       const alert = document.getElementById('notification');   
       const formFields = {
         donorName: document.getElementById('donorName'),
@@ -143,6 +148,7 @@ var paymentForm = new SqPaymentForm({
         window.location.replace('/sponsor/thankyou');
       })
       .catch(error => {
+        isCalled = false;
         alert.innerHTML = 'Something went wrong. Please try again.';
         alert.classList.add('alert-danger');
         alert.classList.add('fade-in-out');

@@ -56,7 +56,16 @@ exports.handler = function(event, context, callback) {
     const sponsorEmailOptions = {
       to: params.email,
       subject: 'Thank You from Move It Raleigh!',
-      html: '<p>Move It Raleigh would like to thank you for your generous donation.</p>'
+      html: `
+      <p>Thank you for the sponsoring the Move It Raleigh Benefit Concert.  All proceeds will be donated to Helping Hand Mission of Raleigh and dance studios impacted by Hurricane Florence.</p>
+      <p>This is a tax deductible donation.</p>
+      <p>We appreciate your support.  We hope to see you at the Benefit Concert on December 2nd from 6pm to 8pm at Rolesville High School.</p>
+      <p>If you have questions.  Please reach out.</p>
+      <p></p>
+      <p>Thank you,<br>
+      Move It Raleigh<br>
+      <a href="https://moveitraleigh.com/">https://moveitraleigh.com</a><br>
+      <a href="mailto:info@moveitraleigh.com">info@moveitraleigh.com</a></p>`
     }
 
     const mirEmailOptions = {
