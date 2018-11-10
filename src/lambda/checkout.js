@@ -47,7 +47,7 @@ exports.handler = function(event, context, callback) {
     };
 
     const referenceInfo = {
-        note: `${params.viptix} VIP tickets requested`
+        note: `${params.donorName} - ${params.viptix} VIP tickets requested`
     };
 
     const transactionInfo = Object.assign({}, buyerInfo, paymentInfo, referenceInfo);
@@ -60,7 +60,7 @@ exports.handler = function(event, context, callback) {
       <p>Thank you for the sponsoring the Move It Raleigh Benefit Concert.  All proceeds will be donated to Helping Hand Mission of Raleigh and dance studios impacted by Hurricane Florence.</p>
       <p>This is a tax deductible donation.</p>
       <p>We appreciate your support.  We hope to see you at the Benefit Concert on December 2nd from 6pm to 8pm at Rolesville High School.</p>
-      <p>If you have questions.  Please reach out.</p>
+      <p>If you have questions, please reach out.</p>
       <p></p>
       <p>Thank you,<br>
       Move It Raleigh<br>
