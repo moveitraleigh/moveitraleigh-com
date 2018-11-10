@@ -1,24 +1,26 @@
 #form-container
-  #city
-    width: calc(11rem - #{$spacing} * 1.5)
-    margin-right: $spacing-half
-  #state
-    width: calc(4rem - #{$spacing} * 1.5)
-    margin-right: $spacing-half
-  #zip
-    width: 5rem
   input, select
     display: block
   label, .label
-    margin-left: 1 + $spacing
     margin-bottom: 0
   input, select, iframe
-    margin-left: $spacing
     margin-bottom: $spacing
   .form-flex
+    flex-direction: column
     label
       select
         width: 3rem
+  +breakpoint("mama-bear")
+    .form-flex
+      flex-direction: row
+    #city
+      width: calc(8rem - #{$spacing} * 1.5)
+      margin-right: $spacing-half
+    #state
+      width: calc(3rem - #{$spacing} * 1.5)
+      margin-right: $spacing-half
+    #zip
+      width: 4rem
 
 .sponsor-levels
   margin: 0 $spacing

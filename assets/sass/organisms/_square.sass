@@ -5,7 +5,9 @@ iframe
 
 /* Define how SqPaymentForm iframes should look */
 .sq-input
-  width: 20rem
+  width: 80vw
+  +breakpoint("mama-bear")
+    width: 15rem
   height: 38px
   padding: 6px 10px
   background-color: #fff
@@ -30,16 +32,22 @@ iframe
 
 .half
   .sq-input
-    width: calc(10rem - 10px)
+    width: 80vw
+    +breakpoint("mama-bear")
+      width: calc(7.5rem - 10px)
     margin-right: 10px
 
 .third
   .sq-input
-    width: calc(20rem/3 - 15px)
+    width: 80vw
+    +breakpoint("mama-bear")
+      width: calc(5rem - 15px)
     margin-right: 10px
 
 .button-credit-card
-  width: 20rem
+  width: 80vw
+  +breakpoint("mama-bear")
+    width: 15rem
   height: 56px
   margin: $spacing $spacing 0
   background: #4A90E2
