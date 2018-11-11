@@ -150,7 +150,21 @@
         <fieldset>
           <div class="form-group">
             <label for="amount">Amount</label>
-            <input id="amount" name="amount" type="number" step="any" pattern="[-+]?[0-9]*[.,]?[0-9]+"/>
+            <select id="amount" name="amount">
+              <option value="">Please Select</option>
+              <option value="50">$50 - Performance Supporter</option>
+              <option value="100">$100 - Performance Friend</option>
+              <option value="500">$500 - Performance Partner</option>
+              <option value="1000">$1000 - Benefactor Sponsor</option>
+              <option value="3000">$3000 - Outreach Sponsor</option>
+              <option value="5000">$5000 - Production Sponsor</option>
+              <option value="other">Other</option>
+            </select>
+          </div>
+          
+          <div class="form-group" id="form-group-amount">
+            <label for="amount-other">Amount (Other)</label>
+            <input id="amount-other" name="amount-other" type="number" step="any" pattern="[-+]?[0-9]*[.,]?[0-9]+"/>
           </div>
           
           <div class="form-group" id="form-group-viptix">
@@ -256,8 +270,10 @@ document.addEventListener("DOMContentLoaded", function(event) {
     paymentForm.recalculateSize();
   }
 });
-const amount = document.getElementById('amount');
+const amountDropdown = document.getElementById('amount');
+const amount = document.getElementById('amount-other');
 const viptix = document.getElementById('viptix');
+const amtgroup = document.getElementById('form-group-amount');
 const vipgroup = document.getElementById('form-group-viptix');
 
 const perfSupporter = Array.from(document.getElementsByClassName('perf-supporter'));
@@ -288,65 +304,75 @@ function setTickets(numtix) {
   })
 }
 
-amount.addEventListener('change', function(event) {
-  const value = event.target.valueAsNumber;
-  if (value < 50) {
-    perfSupporter.forEach(setFaded(false));
-    perfFriend.forEach(setFaded(false));
-    perfPartner.forEach(setFaded(false));
-    benefactorSponsor.forEach(setFaded(false));
-    outreachSponsor.forEach(setFaded(false));
-    productionSponsor.forEach(setFaded(false));
-    setTickets(0);
-  } else if (value < 100) {
-    perfSupporter.forEach(setFaded(false));
-    perfFriend.forEach(setFaded(true));
-    perfPartner.forEach(setFaded(true));
-    benefactorSponsor.forEach(setFaded(true));
-    outreachSponsor.forEach(setFaded(true));
-    productionSponsor.forEach(setFaded(true));
-    setTickets(0);
-  } else if (value < 500) {
-    perfSupporter.forEach(setFaded(true));
-    perfFriend.forEach(setFaded(false));
-    perfPartner.forEach(setFaded(true));
-    benefactorSponsor.forEach(setFaded(true));
-    outreachSponsor.forEach(setFaded(true));
-    productionSponsor.forEach(setFaded(true));    
-    setTickets(0);
-  } else if (value < 1000) {
-    perfSupporter.forEach(setFaded(true));
-    perfFriend.forEach(setFaded(true));
-    perfPartner.forEach(setFaded(false));
-    benefactorSponsor.forEach(setFaded(true));
-    outreachSponsor.forEach(setFaded(true));
-    productionSponsor.forEach(setFaded(true));    
-    setTickets(4);
-  } else if (value < 3000) {
-    perfSupporter.forEach(setFaded(true));
-    perfFriend.forEach(setFaded(true));
-    perfPartner.forEach(setFaded(true));
-    benefactorSponsor.forEach(setFaded(false));
-    outreachSponsor.forEach(setFaded(true));
-    productionSponsor.forEach(setFaded(true));    
-    setTickets(6);
-  } else if (value < 5000) {
-    perfSupporter.forEach(setFaded(true));
-    perfFriend.forEach(setFaded(true));
-    perfPartner.forEach(setFaded(true));
-    benefactorSponsor.forEach(setFaded(true));
-    outreachSponsor.forEach(setFaded(false));
-    productionSponsor.forEach(setFaded(true));    
-    setTickets(8);
-  } else {
-    perfSupporter.forEach(setFaded(true));
-    perfFriend.forEach(setFaded(true));
-    perfPartner.forEach(setFaded(true));
-    benefactorSponsor.forEach(setFaded(true));
-    outreachSponsor.forEach(setFaded(true));
-    productionSponsor.forEach(setFaded(false));    
-    setTickets(10);
-  }
-});
+function selectLevel (dropdown = false) {
+  return function (event) {
+    const value = parseFloat(event.target.value);
+    if (dropdown && event.target.value === 'other') {
+      amtgroup.classList.add('allowed');
+    } else {
+      amtgroup.classList.remove('allowed');
+    }
+    if (value < 50 || (dropdown && value == 'other')) {
+      perfSupporter.forEach(setFaded(false));
+      perfFriend.forEach(setFaded(false));
+      perfPartner.forEach(setFaded(false));
+      benefactorSponsor.forEach(setFaded(false));
+      outreachSponsor.forEach(setFaded(false));
+      productionSponsor.forEach(setFaded(false));
+      setTickets(0);
+    } else if (value < 100) {
+      perfSupporter.forEach(setFaded(false));
+      perfFriend.forEach(setFaded(true));
+      perfPartner.forEach(setFaded(true));
+      benefactorSponsor.forEach(setFaded(true));
+      outreachSponsor.forEach(setFaded(true));
+      productionSponsor.forEach(setFaded(true));
+      setTickets(0);
+    } else if (value < 500) {
+      perfSupporter.forEach(setFaded(true));
+      perfFriend.forEach(setFaded(false));
+      perfPartner.forEach(setFaded(true));
+      benefactorSponsor.forEach(setFaded(true));
+      outreachSponsor.forEach(setFaded(true));
+      productionSponsor.forEach(setFaded(true));    
+      setTickets(0);
+    } else if (value < 1000) {
+      perfSupporter.forEach(setFaded(true));
+      perfFriend.forEach(setFaded(true));
+      perfPartner.forEach(setFaded(false));
+      benefactorSponsor.forEach(setFaded(true));
+      outreachSponsor.forEach(setFaded(true));
+      productionSponsor.forEach(setFaded(true));    
+      setTickets(4);
+    } else if (value < 3000) {
+      perfSupporter.forEach(setFaded(true));
+      perfFriend.forEach(setFaded(true));
+      perfPartner.forEach(setFaded(true));
+      benefactorSponsor.forEach(setFaded(false));
+      outreachSponsor.forEach(setFaded(true));
+      productionSponsor.forEach(setFaded(true));    
+      setTickets(6);
+    } else if (value < 5000) {
+      perfSupporter.forEach(setFaded(true));
+      perfFriend.forEach(setFaded(true));
+      perfPartner.forEach(setFaded(true));
+      benefactorSponsor.forEach(setFaded(true));
+      outreachSponsor.forEach(setFaded(false));
+      productionSponsor.forEach(setFaded(true));    
+      setTickets(8);
+    } else {
+      perfSupporter.forEach(setFaded(true));
+      perfFriend.forEach(setFaded(true));
+      perfPartner.forEach(setFaded(true));
+      benefactorSponsor.forEach(setFaded(true));
+      outreachSponsor.forEach(setFaded(true));
+      productionSponsor.forEach(setFaded(false));    
+      setTickets(10);
+    }
+  };
+}
+
+amountDropdown.addEventListener('change', selectLevel(true));
+amount.addEventListener('change', selectLevel(false));
 </script>
 {{ end }}
