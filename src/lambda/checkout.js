@@ -97,6 +97,7 @@ exports.handler = function(event, context, callback) {
 
     api.charge(locationId, transactionInfo)
         .then((data) => {
+          console.log(data);
           emailer.send(sponsorEmailOptions);
           emailer.send(mirEmailOptions);
           callback(null, {
