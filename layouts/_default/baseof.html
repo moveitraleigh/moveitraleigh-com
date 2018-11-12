@@ -51,5 +51,7 @@
     </footer>
     <script src="/js/scroll.js" async defer></script>
     {{ template "_internal/google_analytics_async.html" . }} 
+    {{ block "script" . }}
+    {{ end }}
   </body>
 </html>
