@@ -53,9 +53,9 @@ exports.handler = function(event, context, callback) {
     if (params.amount >= 500) {
       referenceInfo.note += `${params.viptix} VIP tickets requested`;
     } else if (params.amount >= 100) {
-      referenceInfo.note += `4 tickets included`;
+      referenceInfo.note += '4 tickets included';
     } else if (params.amount >= 50) {
-      referenceInfo.note += `2 tickets included`;
+      referenceInfo.note += '2 tickets included';
     } else {
       referenceInfo.note += 'no tickets included';
     }
