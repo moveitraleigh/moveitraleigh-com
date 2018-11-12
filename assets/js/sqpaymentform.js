@@ -150,9 +150,9 @@ var paymentForm = new SqPaymentForm({
       .then(data => {
         if (gaEnabled) {
           ga('ecommerce:addTransaction', {
-            'id': data.transaction.id,
+            'id': data.body.transaction.id,
             'affiliation': 'Move It Raleigh Website',
-            'revenue': data.transaction.tenders.amount_money.amount
+            'revenue': data.body.transaction.tenders.amount_money.amount/100
           });
           ga('ecommerce:send');
         }
@@ -160,6 +160,7 @@ var paymentForm = new SqPaymentForm({
         window.location.replace('/sponsor/thankyou');
       })
       .catch(error => {
+        console.dir(error);
         isCalled = false;
         alert.innerHTML = 'Something went wrong. Please try again.';
         alert.classList.add('alert-danger');
