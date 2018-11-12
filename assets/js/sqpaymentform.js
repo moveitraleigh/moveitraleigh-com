@@ -147,13 +147,13 @@ var paymentForm = new SqPaymentForm({
           nonce: formFields.nonce.value
         })
       })
-      .then(response => {
+      .then(data => {
         if (gaEnabled) {
-          const data = response.json();
+          const jsonData = data.json();
           ga('ecommerce:addTransaction', {
-            'id': data.transaction.id,
+            'id': jsonData.transaction.id,
             'affiliation': 'Move It Raleigh Website',
-            'revenue': data.transaction.tenders.amount_money.amount/100
+            'revenue': jsonData.transaction.tenders.amount_money.amount/100
           });
           ga('ecommerce:send');
         }
