@@ -47,7 +47,7 @@ exports.handler = function(event, context, callback) {
     };
 
     const referenceInfo = {
-        note: `${params.donorName} - `;
+        note: `${params.donorName} - `
     };
 
     if (params.amount >= 500) {
