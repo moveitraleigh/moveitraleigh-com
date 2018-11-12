@@ -9,7 +9,7 @@ var isCalled = false;
 var gaEnabled = !!(window.ga);
 
 if (gaEnabled) {
-  window.ga('require', 'ecommerce');
+  ga('require', 'ecommerce');
 }
 /*
  * function: requestCardNonce
@@ -149,14 +149,12 @@ var paymentForm = new SqPaymentForm({
       })
       .then(data => {
         if (gaEnabled) {
-          window.ga('ecommerce:addTransaction', {
+          ga('ecommerce:addTransaction', {
             'id': data.transaction.id,
             'affiliation': 'Move It Raleigh Website',
-            'revenue': data.transaction.tenders.amount_money.amount,
-            'shipping': 0.00,
-            'tax': 0.00
+            'revenue': data.transaction.tenders.amount_money.amount
           });
-          window.ga('ecommerce:send');
+          ga('ecommerce:send');
         }
         donorName.value = business.value = email.value = addr1.value = addr2.value = city.value = state.value = zip.value = amount.value = amountDropdown.value = viptix.value = '';
         window.location.replace('/sponsor/thankyou');
