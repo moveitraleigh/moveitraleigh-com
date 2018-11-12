@@ -123,8 +123,8 @@ var paymentForm = new SqPaymentForm({
         city: document.getElementById('city'),
         state: document.getElementById('state'),
         zip: document.getElementById('zip'),
-        amount: document.getElementById('amount'),
-        amountDropdown: document.getElementById('amountDropdown'),
+        amount: document.getElementById('amount-other'),
+        amountDropdown: document.getElementById('amount'),
         viptix: document.getElementById('viptix'),
         nonce: document.getElementById('card-nonce')
       };
