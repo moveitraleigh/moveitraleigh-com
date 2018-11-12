@@ -7,6 +7,7 @@ function buildForm(form) {
 
 var isCalled = false;
 
+ga('require', 'ecommerce');
 /*
  * function: requestCardNonce
  *
@@ -127,7 +128,6 @@ var paymentForm = new SqPaymentForm({
 
       // Assign the nonce value to the hidden form field
       formFields.nonce.value = nonce;
-      
       fetch('/checkout', {
         method: 'post',
         body: JSON.stringify({
@@ -145,6 +145,14 @@ var paymentForm = new SqPaymentForm({
         })
       })
       .then(data => {
+        ga('ecommerce:addTransaction', {
+          'id': data.transaction.id,
+          'affiliation': 'Move It Raleigh Website',
+          'revenue': data.transaction.tenders.amount_money.amount,
+          'shipping': 0.00,
+          'tax': 0.00
+        });
+        ga('ecommerce:send');
         donorName.value = business.value = email.value = addr1.value = addr2.value = city.value = state.value = zip.value = amount.value = amountDropdown.value = viptix.value = '';
         window.location.replace('/sponsor/thankyou');
       })

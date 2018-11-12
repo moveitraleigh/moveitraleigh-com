@@ -47,8 +47,18 @@ exports.handler = function(event, context, callback) {
     };
 
     const referenceInfo = {
-        note: `${params.donorName} - ${params.viptix} VIP tickets requested`
+        note: `${params.donorName} - `;
     };
+
+    if (params.amount >= 500) {
+      referenceInfo.note += `${params.viptix} VIP tickets requested`;
+    } else if (params.amount >= 100) {
+      referenceInfo.note += `4 tickets included`;
+    } else if (params.amount >= 50) {
+      referenceInfo.note += `2 tickets included`;
+    } else {
+      referenceInfo.note += 'no tickets included';
+    }
 
     const transactionInfo = Object.assign({}, buyerInfo, paymentInfo, referenceInfo);
     const api = new SquareConnect.TransactionsApi();
