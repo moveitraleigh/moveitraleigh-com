@@ -120,6 +120,7 @@ var paymentForm = new SqPaymentForm({
         state: document.getElementById('state'),
         zip: document.getElementById('zip'),
         amount: document.getElementById('amount'),
+        amountDropdown: document.getElementById('amountDropdown'),
         viptix: document.getElementById('viptix'),
         nonce: document.getElementById('card-nonce')
       };
@@ -138,13 +139,13 @@ var paymentForm = new SqPaymentForm({
           city: formFields.city.value,
           state: formFields.state.value,
           zip: formFields.zip.value,
-          amount: formFields.amount.value,
+          amount: (formFields.amountDropdown.value === 'other') ? formFields.amount.value : formFields.amountDropdown.value,
           viptix: formFields.viptix.value,
           nonce: formFields.nonce.value
         })
       })
       .then(data => {
-        donorName.value = business.value = email.value = addr1.value = addr2.value = city.value = state.value = zip.value = amount.value = viptix.value = '';
+        donorName.value = business.value = email.value = addr1.value = addr2.value = city.value = state.value = zip.value = amount.value = amountDropdown.value = viptix.value = '';
         window.location.replace('/sponsor/thankyou');
       })
       .catch(error => {
