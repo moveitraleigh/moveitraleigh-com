@@ -5,6 +5,8 @@ title = "Stay Connected"
 side_img = "/img/mir-wall.jpg"
 side_alt = "Move It Raleigh - Wall"
 heading = "How Do I Stay Connected?"
+images = ["/img/mir-wall.jpg"]
+description = "Move It Raleigh encourages residents in the Triangle area to get out and move! Check us out on social media."
 +++
 **Follow Us.**
 

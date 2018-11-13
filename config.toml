@@ -6,9 +6,9 @@ title = "Move It Raleigh"
   hrefTargetBlank = true
 
 [params]
-  description = "Text about my cool site"
-  images = ["site-feature-image.jpg"]
-  title = "My cool site"
+  description = "Move It Raleigh is a community-based campaign to encourage residents in the Triangle area to get out and move, with a specific focus on the performing arts."
+  images = ["/img/banner.jpg"]
+  title = "Move It Raleigh"
   header_image = "img/mir-full.png"
 
 # [taxonomies]
@@ -21,7 +21,7 @@ title = "Move It Raleigh"
   [[menu.main]]
     identifier = "about"
     name = "Who We Are"
-    title = "Who We Are`"
+    title = "Who We Are"
     url = "/about/"
     weight = -110
     
