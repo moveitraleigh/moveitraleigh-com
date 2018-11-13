@@ -147,20 +147,22 @@ var paymentForm = new SqPaymentForm({
           nonce: formFields.nonce.value
         })
       })
+      .then(data => data.json())
       .then(data => {
         if (gaEnabled) {
-          ga('ecommerce:addTransaction', {
+          const options = {
             'id': data.transaction.id,
             'affiliation': 'Move It Raleigh Website',
-            'revenue': data.transaction.tenders.amount_money.amount/100
-          });
+            'revenue': (data.transaction.tenders[0].amount_money.amount/100).toFixed(2),
+            'currency': 'USD'
+          };
+          ga('ecommerce:addTransaction', options);
           ga('ecommerce:send');
         }
         donorName.value = business.value = email.value = addr1.value = addr2.value = city.value = state.value = zip.value = amount.value = amountDropdown.value = viptix.value = '';
         window.location.replace('/sponsor/thankyou');
       })
       .catch(error => {
-        console.dir(error);
         isCalled = false;
         alert.innerHTML = 'Something went wrong. Please try again.';
         alert.classList.add('alert-danger');

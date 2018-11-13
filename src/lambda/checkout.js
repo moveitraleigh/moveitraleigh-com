@@ -11,6 +11,7 @@ const oauth2 = defaultClient.authentications['oauth2'];
 oauth2.accessToken = process.env[`${BRANCH_ENV}_SQUARE_ACCESS_TOKEN`];
  
 const locationId = process.env[`${BRANCH_ENV}_SQUARE_LOC_ID`];
+const notifyEmail = process.env[`${BRANCH_ENV}_NOTIFY_EMAIL`] || 'brett.lewis@gmail.com';
 
 exports.handler = function(event, context, callback) {
     // Only allow POST
@@ -46,19 +47,21 @@ exports.handler = function(event, context, callback) {
         card_nonce: cardNonce
     };
 
-    const referenceInfo = {
-        note: `${params.donorName} - `
-    };
+    let noteSuffix;
 
     if (params.amount >= 500) {
-      referenceInfo.note += `${params.viptix} VIP tickets requested`;
+      noteSuffix = `${params.viptix} VIP tickets requested`;
     } else if (params.amount >= 100) {
-      referenceInfo.note += '4 tickets included';
+      noteSuffix = '4 tickets included';
     } else if (params.amount >= 50) {
-      referenceInfo.note += '2 tickets included';
+      noteSuffix = '2 tickets included';
     } else {
-      referenceInfo.note += 'no tickets included';
+      noteSuffix = 'no tickets included';
     }
+
+    const referenceInfo = {
+        note: `${params.donorName} - ${noteSuffix}`
+    };
 
     const transactionInfo = Object.assign({}, buyerInfo, paymentInfo, referenceInfo);
     const api = new SquareConnect.TransactionsApi();
@@ -79,7 +82,7 @@ exports.handler = function(event, context, callback) {
     }
 
     const mirEmailOptions = {
-      to: 'brett.lewis@gmail.com',
+      to: notifyEmail,
       subject: 'New Sponsor for Move It Raleigh',
       text: `
         Name: ${params.donorName}
@@ -91,7 +94,7 @@ exports.handler = function(event, context, callback) {
         State: ${params.state}
         ZIP: ${params.zip}
         Amount: ${params.amount}
-        VIP Tickets Requested: ${params.viptix}
+        Tickets: ${noteSuffix}
       `
     }
 

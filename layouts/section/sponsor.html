@@ -291,12 +291,12 @@ function setTickets(numtix) {
 function selectLevel (dropdown = false) {
   return function (event) {
     const value = parseFloat(event.target.value);
-    if (dropdown && event.target.value === 'other') {
+    if (amountDropdown.value === 'other') {
       amtgroup.classList.add('allowed');
     } else {
       amtgroup.classList.remove('allowed');
     }
-    if (value < 50 || (dropdown && value == 'other')) {
+    if (value < 50 || (dropdown && amountDropdown.value == 'other')) {
       perfSupporter.forEach(setFaded(false));
       perfFriend.forEach(setFaded(false));
       perfPartner.forEach(setFaded(false));
@@ -368,12 +368,12 @@ amount.addEventListener('change', selectLevel(false));
 {{ $jsVars := (printf "var applicationId = '%s';\n\nvar locationId = '%s';\n\n" $appId $locId) | resources.FromString "js/vars.js" }}
 {{ $jsTemplate := resources.Get "js/sqpaymentform.js" }}
 
-{{ $sqPaymentFormJs := slice $jsVars $jsTemplate | resources.Concat "js/sqpayment.js" }}
+{{ $sqPaymentFormJs := slice $jsVars $jsTemplate | resources.Concat "js/sqpayment.js" | resources.Minify | resources.Fingerprint "sha512" }}
 <!-- link to the SqPaymentForm library -->
 <script type="text/javascript" src="https://js.squareup.com/v2/paymentform">
 </script>
 
 <!-- link to the local SqPaymentForm initialization -->
-<script type="text/javascript" src="{{ $sqPaymentFormJs.RelPermalink }}">
+<script type="text/javascript" src="{{ $sqPaymentFormJs.RelPermalink }}" integrity="{{ $sqPaymentFormJs.Data.Integrity }}">
 </script>
 {{ end }}
