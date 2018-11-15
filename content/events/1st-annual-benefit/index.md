@@ -1,7 +1,7 @@
 +++
 date = "2018-09-22T13:30:14-04:00"
 draft = false
-title = "First Annual Benefit"
+title = "First Annual Move It Raleigh Benefit Concert"
 type = "event"
 header_image = "/img/mir-concert-full.png"
 side_img = "/img/helpinghand.jpg"
