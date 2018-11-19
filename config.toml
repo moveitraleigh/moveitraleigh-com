@@ -5,7 +5,7 @@ disableKinds = ["taxonomyTerm"]
 
 [blackfriday]
   hrefTargetBlank = true
-
+  
 [frontmatter]
   date = ["date", "publishDate", "lastmod"]
   lastmod = [":fileModTime", "lastmod", "date", "publishDate"]
@@ -36,8 +36,8 @@ disableKinds = ["taxonomyTerm"]
     
   [[menu.main]]
     identifier = "concert"
-    name = "Benefit Concert"
-    title = "Benefit Concert"
+    name = "Raleigh Gives Back"
+    title = "Raleigh Gives Back"
     url = "/events/1st-annual-benefit/"
     weight = -100
 
