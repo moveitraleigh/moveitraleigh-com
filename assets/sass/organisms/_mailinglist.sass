@@ -4,6 +4,15 @@
     display: block
     +breakpoint("mama-bear")
       width: 20rem
+  input[type="checkbox"]
+    width: auto
+    margin-right: $spacing
+    margin-bottom: 0
+    vertical-align: baseline
+    display: inline-block
+    & + label
+      display: inline-block
+      vertical-align: bottom
   label, .label
     margin-bottom: 0
   input, select, iframe

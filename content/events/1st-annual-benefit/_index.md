@@ -1,5 +1,4 @@
 +++
-date = "2018-09-22T13:30:14-04:00"
 draft = false
 title = "First Annual Move It Raleigh Benefit Concert"
 type = "event"
@@ -14,6 +13,10 @@ location = "Rolesville High School"
 address = "1099 E Young St, Rolesville, NC 27571"
 eventStart = "2018-12-02 18:00:00"
 eventEnd = "2018-12-02 20:00:00"
+participants = [
+  "CC & Co Dance Complex", 
+  "International Ballet Academy"
+  ]
 +++
 **Join The Journey. Be A Part Of The Evolution. Make A Difference.**
 

@@ -1,10 +1,9 @@
 +++
-date = "2018-09-22T13:30:14-04:00"
 draft = false
 title = "Stay Connected"
 side_img = "/img/mir-wall.jpg"
 side_alt = "Move It Raleigh - Wall"
-heading = "How Do I Stay Connected?"
+heading = "Be part of the MOVEment"
 images = ["/img/mir-wall.jpg"]
 description = "Move It Raleigh encourages residents in the Triangle area to get out and move! Check us out on social media."
 +++

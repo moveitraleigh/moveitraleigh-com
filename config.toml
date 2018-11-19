@@ -1,16 +1,25 @@
 baseURL = "https://moveitraleigh.com/"
 languageCode = "en-us"
 title = "Move It Raleigh"
+disableKinds = ["taxonomyTerm"]
 
 [blackfriday]
   hrefTargetBlank = true
 
+[frontmatter]
+  date = ["date", "publishDate", "lastmod"]
+  lastmod = [":fileModTime", "lastmod", "date", "publishDate"]
+  publishDate = ["publishDate", "date"]
+  expiryDate = ["expiryDate"]
+  
 [params]
   description = "Move It Raleigh is a community-based campaign to encourage residents in the Triangle area to get out and move, with a specific focus on the performing arts."
   images = ["/img/banner.jpg"]
   title = "Move It Raleigh"
   header_image = "img/mir-full.png"
 
+ [taxonomies]
+   participant = "participants"
 # [taxonomies]
 #   series = "series"
 #   event = "events"
@@ -41,6 +50,14 @@ title = "Move It Raleigh"
     weight = -99
 
   [[menu.main]]
+    identifier = "tickets"
+    name = "Purchase Tickets"
+    title = "Purchase Tickets"
+    parent = "concert"
+    url = "/events/1st-annual-benefit/tickets/"
+    weight = -98
+
+  [[menu.main]]
     identifier = "sponsor"
     name = "Donate"
     url = "/sponsor/"
@@ -48,7 +65,7 @@ title = "Move It Raleigh"
 
   [[menu.main]]
     identifier = "connect"
-    name = "Connect"
+    name = "Join the MOVEment"
     title = "Connect With Us"
     url = "/connect/"
     weight = -80
