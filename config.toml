@@ -45,7 +45,6 @@ disableKinds = ["taxonomyTerm"]
     identifier = "auction"
     name = "Silent Auction"
     title = "Silent Auction"
-    parent = "concert"
     url = "https://www.biddingowl.com/MoveItRaleigh"
     weight = -99
 
@@ -53,7 +52,6 @@ disableKinds = ["taxonomyTerm"]
     identifier = "tickets"
     name = "Purchase Tickets"
     title = "Purchase Tickets"
-    parent = "concert"
     url = "/events/1st-annual-benefit/tickets/"
     weight = -98
 
