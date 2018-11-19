@@ -8,7 +8,7 @@ email = 'info@cccodance.com'
 sitemap_exclude = true
 
 [[resources]]
-  src = "logo.jpg"
+  src = "logo.png"
   name = "logo"
   title = "CC & Co Dance Complex Logo"
 
