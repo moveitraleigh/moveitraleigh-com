@@ -1,14 +1,14 @@
 +++
 draft = false
-title = "First Annual Move It Raleigh Benefit Concert"
+title = "Raleigh Gives Back Benefit Concert"
 type = "event"
 header_image = "/img/mir-concert-full.png"
 side_img = "/img/helpinghand.jpg"
 side_alt = "Helping Hand Mission of Raleigh"
 images = ["/img/helpinghand.jpg"]
 description = "Join us for the First Annual Move It Raleigh Benefit Concert on December 2nd at Rolesville High School. Proceeds to benefit Helping Hand Mission of Raleigh and dance studios impacted by Hurricane Florence."
-heading = "First Annual Move It Raleigh Benefit Concert"
-eventName = "First Annual Move It Raleigh Benefit Concert"
+heading = "Raleigh Gives Back Benefit Concert"
+eventName = "Raleigh Gives Back Benefit Concert"
 location = "Rolesville High School"
 address = "1099 E Young St, Rolesville, NC 27571"
 eventStart = "2018-12-02 18:00:00"
