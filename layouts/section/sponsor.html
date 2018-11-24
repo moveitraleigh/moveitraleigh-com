@@ -136,12 +136,12 @@
             <label for="amount">Amount</label>
             <select id="amount" name="amount">
               <option value="">Please Select</option>
-              <option value="50">$50 - Performance Supporter</option>
-              <option value="100">$100 - Performance Friend</option>
-              <option value="500">$500 - Performance Partner</option>
-              <option value="1000">$1000 - Benefactor Sponsor</option>
-              <option value="3000">$3000 - Outreach Sponsor</option>
-              <option value="5000">$5000 - Production Sponsor</option>
+              <option value="50">$50</option>
+              <option value="100">$100</option>
+              <option value="500">$500</option>
+              <option value="1000">$1000</option>
+              <option value="3000">$3000</option>
+              <option value="5000">$5000</option>
               <option value="other">Other</option>
             </select>
           </div>
@@ -149,23 +149,6 @@
           <div class="form-group" id="form-group-amount">
             <label for="amount-other">Amount (Other)</label>
             <input id="amount-other" name="amount-other" type="number" step="any" pattern="[-+]?[0-9]*[.,]?[0-9]+"/>
-          </div>
-          
-          <div class="form-group" id="form-group-viptix">
-            <label for="viptix">VIP Tickets Requested</label>
-            <select id="viptix" name="viptix">
-              <option value="0">No VIP Tickets</option>
-              <option value="1">1 VIP Ticket</option>
-              <option value="2">2 VIP Tickets</option>
-              <option value="3">3 VIP Tickets</option>
-              <option value="4">4 VIP Tickets</option>
-              <option value="5">5 VIP Tickets</option>
-              <option value="6">6 VIP Tickets</option>
-              <option value="7">7 VIP Tickets</option>
-              <option value="8">8 VIP Tickets</option>
-              <option value="9">9 VIP Tickets</option>
-              <option value="10">10 VIP Tickets</option>
-            </select>
           </div>
         </fieldset>
         
@@ -181,72 +164,13 @@
     </div> <!-- end #sq-ccbox -->
 
   </div> <!-- end #form-container -->
-  <div class="sponsor-levels">
-    <h3>Sponsorship Levels</h3>
-    <dl>
-      <dt class="perf-supporter">Performance Supporter - $50+<sub>(Individuals only)</sub></dt>
-      <dd class="perf-supporter">
-        <ul>
-          <li>2 tickets to Benefit Concert</li>
-        </ul>
-      </dd>
-     
-      <dt class="perf-friend">Performance Friend - $100+<sub>(Companies with <5 employees or individuals)</sub></dt>
-      <dd class="perf-friend">
-        <ul>
-          <li>Recognition in Benefit Concert Program</li>
-          <li>4 tickets to Benefit Concert</li>
-          <li>Opportunity to include materials in concert swag bag (750 bags - 1 swag bag per ticket)</li>
-        </ul>
-      </dd>
-
-      <dt class="perf-partner">Performance Partner - $500+</dt>
-      <dd class="perf-partner">
-        <ul>
-          <li>Company name or individual recognition in Benefit Concert Program</li>
-          <li>Quarter-page ad in Benefit Concert Program</li>
-          <li>4 VIP tickets to Benefit Concert, if requested</li>
-          <li>Opportunity to include materials in concert swag bag (750 bags - 1 swag bag per ticket)</li>
-        </ul>
-      </dd>
-      
-      <dt class="benefactor-sponsor">Benefactor Sponsor - $1000</dt>
-      <dd class="benefactor-sponsor">
-        <ul>
-          <li>Company name or individual recognition in Benefit Concert Program</li>
-          <li>Half-page ad in Benefit Concert Program</li>
-          <li>6 VIP tickets to Benefit Concert, if requested</li>
-          <li>Opportunity to include materials in concert swag bag (750 bags - 1 swag bag per ticket)</li>
-        </ul>
-      </dd>
-
-      <dt class="outreach-sponsor">Outreach Sponsor - $3000</dt>
-      <dd class="outreach-sponsor">
-        <ul>
-          <li>Exclusive naming rights to Benefit Concert Online Auction (i.e. 1st Annual MOVE IT RALEIGH Auction, sponsored by John & Jane Doe)</li>
-          <li>Company logo or individual on all auction signage, marketing materials, website</li>
-          <li>Opening curtain recognition and opportunity to speak at performance</li>
-          <li>Full-page ad (inside back cover) in Benefit Concert Program</li>
-          <li>8 VIP tickets to Benefit Concert, if requested</li>
-          <li>Opportunity to include materials in concert swag bag (750 bags - 1 swag bag per ticket)</li>
-        </ul>
-      </dd>
-      
-      <dt class="production-sponsor">Production Sponsor - $5000</dt>
-      <dd class="production-sponsor">
-        <ul>
-          <li>Exclusive naming rights to Benefit Concert (i.e. 1st Annual MOVE IT RALEIGH Benefit Concert, sponsored by XYZ Company)</li>
-          <li>Company logo or individual on all auction signage, marketing materials, website</li>
-          <li>Opening curtain recognition and opportunity to speak at performance</li>
-          <li>2 Full-page ads (inside front cover and back cover) in Benefit Concert Program</li>
-          <li>10 VIP tickets to Benefit Concert, if requested</li>
-          <li>Opportunity to include materials in concert swag bag (750 bags - 1 swag bag per ticket)</li>
-        </ul>
-      </dd>
-    </dl>
-  </div>
-
-</section>
+                <section>
+                  <aside>
+                    <img class="side-image" alt="Come and enjoy ART IN MOTION" src="/img/shoes.jpg">
+                  </aside>
+                </section>
+            </section>
+  </section>
 <script>
 document.addEventListener("DOMContentLoaded", function(event) {
   if (SqPaymentForm.isSupportedBrowser()) {
@@ -256,37 +180,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
 });
 const amountDropdown = document.getElementById('amount');
 const amount = document.getElementById('amount-other');
-const viptix = document.getElementById('viptix');
 const amtgroup = document.getElementById('form-group-amount');
-const vipgroup = document.getElementById('form-group-viptix');
-
-const perfSupporter = Array.from(document.getElementsByClassName('perf-supporter'));
-const perfFriend = Array.from(document.getElementsByClassName('perf-friend'));
-const perfPartner = Array.from(document.getElementsByClassName('perf-partner'));
-const benefactorSponsor = Array.from(document.getElementsByClassName('benefactor-sponsor'));
-const outreachSponsor = Array.from(document.getElementsByClassName('outreach-sponsor'));
-const productionSponsor = Array.from(document.getElementsByClassName('production-sponsor'));
-
-function setFaded(isFaded) {
-  return function (item) {
-    if (isFaded) {
-      item.classList.add('isFaded');
-    } else {
-      item.classList.remove('isFaded')
-    }
-  }
-}
-
-function setTickets(numtix) {
-  if (numtix > 0) {
-    vipgroup.classList.add('allowed');
-  } else {
-    vipgroup.classList.remove('allowed');
-  }
-  Array.from(viptix.options).forEach((item) => {
-    item.hidden = (item.value > numtix);
-  })
-}
 
 function selectLevel (dropdown = false) {
   return function (event) {
@@ -296,68 +190,10 @@ function selectLevel (dropdown = false) {
     } else {
       amtgroup.classList.remove('allowed');
     }
-    if (value < 50 || (dropdown && amountDropdown.value == 'other')) {
-      perfSupporter.forEach(setFaded(false));
-      perfFriend.forEach(setFaded(false));
-      perfPartner.forEach(setFaded(false));
-      benefactorSponsor.forEach(setFaded(false));
-      outreachSponsor.forEach(setFaded(false));
-      productionSponsor.forEach(setFaded(false));
-      setTickets(0);
-    } else if (value < 100) {
-      perfSupporter.forEach(setFaded(false));
-      perfFriend.forEach(setFaded(true));
-      perfPartner.forEach(setFaded(true));
-      benefactorSponsor.forEach(setFaded(true));
-      outreachSponsor.forEach(setFaded(true));
-      productionSponsor.forEach(setFaded(true));
-      setTickets(0);
-    } else if (value < 500) {
-      perfSupporter.forEach(setFaded(true));
-      perfFriend.forEach(setFaded(false));
-      perfPartner.forEach(setFaded(true));
-      benefactorSponsor.forEach(setFaded(true));
-      outreachSponsor.forEach(setFaded(true));
-      productionSponsor.forEach(setFaded(true));    
-      setTickets(0);
-    } else if (value < 1000) {
-      perfSupporter.forEach(setFaded(true));
-      perfFriend.forEach(setFaded(true));
-      perfPartner.forEach(setFaded(false));
-      benefactorSponsor.forEach(setFaded(true));
-      outreachSponsor.forEach(setFaded(true));
-      productionSponsor.forEach(setFaded(true));    
-      setTickets(4);
-    } else if (value < 3000) {
-      perfSupporter.forEach(setFaded(true));
-      perfFriend.forEach(setFaded(true));
-      perfPartner.forEach(setFaded(true));
-      benefactorSponsor.forEach(setFaded(false));
-      outreachSponsor.forEach(setFaded(true));
-      productionSponsor.forEach(setFaded(true));    
-      setTickets(6);
-    } else if (value < 5000) {
-      perfSupporter.forEach(setFaded(true));
-      perfFriend.forEach(setFaded(true));
-      perfPartner.forEach(setFaded(true));
-      benefactorSponsor.forEach(setFaded(true));
-      outreachSponsor.forEach(setFaded(false));
-      productionSponsor.forEach(setFaded(true));    
-      setTickets(8);
-    } else {
-      perfSupporter.forEach(setFaded(true));
-      perfFriend.forEach(setFaded(true));
-      perfPartner.forEach(setFaded(true));
-      benefactorSponsor.forEach(setFaded(true));
-      outreachSponsor.forEach(setFaded(true));
-      productionSponsor.forEach(setFaded(false));    
-      setTickets(10);
-    }
   };
 }
 
 amountDropdown.addEventListener('change', selectLevel(true));
-amount.addEventListener('change', selectLevel(false));
 </script>
 {{ end }}
 

@@ -47,20 +47,8 @@ exports.handler = function(event, context, callback) {
         card_nonce: cardNonce
     };
 
-    let noteSuffix;
-
-    if (params.amount >= 500) {
-      noteSuffix = `${params.viptix} VIP tickets requested`;
-    } else if (params.amount >= 100) {
-      noteSuffix = '4 tickets included';
-    } else if (params.amount >= 50) {
-      noteSuffix = '2 tickets included';
-    } else {
-      noteSuffix = 'no tickets included';
-    }
-
     const referenceInfo = {
-        note: `${params.donorName} - ${noteSuffix}`
+        note: `${params.donorName}`
     };
 
     const transactionInfo = Object.assign({}, buyerInfo, paymentInfo, referenceInfo);
@@ -94,7 +82,7 @@ exports.handler = function(event, context, callback) {
         State: ${params.state}
         ZIP: ${params.zip}
         Amount: ${params.amount}
-        Tickets: ${noteSuffix}
+        No Tickets Given - Past due date
       `
     }
 

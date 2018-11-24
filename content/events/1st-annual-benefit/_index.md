@@ -14,8 +14,16 @@ address = "1099 E Young St, Rolesville, NC 27571"
 eventStart = "2018-12-02 18:00:00"
 eventEnd = "2018-12-02 20:00:00"
 participants = [
+  "Academy for the Performing Arts",
+  "Broughton High School",
+  "Carolina Ballet",
+  "Carolina Dance Center",
   "CC & Co Dance Complex", 
-  "International Ballet Academy"
+  "International Ballet Academy",
+  "Leesville Road High School",
+  "Main Street Dance",
+  "North Raleigh Christian Academy",
+  "Wakefield High School"
   ]
 +++
 **Join The Journey. Be A Part Of The Evolution. Make A Difference.**
