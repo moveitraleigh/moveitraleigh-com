@@ -1,6 +1,7 @@
 +++
 draft = false
 title = "Sponsorship"
+sitemap_exclude = true
 +++
 ## How Can I Support Move It Raleigh?
 
