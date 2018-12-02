@@ -45,6 +45,31 @@
             </section>
           {{ end }}
 
+          {{ with .Params.sponsors }}
+            <section class="participants">
+              <h3>Sponsors</h3>
+              <ul>
+                {{ range $.Params.sponsors }}
+                  {{ $sponsor := $.Site.GetPage "taxonomyTerm" (printf "sponsors/%s" (urlize .)) }}
+                  {{ with $sponsor }}
+                    {{ $orig := .Resources.GetMatch "logo" }}
+                    {{ $logo := $orig.Resize "x100" }}
+                    <li>
+                      <a href="{{ .Params.website }}" target="_blank">
+                        <figure>
+                          <img src="{{ $logo.RelPermalink }}" alt="{{ $logo.Title }}" />
+                          <figcaption>
+                            <h4><small>{{ .Params.name }}</small></h4>
+                          </figcaption>                          
+                        </figure>
+                      </a>
+                    </li>
+                  {{ end }}
+                {{ end }}
+              </ul>
+            </section>
+          {{ end }}
+
           {{ with .Params.participants }}
             <section class="participants">
               <h3>Participants</h3>
@@ -68,7 +93,7 @@
                 {{ end }}
               </ul>
             </section>
-          {{ end }}
+          {{ end }}          
         </section>
       </article>
 
