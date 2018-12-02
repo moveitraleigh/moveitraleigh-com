@@ -34,6 +34,6 @@ sponsors = [
 
 Thank you for making Raleigh Gives Back, Move It Raleigh's first annual dance benefit concert, such an amazing success! Raleigh Gives Back was held at Rolesville High School on December 2nd  6:00pm. Those who attended experienced a two-hour community performance showcasing amazingly talented local performing artists. Proceeds from this event benefited [Helping Hand Mission of Raleigh](http://helpinghandmission.org/) and dance studios impacted by Hurricane Florence.
 
-The silent auction that accompanied the event generated quite a bit of excitement. The auction, which contained items from organizations such as Lululemon, Bluewater Spa, and the Boston Red Sox, assisted in bringing us over our goal for a grand total of $12,345!
+The silent auction that accompanied the event generated quite a bit of excitement. The auction, which contained items from organizations such as Lululemon, Bluewater Spa, and the Boston Red Sox, assisted in bringing us over our goal of $10,000!
 
 Be sure to join us at Marbles Museum on April 22nd for our next event which will celebrate Earth Day!
