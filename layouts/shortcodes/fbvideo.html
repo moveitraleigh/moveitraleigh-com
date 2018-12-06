@@ -1,0 +1,8 @@
+<div class="embed fbvideo-player">
+  <iframe
+    class="facebook-player"
+    type="text/html"
+    src="//www.facebook.com/plugins/video.php?{{ ( querify "href" (index .Params 0) "show_text" "false" ) | safeURL }}"
+    allowTransparency="true" allowFullScreen="true" scrolling="no" frameborder="0">
+  </iframe>
+</div>

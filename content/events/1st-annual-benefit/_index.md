@@ -36,4 +36,6 @@ Thank you for making Raleigh Gives Back, Move It Raleigh's first annual dance be
 
 The silent auction that accompanied the event generated quite a bit of excitement. The auction, which contained items from organizations such as Lululemon, Bluewater Spa, and the Boston Red Sox, assisted in bringing us over our goal of $10,000!
 
+{{< fbvideo "https://www.facebook.com/CarolinaHDVideo/videos/1089815724525005/" >}}
+
 Be sure to join us at Marbles Museum on April 22nd for our next event which will celebrate Earth Day!
