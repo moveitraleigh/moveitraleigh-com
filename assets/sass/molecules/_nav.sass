@@ -40,7 +40,7 @@ nav
     padding: 0
     top: $height-header - $spacing-double
     z-index: $zindex-nav
-    background-color: $color-nav-base
+    background-color: #fefefe
     overflow-x: visible
     overflow-y: scroll
     position: fixed
@@ -52,8 +52,9 @@ nav
       position: relative
       display: block
       transition: $nav-hover-transition
-      &:hover
-        background-color: $color-nav-sub
+      @for $i from 1 through $navColorsLength
+        &:hover:nth-of-type(#{$navColorsLength}n+#{$i})
+          background-color: nth($navColors, $i)
     [id^=sm-]
       display: none
       + .sub-menu
@@ -109,6 +110,7 @@ nav
       li
         list-style: none
         position: relative
+        border-radius: 12px
         float: left
         display: inline
         transition: $nav-hover-transition

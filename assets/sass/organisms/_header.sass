@@ -4,7 +4,8 @@ header
   min-height: $height-header
   width: 100%
   z-index: $zindex-header
-  background: $grey-gandalf
+  background: rgb(255,255,255)
+  background: linear-gradient(40deg, rgba(255,255,255,1) 0%, rgba(108,129,255,1) 40%, rgba(155,70,213,1) 60%, rgba(253,29,29,1) 80%, rgba(252,176,69,1) 100%)
   +breakpoint('mama-bear')
     background: inherit
   h1
@@ -25,7 +26,8 @@ header
       height: 100%
   &.sticky-header
     position: fixed
-    background: $grey-gandalf
+    background: rgb(255,255,255)
+    background: linear-gradient(40deg, rgba(255,255,255,1) 0%, rgba(108,129,255,1) 40%, rgba(155,70,213,1) 60%, rgba(253,29,29,1) 80%, rgba(252,176,69,1) 100%)
     transition: $nav-mobile-transition
     margin-bottom: 100px
     +breakpoint("mama-bear")
