@@ -40,7 +40,8 @@ nav
     padding: 0
     top: $height-header - $spacing-double
     z-index: $zindex-nav
-    background-color: #fefefe
+    background-color: $black
+    color: $white
     overflow-x: visible
     overflow-y: scroll
     position: fixed
@@ -51,10 +52,12 @@ nav
     li
       position: relative
       display: block
+      color: $white
       transition: $nav-hover-transition
-      @for $i from 1 through $navColorsLength
-        &:hover:nth-of-type(#{$navColorsLength}n+#{$i})
-          background-color: nth($navColors, $i)
+      &:hover
+        @for $i from 1 through $navColorsLength
+          &:nth-of-type(#{$navColorsLength}n+#{$i})
+            background-color: nth($navColors, $i)
     [id^=sm-]
       display: none
       + .sub-menu
@@ -68,12 +71,13 @@ nav
     display: inline-block
     width: 100%
     cursor: pointer
-    color: $color-font-base
-    &:hover,
+    color: $white
     &:visited,
-    &.active,
+    &.active
+      color: $white
+    &:hover,
     &.focus
-      color: $color-font-base
+      color: $black
   span.drop-icon
     display: none
   .sub-menu

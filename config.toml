@@ -48,17 +48,17 @@ disableKinds = ["taxonomyTerm"]
     url = "/events/community-class/"
     weight = 50
     
-  [[menu.main]]
-    identifier = "auction"
-    name = "Silent Auction"
-    url = "https://www.biddingowl.com/MoveItRaleigh"
-    weight = 70
+#  [[menu.main]]
+#    identifier = "auction"
+#    name = "Silent Auction"
+#    url = "https://www.biddingowl.com/MoveItRaleigh"
+#    weight = 70
 
-  [[menu.main]]
-    identifier = "donate"
-    name = "Donate"
-    url = "/donate/"
-    weight = 80
+#  [[menu.main]]
+#    identifier = "donate"
+#    name = "Donate"
+#    url = "/donate/"
+#    weight = 80
 
   [[menu.main]]
     identifier = "past-events"

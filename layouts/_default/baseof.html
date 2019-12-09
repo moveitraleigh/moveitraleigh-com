@@ -92,17 +92,29 @@
                   {{ $participant := $.Site.GetPage "taxonomyTerm" (printf "participants/%s" (urlize .)) }}
                   {{ with $participant }}
                     {{ $orig := .Resources.GetMatch "logo" }}
+                    {{ with $orig }}
                     {{ $logo := $orig.Resize "x100" }}
                     <li>
-                      <a href="{{ .Params.website }}" target="_blank">
+                      <a href="{{ $participant.Params.website }}" target="_blank">
                       <figure>
                         <img src="{{ $logo.RelPermalink}}" alt="{{ $logo.Title }}" />
                         <figcaption>
-                          <h4><small>{{ .Params.name }}</small></h4>
+                          <h4><small>{{ $participant.Params.name }}</small></h4>
                         </figcaption>
                       </figure>
                       </a>
                     </li>
+                    {{ else }}
+                    <li>
+                      <a href="{{ $participant.Params.website }}" target="_blank">
+                      <figure>
+                        <figcaption>
+                          <h4><small>{{ $participant.Params.name }}</small></h4>
+                        </figcaption>
+                      </figure>
+                      </a>
+                    </li>                    
+                  {{ end }}
                   {{ end }}
                 {{ end }}
               </ul>

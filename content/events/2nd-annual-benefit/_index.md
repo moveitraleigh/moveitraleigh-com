@@ -1,15 +1,34 @@
 +++
 draft = false
-title = "Raleigh Gives Back Benefit Concert"
+title = "2020 2nd Annual Raleigh Gives Back Benefit Concert sponsored by Move it Raleigh"
 type = "event"
 side_fbvideo = "https://www.facebook.com/CarolinaHDVideo/videos/1089815724525005/"
 description = "Join us for the Second Annual Move It Raleigh Benefit Concert on January 26th at A.J. Fletcher Opera Theater"
-heading = "Raleigh Gives Back Benefit Concert"
-eventName = "Raleigh Gives Back Benefit Concert"
+heading = "2020 2nd Annual Raleigh Gives Back Benefit Concert sponsored by Move it Raleigh"
+eventName = "2020 2nd Annual Raleigh Gives Back Benefit Concert sponsored by Move it Raleigh"
 location = "A.J. Fletcher Opera Theater"
 address = "2 E South St, Raleigh, NC 27601"
 eventStart = "2020-01-26 18:30:00"
 eventEnd = "2020-01-26 21:00:00"
+participants = [
+  "Academy for the Performing Arts",
+  "Broughton High School",
+  "Cardinal Gibbons High School",
+  "Carolina Ballet",
+  "Carolina Dance Center",
+  "CC & Co Dance Complex",
+  "CDF Superstars",
+  "Enloe High School",
+  "Expressions In Rhythm",
+  "International Ballet Academy",
+  "Longleaf School of the Arts",
+  "Main Street Dance",
+  "Meredith College",
+  "North Raleigh Christian Academy",
+  "Raleigh Rockers",
+  "Sole Symphony",
+  "Southern Star"
+  ]
 sponsors = [
   "Fractured Atlas"
   ]
@@ -18,13 +37,13 @@ sponsors = [
 
 Jan 26, 2020
 6:30 pm
-Location: A.J. Fletcher Opera Theater
+Location: A.J. Fletcher Opera Theater at the Duke Energy Center for the Performing Arts
 
 ### What It Is
-MOVE IT RALEIGH is a non-profit campaign formed to encourage residents in the Triangle to get out and move, with a specific focus on the performing arts. MOVE IT RALEIGH will work with local businesses and residents to give back to the community and fund performing arts’ needs in the Triangle area.
+"Raleigh Gives Back" is a community benefit concert that unites the Triangle dance community and raises money to give back to the triangle arts community to enhance and elevate the opportunities for all dancers and non dancers to enjoy and participate in the arts. 
 
 ### Why
-Developed by Christy Curtis, owner of CC & Co Dance Complex, Move It Raleigh is a **community-based campaign to encourage residents in the Triangle area to get out and move,** with a specific focus on the performing arts.
+We feel it is important to collaborate and share our talent with one another and our community to give back! 
 
 ### Tickets
-[ buy ticket link ]
+TBD

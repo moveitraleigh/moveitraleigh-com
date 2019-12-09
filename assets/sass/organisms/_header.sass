@@ -4,10 +4,14 @@ header
   min-height: $height-header
   width: 100%
   z-index: $zindex-header
-  background: rgb(255,255,255)
-  background: linear-gradient(40deg, rgba(255,255,255,1) 0%, rgba(108,129,255,1) 40%, rgba(155,70,213,1) 60%, rgba(253,29,29,1) 80%, rgba(252,176,69,1) 100%)
+  background: $black
   +breakpoint('mama-bear')
     background: inherit
+    nav
+      a,
+      a:visited,
+      a:active
+        color: $black
   h1
     display:  inline
     padding-left: 1.1em
@@ -26,8 +30,7 @@ header
       height: 100%
   &.sticky-header
     position: fixed
-    background: rgb(255,255,255)
-    background: linear-gradient(40deg, rgba(255,255,255,1) 0%, rgba(108,129,255,1) 40%, rgba(155,70,213,1) 60%, rgba(253,29,29,1) 80%, rgba(252,176,69,1) 100%)
+    background: $black
     transition: $nav-mobile-transition
     margin-bottom: 100px
     +breakpoint("mama-bear")
@@ -36,6 +39,14 @@ header
       .nav-logo
         padding-left: $hpad-header * 4
         height: 80px
+      nav
+        a,
+        a:visited,
+        a:active
+          color: $white
+        a:hover,
+        a:focus
+          color: $black
     + main
       top: 100px
     ~ footer
