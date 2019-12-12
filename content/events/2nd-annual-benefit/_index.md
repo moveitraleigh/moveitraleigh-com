@@ -3,6 +3,7 @@ draft = false
 title = "2020 2nd Annual Raleigh Gives Back Benefit Concert sponsored by Move it Raleigh"
 type = "event"
 side_fbvideo = "https://www.facebook.com/CarolinaHDVideo/videos/1089815724525005/"
+decpa_logo = true
 description = "Join us for the Second Annual Move It Raleigh Benefit Concert on January 26th at A.J. Fletcher Opera Theater"
 heading = "2020 2nd Annual Raleigh Gives Back Benefit Concert sponsored by Move it Raleigh"
 eventName = "2020 2nd Annual Raleigh Gives Back Benefit Concert sponsored by Move it Raleigh"
@@ -32,17 +33,19 @@ participants = [
 sponsors = [
   "Fractured Atlas"
   ]
+decpa = true
 +++
 **Raleigh Gives Back.**
 
-Jan 26, 2020
-6:30 pm
+Jan 26, 2020 \
+6:30 pm \
+\
 Location: A.J. Fletcher Opera Theater at the Duke Energy Center for the Performing Arts
 
 ### What It Is
 "Raleigh Gives Back" is a community benefit concert that unites the Triangle dance community and raises money to give back to the triangle arts community to enhance and elevate the opportunities for all dancers and non dancers to enjoy and participate in the arts. 
 
-###Who
+### Who
 There will be 18 different performers participating in the 2020 concert: private dance studios, high schools, colleges, ballet schools, ballroom studio, breaking crew, guest performers and much more.  For the first time we will be performing a community piece of work choreographed by Guest Artist, Grace Buckley. See information on the community class. 
 
 ### Why
