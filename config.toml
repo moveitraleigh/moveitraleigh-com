@@ -54,11 +54,11 @@ disableKinds = ["taxonomyTerm"]
 #    url = "https://www.biddingowl.com/MoveItRaleigh"
 #    weight = 70
 
-#  [[menu.main]]
-#    identifier = "donate"
-#    name = "Donate"
-#    url = "/donate/"
-#    weight = 80
+  [[menu.main]]
+    identifier = "donate"
+    name = "Donate"
+    url = "/donate/"
+    weight = 80
 
   [[menu.main]]
     identifier = "past-events"
