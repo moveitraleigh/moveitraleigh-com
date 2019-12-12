@@ -42,6 +42,9 @@ Location: A.J. Fletcher Opera Theater at the Duke Energy Center for the Performi
 ### What It Is
 "Raleigh Gives Back" is a community benefit concert that unites the Triangle dance community and raises money to give back to the triangle arts community to enhance and elevate the opportunities for all dancers and non dancers to enjoy and participate in the arts. 
 
+###Who
+There will be 18 different performers participating in the 2020 concert: private dance studios, high schools, colleges, ballet schools, ballroom studio, breaking crew, guest performers and much more.  For the first time we will be performing a community piece of work choreographed by Guest Artist, Grace Buckley. See information on the community class. 
+
 ### Why
 We feel it is important to collaborate and share our talent with one another and our community to give back! 
 
