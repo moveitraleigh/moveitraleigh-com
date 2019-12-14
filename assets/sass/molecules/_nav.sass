@@ -1,7 +1,8 @@
 nav
   font-family: $font-family-2
-  background-color: $color-nav-base
-  overflow-y: scroll
+  background-color: transparent
+  position: sticky
+  top: 0
   z-index: $zindex-nav
   #toggle-menu
     padding-top: $vpad-header * 2.5
@@ -37,6 +38,7 @@ nav
         display: block
         height: 100vh
   ul
+    margin-top: 100px
     padding: 0
     top: $height-header - $spacing-double
     z-index: $zindex-nav
@@ -44,7 +46,9 @@ nav
     color: $white
     overflow-x: visible
     overflow-y: scroll
-    position: fixed
+    position: sticky
+    top: 100px
+    height: 100vh
     list-style: none
     height: 0
     width: 100vw

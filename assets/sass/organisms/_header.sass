@@ -1,4 +1,6 @@
 header
+  position: sticky
+  top: 0
   display: flex
   justify-content: space-between
   min-height: $height-header
@@ -29,10 +31,8 @@ header
     img
       height: 100%
   &.sticky-header
-    position: fixed
     background: $black
     transition: $nav-mobile-transition
-    margin-bottom: 100px
     +breakpoint("mama-bear")
       min-height: 80px
       margin-bottom: 80px
@@ -49,5 +49,6 @@ header
           color: $black
     + main
       top: 100px
+      top: 0
     ~ footer
       margin-top: 100px
