@@ -6,6 +6,6 @@ side_alt = "Posing in front of the MIR Logo"
 heading = "Who We Are"
 images = ["/img/mir-pose.jpg"]
 +++
-Developed by Christy Curtis, owner of CC & Co Dance Complex, Move It Raleigh is a community-based campaign to encourage residents in the Triangle area to get out and move, with a specific focus on the performing arts.
+Developed by Christy Curtis, owner of CC & Co Dance Complex, Move It Raleigh is a Non-Profit Organization to encourage residents in the Triangle area to get out and move, with a specific focus on the performing arts.
 
 **Move It Raleigh will work with businesses and residents to give back to the community and fund performing arts' needs in the Triangle area.**

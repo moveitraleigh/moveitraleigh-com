@@ -18,7 +18,6 @@ participants = [
   "Carolina Ballet",
   "Carolina Dance Center",
   "CC & Co Dance Complex",
-  "CDF Superstars",
   "Enloe High School",
   "Expressions In Rhythm",
   "International Ballet Academy",
@@ -26,13 +25,12 @@ participants = [
   "Main Street Dance",
   "Meredith College",
   "North Raleigh Christian Academy",
+  "Premier School of Dance",
   "Raleigh Rockers",
   "Sole Symphony",
   "Southern Star"
   ]
-sponsors = [
-  "Fractured Atlas"
-  ]
+sponsors = []
 decpa = true
 +++
 **Raleigh Gives Back.**
