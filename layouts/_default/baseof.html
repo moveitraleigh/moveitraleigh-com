@@ -35,6 +35,7 @@
             {{ .Content }}
           {{ end }}
         </section>
+        {{ if or (.Params.decpa) (.Params.side_img) (.Params.side_fbvideo) (.Params.sponsors) (.Params.participants) }}
         <section>
           {{ with .Params.decpa }}
             <section class="decpa">
@@ -125,6 +126,7 @@
             </section>
           {{ end }}          
         </section>
+        {{ end }}
       </article>
 
     </main>
