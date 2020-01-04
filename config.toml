@@ -43,9 +43,9 @@ disableKinds = ["taxonomyTerm"]
     weight = 40
 
   [[menu.main]]
-    identifier = "community-class"
-    name = "Community Class"
-    url = "/events/community-class/"
+    identifier = "community-opportunities"
+    name = "Community Opportunities"
+    url = "/events/community-opportunities/"
     weight = 50
     
  [[menu.main]]
