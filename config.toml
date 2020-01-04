@@ -61,10 +61,10 @@ disableKinds = ["taxonomyTerm"]
     weight = 80
 
   [[menu.main]]
-    identifier = "past-events"
-    name = "Past Events"
-    title = "Past Events"
-    url = "/events/1st-annual-benefit/"
+    identifier = "sponsor"
+    name = "Sponsorship"
+    title = "sponsorship"
+    url = "/sponsor/"
     weight = 90
 
   [[menu.main]]
