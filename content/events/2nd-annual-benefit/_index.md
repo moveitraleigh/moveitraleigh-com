@@ -60,4 +60,4 @@ Option           | Price
 
 Sale to the general public starts on Tue, Jan 14 @ 06:00 pm EST
 
-<a href="https://www1.ticketmaster.com/event/2D005794C96DE9A0" class="button button-primary button-tickets">Buy Tickets</a>
+<a href="https://www1.ticketmaster.com/event/2D005794C96DE9A0" class="button button-primary button-large">Buy Tickets</a>
