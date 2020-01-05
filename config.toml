@@ -68,6 +68,12 @@ disableKinds = ["taxonomyTerm"]
     weight = 90
 
   [[menu.main]]
+    identifier = "advertise"
+    name = "Ad"
+    url = "/events/2nd-annual-benefit/advertise/"
+    weight = 95
+
+  [[menu.main]]
     identifier = "connect"
     name = "Join the MOVEment"
     title = "Connect With Us"
