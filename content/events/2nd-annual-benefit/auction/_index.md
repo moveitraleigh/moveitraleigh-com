@@ -3,6 +3,7 @@ draft = false
 title = "Second Annual Move It Raleigh Silent Auction"
 description = "Feel free to participate in the Second Annual Move It Raleigh Silent Auction!"
 heading = "Second Annual Move It Raleigh Silent Auction"
+banner_alert = "The Move It Raleigh <a href=\"https://www.biddingowl.com/MoveItRaleigh\">Silent Auction</a> is live!"
 +++
 
 The Move It Raleigh Silent Auction is scheduled to conclude January 26, 2020 at 6:30 pm at AJ Fletcher Opera Theater at the Duke Energy Center for the Performing Arts. Proceeds from the auction funds will go toward our Community Outreach programs. This year we hope to raise over $20,000 and hope you will donate.
