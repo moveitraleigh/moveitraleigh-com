@@ -65,11 +65,12 @@ nav
     [id^=sm-]
       display: none
       + .sub-menu
+        margin-top: 0
         display: block
         height: 0
         transition: $nav-mobile-transition        
       &:checked + .sub-menu
-          height: $line-height * 2em // WARNING - Change when adding more items
+        height: $line-height * 1em // WARNING - Change when adding more items
   a
     +unstyled-link
     display: inline-block
@@ -120,23 +121,22 @@ nav
         position: relative
         border-radius: 12px
         float: left
-        display: inline
+        display: inline-block
         transition: $nav-hover-transition
         a
           +unstyled-link
           color: $black
         &:hover
-          background-color: #ddd
           ul.sub-menu
-            background-color: #ddd
+            background-color: inherit
+            border-radius: 12px
             overflow: hidden
-            display: inline-block
-            height: $line-height * 2em !important // WARNING - Change when adding more items
+            height: $line-height * 1em !important // WARNING - Change when adding more items
             li
               float: none
               display: block
               &:hover
-                background-color: #eee
+                background-color: inherit
       ul.sub-menu
         display: inline-block
         left: 0
@@ -147,6 +147,9 @@ nav
         width: auto
         white-space: nowrap
         transition: $nav-hover-transition
+        li
+          width: auto
+          min-width: 100%
       .drop-icon
         position: relative
       .nav-item
