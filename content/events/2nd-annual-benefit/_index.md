@@ -52,11 +52,11 @@ We feel it is important to collaborate and share our talent with one another and
 ### Tickets
 Option             | Price
 -------------------|-------
-***Dress Circle*** | $30.00
+***VIP*** | $30.00
 ***Premium***      | $20.00
 ***Students\****   | $15.00
 
- \* Students Must have Student ID & pick up at will call
+ \* Students Must h ave Student ID & pick up at will call
 
 Sale to the general public starts on Tue, Jan 14 @ 06:00 pm EST
 
