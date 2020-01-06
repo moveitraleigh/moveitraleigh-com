@@ -50,11 +50,11 @@ There will be 18 different performers participating in the 2020 concert: private
 We feel it is important to collaborate and share our talent with one another and our community to give back! 
 
 ### Tickets
-Option           | Price
------------------|-------
-***VIP***        | $30.00
-***Premium***    | $20.00
-***Students\**** | $15.00
+Option             | Price
+-------------------|-------
+***Dress Circle*** | $30.00
+***Premium***      | $20.00
+***Students\****   | $15.00
 
  \* Students Must have Student ID & pick up at will call
 
