@@ -61,18 +61,18 @@ disableKinds = ["taxonomyTerm"]
     url = "/events/2nd-annual-benefit/auction/"
     weight = 70
 
-  [[menu.main]]
-    identifier = "donate"
-    name = "Donate"
-    url = "/donate/"
-    weight = 80
+#  [[menu.main]]
+#    identifier = "donate"
+#    name = "Donate"
+#    url = "/donate/"
+#    weight = 80
 
-  [[menu.main]]
-    identifier = "sponsor"
-    name = "Sponsorship"
-    title = "sponsorship"
-    url = "/sponsor/"
-    weight = 90
+#  [[menu.main]]
+#    identifier = "sponsor"
+#    name = "Sponsorship"
+#    title = "sponsorship"
+#    url = "/sponsor/"
+#    weight = 90
 
   [[menu.main]]
     identifier = "advertise"
