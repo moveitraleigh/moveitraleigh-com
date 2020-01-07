@@ -50,14 +50,8 @@ There will be 18 different performers participating in the 2020 concert: private
 We feel it is important to collaborate and share our talent with one another and our community to give back! 
 
 ### Tickets
-Option             | Price
--------------------|-------
-***VIP*** | $30.00
-***Premium***      | $20.00
-***Students\****   | $15.00
+Ticket prices range from $20.00 - $30.00. Students can purchase tickets for $15.00; students must have Student ID & pick up at will call.
 
- \* Students Must h ave Student ID & pick up at will call
-
-Sale to the general public starts on Tue, Jan 14 @ 06:00 pm EST
+Sale to the general public starts on Tue, Jan 14 @ 06:00 pm EST.
 
 <a href="https://www1.ticketmaster.com/event/2D005794C96DE9A0" class="button button-primary button-large">Buy Tickets</a>
