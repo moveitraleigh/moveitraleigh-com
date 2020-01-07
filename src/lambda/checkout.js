@@ -59,8 +59,8 @@ exports.handler = function(event, context, callback) {
       subject: 'Thank You from Move It Raleigh!',
       html: `
       <p>Thank you for donating to Move It Raleigh.</p>
-      <p>This is a tax deductible donation.</p>
-      <p>We appreciate your support. If you have questions, please reach out.</p>
+      <p>This is a tax deductible donation. You will receive a receipt of your donation within the next week.</p>
+      <p>We appreciate your support! If you have any questions, please reach out.</p>
       <p></p>
       <p>Thank you,<br>
       Move It Raleigh<br>

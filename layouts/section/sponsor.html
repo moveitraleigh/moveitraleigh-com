@@ -261,7 +261,7 @@ amount.addEventListener('change', selectLevel(false));
 {{ $appId := (getenv (printf "%s_SQUARE_APP_ID" (getenv "BRANCH_ENV" | upper))) }}
 {{ $locId := (getenv (printf "%s_SQUARE_LOC_ID" (getenv "BRANCH_ENV" | upper))) }}
 
-{{ $jsVars := (printf "var applicationId = '%s';\n\nvar locationId = '%s';\n\n" $appId $locId) | resources.FromString "js/vars.js" }}
+{{ $jsVars := (printf "var targetDir = 'sponsor'; applicationId = '%s';\n\nvar locationId = '%s';\n\n" $appId $locId) | resources.FromString "js/vars.js" }}
 {{ $jsTemplate := resources.Get "js/sqpaymentform.js" }}
 
 {{ $sqPaymentFormJs := slice $jsVars $jsTemplate | resources.Concat "js/sqpayment.js" | resources.Minify | resources.Fingerprint "sha512" }}

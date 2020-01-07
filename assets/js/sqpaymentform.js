@@ -158,7 +158,7 @@ var paymentForm = new SqPaymentForm({
           ga('ecommerce:send');
         }
         donorName.value = business.value = email.value = addr1.value = addr2.value = city.value = state.value = zip.value = amount.value = amountDropdown.value = '';
-        window.location.replace('/sponsor/thankyou');
+        window.location.replace('/' + targetDir + '/thankyou');
       })
       .catch(error => {
         isCalled = false;
