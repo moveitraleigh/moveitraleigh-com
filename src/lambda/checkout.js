@@ -58,14 +58,14 @@ exports.handler = function(event, context, callback) {
       to: params.email,
       subject: 'Thank You from Move It Raleigh!',
       html: `
-      <p>Thank you for the donating to Move It Raleigh.</p>
+      <p>Thank you for donating to Move It Raleigh.</p>
       <p>This is a tax deductible donation.</p>
       <p>We appreciate your support. If you have questions, please reach out.</p>
       <p></p>
       <p>Thank you,<br>
       Move It Raleigh<br>
       <a href="https://moveitraleigh.com/">https://moveitraleigh.com</a><br>
-      <a href="mailto:info@moveitraleigh.com">info@moveitraleigh.com</a></p>`
+      <a href="mailto:moveitraleigh@gmail.com">moveitraleigh@gmail.com</a></p>`
     }
 
     const mirEmailOptions = {
@@ -81,7 +81,6 @@ exports.handler = function(event, context, callback) {
         State: ${params.state}
         ZIP: ${params.zip}
         Amount: ${params.amount}
-        No Tickets Given - Past due date
       `
     }
 
