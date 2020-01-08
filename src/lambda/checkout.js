@@ -64,7 +64,7 @@ exports.handler = function(event, context, callback) {
       <p></p>
       <p>Thank you,<br>
       Move It Raleigh<br>
-      <a href="https://moveitraleigh.com/">https://moveitraleigh.com</a><br>
+      <a href="https://www.moveitraleigh.com/">https://www.moveitraleigh.com</a><br>
       <a href="mailto:moveitraleigh@gmail.com">moveitraleigh@gmail.com</a></p>`
     }
 
