@@ -50,7 +50,7 @@ There will be 18 different performers participating in the 2020 concert: private
 We feel it is important to collaborate and share our talent with one another and our community to give back! 
 
 ### Tickets
-Ticket prices range from $20.00 - $30.00. Students can purchase tickets for $15.00; students must have Student ID & pick up at will call.
+Ticket prices range from $20.00 - $30.00. Students can purchase tickets for $15.00; student tickets will need to be purchased at the Box Office with student ID.
 
 **Please note:** A facility fee of $2.15 will be added to all tickets as well as sales tax. If you would like to forgo the additional Ticketmaster service charges, convenience fees, and processing fees, you may buy tickets directly at the Duke Energy Center Box Office.
 
