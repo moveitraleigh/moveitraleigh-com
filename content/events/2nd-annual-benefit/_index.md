@@ -52,6 +52,10 @@ We feel it is important to collaborate and share our talent with one another and
 ### Tickets
 Ticket prices range from $20.00 - $30.00. Students can purchase tickets for $15.00; students must have Student ID & pick up at will call.
 
+**Please note:** A facility fee of $2.15 will be added to all tickets as well as sales tax. If you would like to forgo the additional Ticketmaster service charges, convenience fees, and processing fees, you may buy tickets directly at the Duke Energy Center Box Office.
+
+Box Office is open Monday - Friday 9:00am to 5:30pm. You can also purchase tickets night of show, which opens one prior to any scheduled performance.  Will Call tickets can be picked up one hour prior to the scheduled performance up until show starts.
+
 Sale to the general public starts on Tue, Jan 14 @ 06:00 pm EST.
 
 <a href="https://www1.ticketmaster.com/event/2D005794C96DE9A0" class="button button-primary button-large">Buy Tickets</a>
