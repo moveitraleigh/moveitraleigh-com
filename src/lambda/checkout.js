@@ -70,7 +70,7 @@ exports.handler = function(event, context, callback) {
 
     const mirEmailOptions = {
       to: notifyEmail,
-      subject: 'New Sponsor for Move It Raleigh',
+      subject: 'New Donation for Move It Raleigh',
       text: `
         Name: ${params.donorName}
         Business: ${params.business}
