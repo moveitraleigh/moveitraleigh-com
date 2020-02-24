@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie-edge">
-    {{ if eq .URL "/" }}<title>{{ .Site.Title }}</title>{{ else }}<title>{{ .Site.Title }} - {{ .Title }}</title>{{ end }}
+    {{ if eq .RelPermalink "/" }}<title>{{ .Site.Title }}</title>{{ else }}<title>{{ .Site.Title }} - {{ .Title }}</title>{{ end }}
     {{ with .Description }}<meta name="description" content="{{ . }}">{{ end }}
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     {{ template "_internal/opengraph.html" . }}
@@ -44,6 +44,15 @@
             <section>
               <aside>
                 <img class="side-image" alt="{{ $.Params.side_alt }}" src="{{ . }}" />
+              </aside>
+            </section>
+          {{ end }}
+          {{ with .Params.side_youtube }}
+            <section class="side-youtube">
+              <aside>
+                <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+                  <iframe src="https://www.youtube.com/embed/{{ $.Params.side_youtube}}" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" allowfullscreen="" title="YouTube Video"></iframe>
+                </div>
               </aside>
             </section>
           {{ end }}

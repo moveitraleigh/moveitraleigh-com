@@ -30,6 +30,7 @@ participants = [
   ]
 sponsors = []
 decpa = true
+side_youtube = "KdO3tDAh9_w"
 +++
 **Raleigh Gives Back.**
 
