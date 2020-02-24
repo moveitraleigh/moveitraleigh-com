@@ -27,6 +27,8 @@ CC & Co. Dance Complex \
 8863 Six Forks Rd \
 Raleigh, NC 27615
 
-<a href="./Raleigh%20Moves%20Together%20Sample%20Schedule.pdf" class="button button-primary button-large">Download Sample Schedule</a>
+<a href="https://docs.google.com/forms/d/e/1FAIpQLSdlXCorYaMnpCCupQOO9T67uteiDr0D_9Ox9Xqzumc6aXQfSw/viewform" class="button button-primary button-large">Signup Form</a>
 
 <a href="./Raleigh%20Moves%20Together%20Waiver.pdf" class="button button-primary button-large">Download Waiver</a>
+
+<a href="./Raleigh%20Moves%20Together%20Sample%20Schedule.pdf" class="button button-primary button-large">Download Sample Schedule</a>
