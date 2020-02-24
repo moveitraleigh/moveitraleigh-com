@@ -27,6 +27,9 @@ disableKinds = ["taxonomyTerm"]
 #   event = "events"
 #   tag = "tags"
 #   category = "categories"
+
+[markup.goldmark.renderer]
+  unsafe= true
     
 [menu]
   [[menu.main]]
@@ -45,7 +48,7 @@ disableKinds = ["taxonomyTerm"]
   [[menu.main]]
     identifier = "community-opportunities"
     name = "Community Opportunities"
-    url = "/events/closing-number/"
+    url = "/events/raleigh-moves-together/"
     weight = 50
     
   [[menu.main]]
@@ -55,11 +58,11 @@ disableKinds = ["taxonomyTerm"]
     url = "/events/community-dance/"
     weight = 50
     
-  [[menu.main]]
-    identifier = "auction"
-    name = "Silent Auction"
-    url = "/events/2nd-annual-benefit/auction/"
-    weight = 70
+  # [[menu.main]]
+  #   identifier = "auction"
+  #   name = "Silent Auction"
+  #   url = "/events/2nd-annual-benefit/auction/"
+  #   weight = 70
 
  [[menu.main]]
    identifier = "donate"

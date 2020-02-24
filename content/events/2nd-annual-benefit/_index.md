@@ -2,8 +2,6 @@
 draft = false
 title = "2020 2nd Annual Raleigh Gives Back Benefit Concert sponsored by Move it Raleigh"
 type = "event"
-side_fbvideo = "https://www.facebook.com/CarolinaHDVideo/videos/1089815724525005/"
-decpa_logo = true
 description = "Join us for the Second Annual Move It Raleigh Benefit Concert on January 26th at A.J. Fletcher Opera Theater"
 heading = "2020 2nd Annual Raleigh Gives Back Benefit Concert sponsored by Move it Raleigh"
 eventName = "2020 2nd Annual Raleigh Gives Back Benefit Concert sponsored by Move it Raleigh"
@@ -40,22 +38,10 @@ Jan 26, 2020 \
 \
 Location: A.J. Fletcher Opera Theater at the Duke Energy Center for the Performing Arts
 
-### What It Is
-"Raleigh Gives Back" is a community benefit concert that unites the Triangle dance community and raises money to give back to the triangle arts community to enhance and elevate the opportunities for all dancers and non dancers to enjoy and participate in the arts. 
+We would like to extend a big thank you to our audience, supporters, and sponsors for YOUR part in making MOVE IT RALEIGH’S 2nd annual benefit concert “Raleigh Gives Back” a night full of community, love, and collaboration! We are completely honored & humbled by the support and generosity given by our community! 
 
-### Who
-There will be 18 different performers participating in the 2020 concert: private dance studios, high schools, colleges, ballet schools, ballroom studio, breaking crew, guest performers and much more.  For the first time we will be performing a community piece of work choreographed by Guest Artist, Grace Buckley. See information on the community class. 
+This year, we had 16 studios and performers grace the stage. Our very first community collaboration performance opportunities brought together dancers from different studios that would not usually have the chance to dance with one another. We are extremely grateful to Grace Buckley for choreographing our first ever collaboration piece, bringing 20 dancers from 5 different studios together for one special night. We would also like to thank each one of the nearly 100 dancers who participated in our closing number - our second collaboration opportunity. We were able to raise close to $900 from this incredible experience! We are so proud of these dancers who had to learn choreography off of a video and only had ONE rehearsal!!! Seeing dancers from all over the Triangle gave us chills - and we cannot wait until next year! It was truly moving to see you ALL light up the stage with your pure, genuine love for dance!
 
-### Why
-We feel it is important to collaborate and share our talent with one another and our community to give back! 
+We would also love to announce that we raised almost $20,000 in donations this year! Portions of these proceeds will fund our first community dance workshop Raleigh Moves Together!! Raleigh Moves Together is a FREE workshop to be held on March 14th, 2020 at CC & Co. Dance Complex for dancers that are enrolled in middle and high school dance programs in Wake County to provide access to classes with professional educators and choreographers. Interested schools and/or dancers can find more details under our “Community” tab.
 
-### Tickets
-Ticket prices range from $20.00 - $30.00. Students can purchase tickets for $15.00; student tickets will need to be purchased at the Box Office with student ID.
-
-**Please note:** A facility fee of $2.15 will be added to all tickets as well as sales tax. If you would like to forgo the additional Ticketmaster service charges, convenience fees, and processing fees, you may buy tickets directly at the Duke Energy Center Box Office.
-
-Box Office is open Monday - Friday 9:00am to 5:30pm. You can also purchase tickets night of show, which opens one prior to any scheduled performance.  Will Call tickets can be picked up one hour prior to the scheduled performance up until show starts.
-
-Sale to the general public starts on Tue, Jan 14 @ 06:00 pm EST.
-
-<a href="https://www1.ticketmaster.com/event/2D005794C96DE9A0" class="button button-primary button-large">Buy Tickets</a>
+Thank you for making Move It Raleigh a success, and be on the lookout in late spring for the date of next year’s RALEIGH GIVES BACK!
