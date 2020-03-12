@@ -8,19 +8,21 @@ heading = "Raleigh Moves Together at CC & Co. Dance Complex"
 eventName = "Raleigh Moves Together at CC & Co. Dance Complex"
 location = "CC & Co. Dance Complex"
 address = "8863 Six Forks Rd, Raleigh, NC 27615"
-eventStart = "2020-03-14 13:00:00"
-eventEnd = "2020-03-14 20:15:00"
 +++
 
-## Raleigh Moves Together!
+## Raleigh Moves Together Postponed!
 
-“Raleigh Moves Together Workshop” is a FREE workshop to be held on March 14th, 2020 at CC & Co. Dance Complex for dancers that are enrolled in middle and high school dance programs in Wake County to provide access to classes with professional educators and choreographers. During this 6 hour workshop, the dancers will not only take classes but will participate in "talk-backs" with the guest artists, where the dancers can ask questions and receive feedback as well as mentorship opportunities.  This day will include contemporary, hip hop, jazz, musical theatre, and commercial dance classes of varying levels. At the end of the day, all dancers will have the opportunity to participate in a commercial video project. 
+In light of the current health concerns in Wake County regarding COVID-19, and out of an abundance of caution, we have decided to reschedule the Raleigh Moves Together workshop sponsored by Move It Raleigh that was planned for March 14th. While we will greatly miss seeing our incredible dance community come together for this event, safety for our community is our top priority. We will look forward to dancing with you at a later date!
+
+We are looking into some dates in the spring with the same great faculty and classes! An announcement will be made soon in regards to a new date, and we sincerely hope that you will be able to join us!
+
+If you have any questions, please feel free to contact us by emailing us at moveitraleigh@gmail.com.
+
+## What Is Raleigh Moves Together?
+
+“Raleigh Moves Together Workshop” is a FREE workshop to be held at CC & Co. Dance Complex for dancers that are enrolled in middle and high school dance programs in Wake County to provide access to classes with professional educators and choreographers. During this 6 hour workshop, the dancers will not only take classes but will participate in "talk-backs" with the guest artists, where the dancers can ask questions and receive feedback as well as mentorship opportunities.  This day will include contemporary, hip hop, jazz, musical theatre, and commercial dance classes of varying levels. At the end of the day, all dancers will have the opportunity to participate in a commercial video project. 
 
 The mission of "Raleigh Moves Together Workshop" is to give every dancer in Wake County an opportunity to explore and grow their talents within the dance arena and connect them to the possibilities of dance as a vocation regardless of their financial means.
-
-### When?
-Mar 14, 2020 \
-1:00 pm - 8:15 pm
 
 ### Where?
 CC & Co. Dance Complex \

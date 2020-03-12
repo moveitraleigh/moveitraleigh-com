@@ -3,6 +3,7 @@ draft = false
 title = "Move It Raleigh"
 banner_img = "/img/banner.png"
 banner_alt = "Move It Raleigh"
+banner_alert = "Raleigh Moves Together event has been postponed. <a href='/events/raleigh-moves-together'>Click here for more information.</a>"
 description = "Move It Raleigh is a community-based campaign to encourage residents in the Triangle area to get out and move, with a specific focus on the performing arts."
 +++
 ## Who We Are
