@@ -3,12 +3,12 @@ draft = false
 title = "Raleigh Moves Together!"
 type = "event"
 float_img = "/img/rmt.jpg"
-description = ""
+description = "Raleigh Moves Together is a FREE workshop to be held at CC & Co. Dance Complex for dancers that are enrolled in middle and high school dance programs in Wake County to provide access to classes with professional educators and choreographers."
 heading = "Raleigh Moves Together at CC & Co. Dance Complex"
 eventName = "Raleigh Moves Together at CC & Co. Dance Complex"
 location = "CC & Co. Dance Complex"
 address = "8863 Six Forks Rd, Raleigh, NC 27615"
-eventStart = "2021-09-26 13:00:00"
+eventStart = "2021-09-26 14:00:00"
 eventEnd = "2021-09-26 20:00:00"
 +++
 
