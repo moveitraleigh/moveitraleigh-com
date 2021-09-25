@@ -35,6 +35,6 @@ Raleigh, NC 27615
 
 <a href="./Raleigh%20Moves%20Together%20Waiver.pdf" class="button button-primary button-large">Download Waiver</a>
 
-<a href="./Raleigh%20Moves%20Together%20Sample%20Schedule.pdf" class="button button-primary button-large">Download Sample Schedule</a>
+<a href="./RaleighMovesTogetherSchedule.pdf" class="button button-primary button-large">Download Sample Schedule</a>
 
 Please email <a href="mailto:moveitraleigh@gmail.com">moveitraleigh@gmail.com</a> with any questions!
