@@ -10,4 +10,4 @@ Developed by Christy Curtis, owner of CC & Co. Dance Complex, Move It Raleigh is
 
 **MOVE IT RALEIGH is a non-profit 501(c)(3) to celebrate and support dance in our community, with a specific focus on providing Triangle students and teachers access to classes, education, and performance opportunities. All net proceeds from MOVE IT RALEIGH will be donated back locally to fund performing arts needs in the triangle.**
 
-<a href="./What%20Is%20Move%20It%20Raleigh.pdf" class="button button-primary button-large">Download Press Kit</a>
+<a href="./What%20Is%20Move%20It%20Raleigh.pdf" class="button button-primary button-large">Click Here For More Information</a>
