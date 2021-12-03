@@ -8,4 +8,6 @@ images = ["/img/mir-pose.jpg"]
 +++
 Developed by Christy Curtis, owner of CC & Co. Dance Complex, Move It Raleigh is a Non-Profit Organization created to support the performing arts programs of Wake County. Move It Raleigh’s focus is on providing professional development to the Wake County school dance teachers and providing opportunities to students interested in dance.
 
-**Move It Raleigh will work with businesses and residents to give back to the community and fund performing arts' needs in the Triangle area.**
+**MOVE IT RALEIGH is a non-profit 501(c)(3) to celebrate and support dance in our community, with a specific focus on providing Triangle students and teachers access to classes, education, and performance opportunities. All net proceeds from MOVE IT RALEIGH will be donated back locally to fund performing arts needs in the triangle.**
+
+<a href="./What%20Is%20Move%20It%20Raleigh.pdf" class="button button-primary button-large">Download Press Kit</a>
