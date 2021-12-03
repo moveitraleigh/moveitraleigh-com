@@ -6,13 +6,13 @@ disableKinds = ["taxonomyTerm"]
 
 [blackfriday]
   hrefTargetBlank = true
-  
+
 [frontmatter]
   date = ["date", "publishDate", "lastmod"]
   lastmod = [":fileModTime", "lastmod", "date", "publishDate"]
   publishDate = ["publishDate", "date"]
   expiryDate = ["expiryDate"]
-  
+
 [params]
   description = "Move It Raleigh is a community-based campaign to encourage residents in the Triangle area to get out and move, with a specific focus on the performing arts."
   images = ["/img/banner.jpg"]
@@ -22,6 +22,7 @@ disableKinds = ["taxonomyTerm"]
  [taxonomies]
    participant = "participants"
    sponsor = "sponsors"
+
 # [taxonomies]
 #   series = "series"
 #   event = "events"
@@ -30,7 +31,7 @@ disableKinds = ["taxonomyTerm"]
 
 [markup.goldmark.renderer]
   unsafe= true
-    
+
 [menu]
   [[menu.main]]
     identifier = "about"
@@ -38,11 +39,11 @@ disableKinds = ["taxonomyTerm"]
     title = "Who We Are"
     url = "/about/"
     weight = 30
-    
+
   [[menu.main]]
     identifier = "benefit-concert"
     name = "Benefit Concert"
-    url = "/events/2nd-annual-benefit/"
+    url = "/events/3rd-annual-benefit/"
     weight = 40
 
   [[menu.main]]
@@ -50,19 +51,19 @@ disableKinds = ["taxonomyTerm"]
     name = "Community Opportunities"
     url = "/events/raleigh-moves-together/"
     weight = 50
-    
+
   [[menu.main]]
     identifier = "community-dance"
     parent = "community-opportunities"
     name = "Past Opportunities"
     url = "/events/community-dance/"
     weight = 50
-    
-  # [[menu.main]]
-  #   identifier = "auction"
-  #   name = "Silent Auction"
-  #   url = "/events/2nd-annual-benefit/auction/"
-  #   weight = 70
+
+  [[menu.main]]
+    identifier = "auction"
+    name = "Silent Auction"
+    url = "/events/3rd-annual-benefit/auction/"
+    weight = 70
 
  [[menu.main]]
    identifier = "donate"
@@ -70,9 +71,22 @@ disableKinds = ["taxonomyTerm"]
    url = "/donate/"
    weight = 80
 
-  [[menu.main]]
-    identifier = "connect"
-    name = "Join the MOVEment"
-    title = "Connect With Us"
-    url = "/connect/"
-    weight = 100
+ [[menu.main]]
+   identifier = "sponsor"
+   name = "Sponsorship"
+   title = "sponsorship"
+   url = "/sponsor/"
+   weight = 90
+
+ [[menu.main]]
+   identifier = "advertise"
+   name = "Ad"
+   url = "/events/3rd-annual-benefit/advertise/"
+   weight = 95
+
+ [[menu.main]]
+   identifier = "connect"
+   name = "Join the MOVEment"
+   title = "Connect With Us"
+   url = "/connect/"
+   weight = 100
