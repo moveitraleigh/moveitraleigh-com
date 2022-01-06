@@ -66,6 +66,12 @@ disableKinds = ["taxonomyTerm"]
     weight = 70
 
  [[menu.main]]
+   identifier = "tickets"
+   name = "Tickets"
+   url = "https://www.ticketmaster.com/event/2D005C2386E01945"
+   weight = 75
+
+ [[menu.main]]
    identifier = "donate"
    name = "Donate"
    url = "/donate/"

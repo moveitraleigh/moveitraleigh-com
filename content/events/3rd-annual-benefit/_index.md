@@ -25,7 +25,8 @@ RALEIGH GIVES BACK is the annual fundraising event for MOVE IT RALEIGH. RALEIGH 
 
 #### Buy Tickets
 
-Tickets go on sale Jan 3rd. on website and DECPA website/Ticketmaster. More information to come.
+Tickets go on sale Jan 6th at 10:00am on website and DECPA website/Ticketmaster.
+<a target="_blank" href="https://www.ticketmaster.com/event/2D005C2386E01945" class="button button-primary button-large">Click To Purchase Tickets</a>
 
 #### Buy an Ad
 
