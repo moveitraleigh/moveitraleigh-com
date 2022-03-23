@@ -3,25 +3,25 @@ draft = false
 title = "2022 3rd Annual Raleigh Gives Back Benefit Concert sponsored by Move it Raleigh"
 type = "event"
 side_img = "/img/rgb2022.jpg"
-description = "Join us for the Third Annual Move It Raleigh Benefit Concert on April 26th at A.J. Fletcher Opera Theater"
+description = "Join us for the Third Annual Move It Raleigh Benefit Concert on April 24th at A.J. Fletcher Opera Theater"
 heading = "2022 3rd Annual Raleigh Gives Back Benefit Concert sponsored by Move it Raleigh"
 eventName = "2022 3rd Annual Raleigh Gives Back Benefit Concert sponsored by Move it Raleigh"
 location = "A.J. Fletcher Opera Theater"
 address = "2 E South St, Raleigh, NC 27601"
-eventStart = "2022-04-26 19:00:00"
-eventEnd = "2022-04-26 21:00:00"
+eventStart = "2022-04-24 19:00:00"
+eventEnd = "2022-04-24 21:00:00"
 participants = []
 sponsors = []
 decpa = true
 +++
 **Raleigh Gives Back.**
 
-Apr 26, 2022 \
+Apr 24, 2022 \
 7:00 pm \
 \
 Location: A.J. Fletcher Opera Theater at the Duke Energy Center for the Performing Arts
 
-RALEIGH GIVES BACK is the annual fundraising event for MOVE IT RALEIGH. RALEIGH GIVES BACK is a concert featuring the Triangle's most talented dancers. This can't miss event will be held on April 26, 2022 at A.J. Fletcher Opera Theater at the Duke Energy Center for the Performing Arts. Net proceeds from RALEIGH GIVES BACK will fund RALEIGH MOVES TOGETHER, our community workshop slated for the spring of 2022, to give free classes to our triangle dance community, as well as ongoing classes for Triangle area dancers.
+RALEIGH GIVES BACK is the annual fundraising event for MOVE IT RALEIGH. RALEIGH GIVES BACK is a concert featuring the Triangle's most talented dancers. This can't miss event will be held on April 24, 2022 at A.J. Fletcher Opera Theater at the Duke Energy Center for the Performing Arts. Net proceeds from RALEIGH GIVES BACK will fund RALEIGH MOVES TOGETHER, our community workshop slated for the spring of 2022, to give free classes to our triangle dance community, as well as ongoing classes for Triangle area dancers.
 
 #### Buy Tickets
 
