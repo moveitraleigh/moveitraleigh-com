@@ -8,7 +8,7 @@ heading = "2022 3rd Annual Raleigh Gives Back Benefit Concert sponsored by Move 
 eventName = "2022 3rd Annual Raleigh Gives Back Benefit Concert sponsored by Move it Raleigh"
 location = "A.J. Fletcher Opera Theater"
 address = "2 E South St, Raleigh, NC 27601"
-eventStart = "2022-04-24 19:00:00"
+eventStart = "2022-04-24 18:30:00"
 eventEnd = "2022-04-24 21:00:00"
 participants = []
 sponsors = []
@@ -17,7 +17,7 @@ decpa = true
 **Raleigh Gives Back.**
 
 Apr 24, 2022 \
-7:00 pm \
+6:30 pm \
 \
 Location: A.J. Fletcher Opera Theater at the Duke Energy Center for the Performing Arts
 
